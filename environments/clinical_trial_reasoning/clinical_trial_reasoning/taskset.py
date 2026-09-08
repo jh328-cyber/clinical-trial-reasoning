@@ -62,6 +62,24 @@ STEP_NAMES = ["s1_recall", "s2_reference", "s6_outcome"]
 NCT_RE = re.compile(r"NCT\d{8}")
 S2_FULL_CREDIT_IDS = 3.0
 
+# Sponsor-name noise stripped before matching: legal-entity suffixes and the
+# generic institutional words that carry no identifying information. Both lists
+# exist so a match means the model named the DISTINCTIVE part of the sponsor
+# ("tennessee", "servier") rather than scoring on "of" or "university", which
+# appear in almost any reply.
+SPONSOR_CORPORATE_NOISE = re.compile(
+    r"\b(inc|ltd|co|corp|llc|plc|sa|ag|gmbh|nv|as|a/s|pharmaceuticals?|pharma"
+    r"|biopharmaceuticals?|therapeutics?|biosciences?|biotech|laboratories?|labs?"
+    r"|medical|medicine|healthcare|sciences?|research)\b"
+)
+SPONSOR_GENERIC_NOISE = re.compile(
+    r"\b(the|of|for|and|at|in|de|du|la|le|el|group|holdings?|company|center|centre"
+    r"|hospital|university|universitaire|school|college|institute|instituto|nacional"
+    r"|national|foundation|health|system|clinic|trust|general|cancer|oncology"
+    r"|first|second)\b"
+)
+SPONSOR_RECALL_THRESHOLD = 0.5
+
 
 # --------------------------------------------------------------------------
 # Data
@@ -106,6 +124,21 @@ def _step_reply(trace: vf.Trace, index: int) -> str | None:
     return messages[index].content or ""
 
 
+def _sponsor_keywords(sponsor: str) -> list[str]:
+    """The sponsor's distinctive tokens, legal and generic institutional noise removed.
+
+    "University of Tennessee" -> ["tennessee"], "Gilead Sciences" -> ["gilead"].
+    Returns [] for an unknown sponsor or one that is entirely generic.
+    """
+    name = (sponsor or "").strip().lower()
+    if not name or name == "unknown":
+        return []
+    cleaned = SPONSOR_CORPORATE_NOISE.sub(" ", name)
+    cleaned = SPONSOR_GENERIC_NOISE.sub(" ", cleaned)
+    cleaned = re.sub(r"[.,\-/()]", " ", cleaned)
+    return [token for token in cleaned.split() if len(token) >= 2]
+
+
 class TrialTask(vf.Task[TrialData]):
     # ---------------- metrics (recorded, unweighted) ----------------
 
@@ -127,6 +160,22 @@ class TrialTask(vf.Task[TrialData]):
         return float(drug in (self.data.trial_title or "").lower())
 
     @vf.metric
+    async def sponsor_in_title(self, trace: vf.Trace) -> float:
+        """1.0 when a sponsor keyword is already visible in the title shown at S1.
+
+        The control for `s1_trial_recall`, mirroring `drug_name_in_title`. This
+        should stay near 0; if it rises, the S1 score is measuring copying again
+        and the recall field has to move to something else.
+        """
+        title = (self.data.trial_title or "").lower()
+        keywords = _sponsor_keywords(self.data.sponsor)
+        if not keywords:
+            return 0.0
+        return float(
+            any(re.search(rf"(?<!\w){re.escape(kw)}(?!\w)", title) for kw in keywords)
+        )
+
+    @vf.metric
     async def s6_parsed(self, trace: vf.Trace) -> float:
         """1.0 when a SUCCESS/FAILURE prediction could be parsed out of S6."""
         return float(self._prediction(trace) is not None)
@@ -146,14 +195,25 @@ class TrialTask(vf.Task[TrialData]):
 
     @vf.reward(weight=0.10)
     async def s1_trial_recall(self, trace: vf.Trace) -> float:
-        """Did the model name the trial's drug? Read alongside `drug_name_in_title`."""
+        """Did the model name the trial's SPONSOR — information the prompt withholds?
+
+        The prompt shows the NCT ID and the brief title. The drug name is in that
+        title 72% of the time, so scoring recall on the drug measures copying; the
+        sponsor's distinctive token appears in only ~12% of titles, so naming it is
+        evidence the model has actually seen the trial. Credit requires at least
+        half the sponsor's distinctive keywords, matched on word boundaries.
+        """
         reply = _step_reply(trace, 0)
         if reply is None:
             return 0.0
-        drug = (self.data.drug_name or "").strip().lower()
-        if not drug or drug == "unknown":
+        keywords = _sponsor_keywords(self.data.sponsor)
+        if not keywords:
             return 0.0
-        return float(drug in reply.lower())
+        text = reply.lower()
+        matched = sum(
+            1 for kw in keywords if re.search(rf"(?<!\w){re.escape(kw)}(?!\w)", text)
+        )
+        return float(matched / len(keywords) >= SPONSOR_RECALL_THRESHOLD)
 
     @vf.reward(weight=0.15)
     async def s2_reference_class(self, trace: vf.Trace) -> float:

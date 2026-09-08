@@ -85,6 +85,8 @@ def main() -> int:
     by_label: dict[str, list[float]] = defaultdict(list)
     by_phase: dict[str, list[float]] = defaultdict(list)
     s1_split: dict[bool, list[float]] = defaultdict(list)
+    s1_by_s6: dict[float, list[float]] = defaultdict(list)
+    sponsor_leak = 0
     all_ids: list[str] = []
     per_trial_ids: list[int] = []
     predicted_success = 0
@@ -98,9 +100,12 @@ def main() -> int:
         if correct is not None:
             by_label[row.get("label", "?")].append(correct)
             by_phase[row.get("phase", "?")].append(correct)
+        sponsor_leak += int(metrics.get("sponsor_in_title") or 0)
         s1 = reward(trace, "s1_trial_recall")
         if s1 is not None:
-            s1_split[bool(metrics.get("drug_name_in_title"))].append(s1)
+            s1_split[bool(metrics.get("sponsor_in_title"))].append(s1)
+            if correct is not None:
+                s1_by_s6[s1].append(correct)
         ids = s2_ids(trace)
         all_ids.extend(ids)
         per_trial_ids.append(len(ids))
@@ -122,10 +127,20 @@ def main() -> int:
     for phase, values in sorted(by_phase.items()):
         print(f"      {phase:<8} {sum(values):.0f}/{len(values)}  ({pct(sum(values), len(values))})")
 
-    print("  S1 recall (drug named) :")
+    s1_all = [v for values in s1_split.values() for v in values]
+    print("  S1 recall (sponsor named) :")
+    print(f"      overall                          {sum(s1_all):.0f}/{len(s1_all)}  "
+          f"({pct(sum(s1_all), len(s1_all))})")
+    print(f"      sponsor_in_title (leak control)  {sponsor_leak}/{n}  ({pct(sponsor_leak, n)})")
     for visible, values in sorted(s1_split.items()):
-        tag = "drug IN title (copyable)" if visible else "drug NOT in title (real recall)"
+        tag = "sponsor IN title (copyable)" if visible else "sponsor NOT in title (real recall)"
         print(f"      {tag:<32} {sum(values):.0f}/{len(values)}  ({pct(sum(values), len(values))})")
+
+    print("  S1 -> S6 (does recall help?) :")
+    for s1_score, values in sorted(s1_by_s6.items(), reverse=True):
+        tag = "S1 correct" if s1_score >= 1.0 else "S1 wrong"
+        print(f"      {tag:<32} S6 {sum(values):.0f}/{len(values)}  "
+              f"({pct(sum(values), len(values))})")
 
     unique = sorted(set(all_ids))
     print("  S2 reference class     :")
