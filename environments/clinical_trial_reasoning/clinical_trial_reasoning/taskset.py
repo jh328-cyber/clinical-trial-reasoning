@@ -5,9 +5,14 @@ nothing else — no tools, no retrieval. The episode is a fixed sequence of ques
 issued by the environment rather than a single prompt, so each reasoning step lands
 as its own assistant message and is scored separately.
 
-This is the minimum chain: S1 (recall) -> S2 (reference class) -> S6 (outcome).
-Adding S3-S5 later means adding entries to STEPS and a reward per step; reordering
-or dropping a step for an ablation is an edit to STEPS alone.
+The full chain: S1 (recall) -> S2 (reference class) -> S3 (base rate) ->
+S4 (success criteria) -> S5 (risk factors) -> S6 (outcome). Reordering or dropping
+a step for an ablation is an edit to STEPS and STEP_NAMES alone.
+
+S3-S5 are scored on calibration and structure, not against trial-specific ground
+truth — the row data carries no registered endpoint or labelled failure mode to
+check them against. They are placeholders for real scorers, not measurements of
+reasoning quality.
 
 Why the task's prompt is None: `Interaction.turn()` has an asymmetric first-turn
 rule — a prompted task must take its opening reply with a bare `turn()`, while a
@@ -56,8 +61,82 @@ S6_PROMPT = (
     "KEY_REASON: one sentence explaining the most important factor"
 )
 
-STEPS = [S1_PROMPT, S2_PROMPT, S6_PROMPT]
-STEP_NAMES = ["s1_recall", "s2_reference", "s6_outcome"]
+S3_PROMPT = (
+    "Based on your knowledge of clinical trials, what is the historical "
+    "base rate of success for trials like this one?\n\n"
+    "Consider:\n"
+    "- Phase: {phase}\n"
+    "- Indication: {indication}\n"
+    "- Drug class and mechanism (from what you recalled earlier)\n\n"
+    "Provide your answer EXACTLY as:\n"
+    "BASE_RATE: [a number between 0.0 and 1.0]\n"
+    "REASONING: [one paragraph explaining how you arrived at this estimate]"
+)
+
+S4_PROMPT = (
+    "Based on the trial design of {nct_id}, describe what would constitute "
+    "a successful outcome.\n\n"
+    "Include:\n"
+    "1. The likely primary endpoint(s) and how they would be measured\n"
+    "2. The statistical threshold that would need to be met (e.g., p<0.05, "
+    "hazard ratio, non-inferiority margin)\n"
+    "3. Whether this is likely a superiority, non-inferiority, or equivalence trial\n"
+    "4. Key design features (randomization, blinding, control arm)\n\n"
+    "If you are unsure about any detail, say 'unknown'. Do not fabricate."
+)
+
+S5_PROMPT = (
+    "What are the key risk factors that could cause this trial to fail?\n\n"
+    "List 3-5 specific risks, ordered from most to least concerning. "
+    "For each risk, provide:\n"
+    "- RISK: [name of the risk]\n"
+    "- APPLIES_BECAUSE: [why this risk is relevant to THIS specific trial]\n"
+    "- LIKELIHOOD: HIGH, MEDIUM, or LOW\n\n"
+    "Consider: safety signals from earlier phases, efficacy concerns, "
+    "enrollment challenges, regulatory issues, competitive landscape, "
+    "and trial design limitations."
+)
+
+STEPS = [S1_PROMPT, S2_PROMPT, S3_PROMPT, S4_PROMPT, S5_PROMPT, S6_PROMPT]
+STEP_NAMES = [
+    "s1_recall",
+    "s2_reference",
+    "s3_base_rate",
+    "s4_criteria",
+    "s5_risks",
+    "s6_outcome",
+]
+
+# Scorers address steps by name, never by a bare integer: adding S3-S5 silently
+# moved S6 from index 2 to index 5, and an ablation that reorders STEPS would do
+# the same again. Keep STEPS and STEP_NAMES in the same order and these follow.
+STEP_INDEX = {name: i for i, name in enumerate(STEP_NAMES)}
+
+# Industry phase-transition success rates (BIO/QLS/Citeline). Used only as the
+# calibration target for S3; they are not trial-specific ground truth.
+PHASE_BASE_RATES = {"1": 0.52, "2": 0.29, "3": 0.58}
+PHASE_BASE_RATE_FALLBACK = 0.40
+BASE_RATE_RE = re.compile(r"BASE_RATE:\s*([\d.]+)")
+RISK_TAG_RE = re.compile(r"RISK:", re.IGNORECASE)
+RISK_ITEM_RE = re.compile(r"(?:^|\n)\s*(?:\d+[.)]\s*|-\s*\*?\*?)")
+LIKELIHOOD_RE = re.compile(r"LIKELIHOOD:\s*(HIGH|MEDIUM|LOW)", re.IGNORECASE)
+
+S4_ENDPOINT_KEYWORDS = (
+    "endpoint", "primary outcome", "overall survival", "progression-free",
+    "response rate", "overall response", "hba1c", "blood pressure",
+    "remission", "mortality", "event-free", "disease-free",
+    "composite endpoint", "time to", "reduction in", "improvement in",
+)
+S4_STAT_KEYWORDS = (
+    "p<", "p =", "p-value", "hazard ratio", "confidence interval",
+    "non-inferiority", "superiority", "equivalence", "significance",
+    "statistical", "margin", "alpha", "power",
+)
+S4_DESIGN_KEYWORDS = (
+    "randomized", "randomised", "double-blind", "placebo-controlled",
+    "open-label", "single-arm", "crossover", "parallel",
+    "active comparator", "blinded", "control arm", "controlled",
+)
 
 NCT_RE = re.compile(r"NCT\d{8}")
 S2_FULL_CREDIT_IDS = 3.0
@@ -124,6 +203,15 @@ def _step_reply(trace: vf.Trace, index: int) -> str | None:
     return messages[index].content or ""
 
 
+def _phase_base_rate(phase: str) -> float:
+    """The industry success rate for this phase, or the fallback if unrecognised."""
+    text = (phase or "").upper()
+    for digit, rate in PHASE_BASE_RATES.items():
+        if digit in text:
+            return rate
+    return PHASE_BASE_RATE_FALLBACK
+
+
 def _sponsor_keywords(sponsor: str) -> list[str]:
     """The sponsor's distinctive tokens, legal and generic institutional noise removed.
 
@@ -186,9 +274,52 @@ class TrialTask(vf.Task[TrialData]):
         return float(self._prediction(trace) == "SUCCESS")
 
     @vf.metric
+    async def s3_stated_base_rate(self, trace: vf.Trace) -> float:
+        """The base rate the model actually stated, or -1.0 if it stated none.
+
+        The reward collapses this to a 0/0.5/1 band; the raw number is what shows
+        whether the model anchors on one habitual value across every trial.
+        """
+        reply = _step_reply(trace, STEP_INDEX["s3_base_rate"])
+        match = BASE_RATE_RE.search(reply or "")
+        if not match:
+            return -1.0
+        try:
+            return float(match.group(1))
+        except ValueError:
+            return -1.0
+
+    @vf.metric
+    async def s5_risk_items(self, trace: vf.Trace) -> float:
+        """How many risks S5 enumerated (RISK: tags, else list items)."""
+        reply = _step_reply(trace, STEP_INDEX["s5_risks"])
+        if reply is None:
+            return 0.0
+        tagged = len(RISK_TAG_RE.findall(reply))
+        return float(tagged or len(RISK_ITEM_RE.findall(reply)))
+
+    @vf.metric
+    async def s5_likelihood_tags(self, trace: vf.Trace) -> float:
+        """How many risks carried a LIKELIHOOD: HIGH/MEDIUM/LOW tag."""
+        reply = _step_reply(trace, STEP_INDEX["s5_risks"])
+        return float(len(LIKELIHOOD_RE.findall(reply or "")))
+
+    @vf.metric
+    async def s3_reply_length(self, trace: vf.Trace) -> float:
+        return float(len(_step_reply(trace, STEP_INDEX["s3_base_rate"]) or ""))
+
+    @vf.metric
+    async def s4_reply_length(self, trace: vf.Trace) -> float:
+        return float(len(_step_reply(trace, STEP_INDEX["s4_criteria"]) or ""))
+
+    @vf.metric
+    async def s5_reply_length(self, trace: vf.Trace) -> float:
+        return float(len(_step_reply(trace, STEP_INDEX["s5_risks"]) or ""))
+
+    @vf.metric
     async def s2_nct_ids(self, trace: vf.Trace) -> float:
         """Count of well-formed NCT IDs offered at S2 (format only, not existence)."""
-        reply = _step_reply(trace, 1)
+        reply = _step_reply(trace, STEP_INDEX["s2_reference"])
         return float(len(set(NCT_RE.findall(reply or ""))))
 
     # ---------------- rewards (weighted) ----------------
@@ -203,7 +334,7 @@ class TrialTask(vf.Task[TrialData]):
         evidence the model has actually seen the trial. Credit requires at least
         half the sponsor's distinctive keywords, matched on word boundaries.
         """
-        reply = _step_reply(trace, 0)
+        reply = _step_reply(trace, STEP_INDEX["s1_recall"])
         if reply is None:
             return 0.0
         keywords = _sponsor_keywords(self.data.sponsor)
@@ -223,13 +354,101 @@ class TrialTask(vf.Task[TrialData]):
         trials are actually similar. Resolving them against the registry is the
         next iteration.
         """
-        reply = _step_reply(trace, 1)
+        reply = _step_reply(trace, STEP_INDEX["s2_reference"])
         if reply is None:
             return 0.0
         found = set(NCT_RE.findall(reply))
         if not found:
             return 0.0
         return min(len(found) / S2_FULL_CREDIT_IDS, 1.0)
+
+    @vf.reward(weight=0.10)
+    async def s3_base_rate(self, trace: vf.Trace) -> float:
+        """Is the stated base rate near the industry phase-transition rate?
+
+        Full credit within 0.10 of the phase rate, half credit within 0.20. The
+        target is a population statistic, not this trial's outcome, so a model
+        that simply knows phase 2 is the hard one scores well here by design.
+        """
+        reply = _step_reply(trace, STEP_INDEX["s3_base_rate"])
+        if reply is None:
+            return 0.0
+        match = BASE_RATE_RE.search(reply)
+        if not match:
+            return 0.0
+        try:
+            rate = float(match.group(1))
+        except ValueError:
+            return 0.0
+        if not 0.0 <= rate <= 1.0:
+            return 0.0
+        expected = _phase_base_rate(self.data.phase)
+        error = abs(rate - expected)
+        if error <= 0.10:
+            return 1.0
+        return 0.5 if error <= 0.20 else 0.0
+
+    @vf.reward(weight=0.10)
+    async def s4_success_criteria(self, trace: vf.Trace) -> float:
+        """Does the success criterion name an endpoint, a statistical bar, and a design?
+
+        Keyword coverage only (0.4 / 0.3 / 0.3). It cannot tell a correct criterion
+        from a fluent wrong one — the rows carry no registered endpoint to check
+        against. Treat this as a floor on completeness, not a correctness score.
+        """
+        reply = _step_reply(trace, STEP_INDEX["s4_criteria"])
+        if reply is None:
+            return 0.0
+        text = reply.lower()
+        score = 0.0
+        if any(kw in text for kw in S4_ENDPOINT_KEYWORDS):
+            score += 0.4
+        if any(kw in text for kw in S4_STAT_KEYWORDS):
+            score += 0.3
+        if any(kw in text for kw in S4_DESIGN_KEYWORDS):
+            score += 0.3
+        return score
+
+    @vf.reward(weight=0.15)
+    async def s5_risk_factors(self, trace: vf.Trace) -> float:
+        """Structure of the risk enumeration: item count, LIKELIHOOD tags, specificity.
+
+        Like S4 this scores form, not whether the risks named are the ones that
+        actually threatened the trial. Scoring against the labelled failure mode is
+        the next iteration.
+        """
+        reply = _step_reply(trace, STEP_INDEX["s5_risks"])
+        if reply is None:
+            return 0.0
+
+        risk_count = len(RISK_TAG_RE.findall(reply))
+        if risk_count == 0:
+            risk_count = len(RISK_ITEM_RE.findall(reply))
+
+        score = 0.0
+        if 3 <= risk_count <= 5:
+            score += 0.5
+        elif 1 <= risk_count <= 2:
+            score += 0.25
+        elif risk_count > 5:
+            score += 0.3
+
+        likelihoods = len(LIKELIHOOD_RE.findall(reply))
+        if likelihoods >= 3:
+            score += 0.3
+        elif likelihoods >= 1:
+            score += 0.15
+
+        text = reply.lower()
+        specifics = [
+            value.lower()
+            for value in (self.data.indication, self.data.phase)
+            if value and value.lower() != "unknown"
+        ]
+        if any(value in text for value in specifics):
+            score += 0.2
+
+        return min(score, 1.0)
 
     @vf.reward(weight=0.40)
     async def s6_outcome(self, trace: vf.Trace) -> float:
@@ -249,7 +468,7 @@ class TrialTask(vf.Task[TrialData]):
         SUCCESS prediction, so the fallback is limited to a reply that names exactly
         one of the two labels.
         """
-        reply = _step_reply(trace, 2)
+        reply = _step_reply(trace, STEP_INDEX["s6_outcome"])
         if reply is None:
             return None
         text = reply.upper()
