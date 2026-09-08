@@ -2,7 +2,6 @@
 
 **Clinical Trial Reasoning Environment**
 Junyi Huang · Abugoot Lab, Harvard Medical School
-Draft for review by Sean Pohorence and Hao Zhu
 
 ---
 
@@ -23,7 +22,7 @@ so the trace is not reliable evidence about the computation.
 **Why structured steps.** If instead the episode is a fixed sequence of questions, each
 answered in its own turn and in its own schema, then every step becomes a measurable
 variable. We get per-step accuracy, per-step failure rates, and a step-by-step profile of
-where reasoning degrades. Sean's framing:
+where reasoning degrades. The guiding framing:
 
 > a sequence of predictions or questions, the last question being: *What's the outcome?*
 
@@ -77,7 +76,8 @@ For each, give NCT ID if you know it, drug, sponsor, phase, and its outcome
 
 **Output.** JSON array of reference trials.
 
-**Why it is useful.** This is Sean's "make a list of similar trials you know of," and it is
+**Why it is useful.** This is the motivating example: "make a list of similar trials you
+know of," and it is
 the single most diagnostic step in the chain. It exposes three things at once:
 (a) **hallucination rate** — do the NCT IDs resolve, and do the resolved records match the
 claimed drug/indication? (b) **retrieval quality** — how relevant is the class the model
@@ -194,8 +194,8 @@ reasoning steps carry the prediction. Free-form CoT admits none of these interve
 error cells. The off-diagonal "correct label, wrong mechanism" cell is, in our view, the
 most interesting thing this environment can measure.
 
-**Relation to Rayane's masking approach.** *(This section needs Rayane's input — the
-description below is my current understanding and should be corrected.)* As I understand
+**Relation to the input-masking approach.** *(The description below is our current
+understanding of the masking work and may need correction.)* As we understand
 it, the masking work perturbs the **input**: hide or ablate parts of the trial record and
 observe how the prediction shifts, which tells us which *fields* the model depends on.
 The step decomposition here perturbs the **process**: it opens up the intermediate
@@ -280,19 +280,3 @@ arms · results reported as per-step metric tables, not a single accuracy number
 6. Only then consider RL. Everything above is evaluation; the environment is
    training-ready by construction, but the scientific question is answerable without
    training a model.
-
----
-
-## Open questions for Sean and Hao
-
-1. **Step count and granularity.** Six steps versus `drug-perturbation-rl`'s four — is
-   this the right resolution, or should S3 fold into S2 and S4 into S5?
-2. **Is the closed-book arm the primary one?** It is the cleanest probe of reasoning, but
-   it is also the least like the real prediction task.
-3. **Reward weights.** The 0.60 / 0.40 intermediate-to-final split is a guess. For
-   evaluation it does not matter much; for RL it determines what gets learned.
-4. **Rayane's masking approach** — §3 needs correcting by someone who knows the actual
-   design, and we should decide whether to unify the two under one environment.
-5. **Scope of the outcome label.** The prior pipeline emitted five orthogonal verdicts plus
-   an overall. Here S6 predicts a single binary. Should the terminal step instead predict
-   the full five-dimensional verdict?
