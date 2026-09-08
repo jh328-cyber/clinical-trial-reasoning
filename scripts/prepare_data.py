@@ -40,8 +40,12 @@ ALLOWED_OUTPUT_FIELDS = {
     "sponsor",
     "drug_name",
     "trial_title",
+    "primary_endpoint",
     "split",
 }
+
+# Joins multiple registered primary outcomes into one field.
+ENDPOINT_JOINER = " | "
 
 DRUG_INTERVENTION_TYPES = {"DRUG", "BIOLOGICAL"}
 
@@ -96,6 +100,20 @@ def extract_title(ctg: dict) -> str:
     return "unknown"
 
 
+def extract_primary_endpoint(ctg: dict) -> str:
+    """The registered primary outcome measure(s), joined.
+
+    The cached record is already flattened, so this reads `primary_outcomes[].measure`
+    rather than the raw API's `protocolSection.outcomesModule.primaryOutcomes`. Only
+    the measure is taken: it says WHAT was to be measured, never what the result was.
+    """
+    measures = [
+        (outcome.get("measure") or "").strip()
+        for outcome in (ctg.get("primary_outcomes") or [])
+    ]
+    return ENDPOINT_JOINER.join(m for m in measures if m)
+
+
 def build_record(split_row: dict, ctg: dict) -> dict:
     record = {
         "nct_id": split_row["nct_id"],
@@ -105,6 +123,7 @@ def build_record(split_row: dict, ctg: dict) -> dict:
         "sponsor": (ctg.get("lead_sponsor") or "unknown").strip() or "unknown",
         "drug_name": extract_drug_name(ctg),
         "trial_title": extract_title(ctg),
+        "primary_endpoint": extract_primary_endpoint(ctg),
         "split": split_row["split"],
     }
     leaked = set(record) - ALLOWED_OUTPUT_FIELDS
@@ -152,8 +171,10 @@ def main() -> int:
     print(f"  ctg provenance       : {provenance}")
     print(f"  labels               : {labels}")
     print(f"  phases               : {phases}")
+    no_endpoint = sum(1 for r in records if not r["primary_endpoint"])
     print(f"  drug_name unknown    : {unknown_drug}")
     print(f"  indication unknown   : {unknown_indication}")
+    print(f"  primary_endpoint set : {len(records) - no_endpoint}/{len(records)}")
     print(f"  written              : {args.out}")
     return 1 if missing else 0
 

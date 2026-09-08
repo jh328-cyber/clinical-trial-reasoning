@@ -117,26 +117,29 @@ STEP_INDEX = {name: i for i, name in enumerate(STEP_NAMES)}
 PHASE_BASE_RATES = {"1": 0.52, "2": 0.29, "3": 0.58}
 PHASE_BASE_RATE_FALLBACK = 0.40
 BASE_RATE_RE = re.compile(r"BASE_RATE:\s*([\d.]+)")
-RISK_TAG_RE = re.compile(r"RISK:", re.IGNORECASE)
+# The label arrives dressed up: markdown emphasis around it and, most often, an
+# ordinal between the word and the colon (`**RISK 1: ...**`). A literal `RISK:`
+# pattern scored 50/60 rows as format non-compliance when the model had in fact
+# complied, so emphasis and an optional number are both tolerated. What is measured
+# is whether the model enumerated labelled risks, not how it styled them.
+RISK_TAG_RE = re.compile(r"\*{0,2}RISK\*{0,2}\s*\d*\s*\*{0,2}\s*:", re.IGNORECASE)
 RISK_ITEM_RE = re.compile(r"(?:^|\n)\s*(?:\d+[.)]\s*|-\s*\*?\*?)")
-LIKELIHOOD_RE = re.compile(r"LIKELIHOOD:\s*(HIGH|MEDIUM|LOW)", re.IGNORECASE)
+LIKELIHOOD_RE = re.compile(
+    r"\*{0,2}LIKELIHOOD\*{0,2}\s*:\s*\*{0,2}(HIGH|MEDIUM|LOW)", re.IGNORECASE
+)
 
-S4_ENDPOINT_KEYWORDS = (
-    "endpoint", "primary outcome", "overall survival", "progression-free",
-    "response rate", "overall response", "hba1c", "blood pressure",
-    "remission", "mortality", "event-free", "disease-free",
-    "composite endpoint", "time to", "reduction in", "improvement in",
+# S4 is scored on how much of the REGISTERED primary endpoint the model names.
+# These words carry no identifying signal — they appear in almost every endpoint
+# description and in almost every S4 reply, so leaving them in would rebuild the
+# saturated keyword scorer this replaced.
+ENDPOINT_STOPWORDS = frozenset(
+    """the of in at to and or a an from by for with on as is was between after
+    before during through number rate change time week weeks month months day days
+    year years baseline study treatment group subjects patients participants
+    measured defined percentage proportion mean median""".split()
 )
-S4_STAT_KEYWORDS = (
-    "p<", "p =", "p-value", "hazard ratio", "confidence interval",
-    "non-inferiority", "superiority", "equivalence", "significance",
-    "statistical", "margin", "alpha", "power",
-)
-S4_DESIGN_KEYWORDS = (
-    "randomized", "randomised", "double-blind", "placebo-controlled",
-    "open-label", "single-arm", "crossover", "parallel",
-    "active comparator", "blinded", "control arm", "controlled",
-)
+ENDPOINT_WORD_RE = re.compile(r"[a-z]{3,}")
+S4_RECALL_BANDS = ((0.6, 1.0), (0.4, 0.7), (0.2, 0.3))
 
 NCT_RE = re.compile(r"NCT\d{8}")
 S2_FULL_CREDIT_IDS = 3.0
@@ -181,6 +184,9 @@ class TrialData(vf.TaskData):
     sponsor: str
     drug_name: str
     trial_title: str
+    primary_endpoint: str = ""
+    """The registered primary outcome measure(s). Scoring-side only: no step prompt
+    interpolates it, so S4 is asked to produce what this field already knows."""
     split: str = "unknown"
 
 
@@ -201,6 +207,25 @@ def _step_reply(trace: vf.Trace, index: int) -> str | None:
     if index >= len(messages):
         return None
     return messages[index].content or ""
+
+
+def _endpoint_keyword_recall(endpoint: str, reply: str | None) -> float:
+    """Share of the registered endpoint's content words that appear in the reply.
+
+    Returns -1.0 when it cannot be computed — no reply, no registered endpoint, or
+    an endpoint made entirely of stopwords. -1.0 is distinct from 0.0 (computed,
+    nothing matched) so an ungradable row is never counted as a failure.
+    """
+    if reply is None:
+        return -1.0
+    text = (endpoint or "").strip().lower()
+    if not text:
+        return -1.0
+    keywords = {w for w in ENDPOINT_WORD_RE.findall(text) if w not in ENDPOINT_STOPWORDS}
+    if not keywords:
+        return -1.0
+    lowered = reply.lower()
+    return sum(1 for kw in keywords if kw in lowered) / len(keywords)
 
 
 def _phase_base_rate(phase: str) -> float:
@@ -305,6 +330,19 @@ class TrialTask(vf.Task[TrialData]):
         return float(len(LIKELIHOOD_RE.findall(reply or "")))
 
     @vf.metric
+    async def s4_endpoint_keyword_recall(self, trace: vf.Trace) -> float:
+        """Raw endpoint keyword recall behind the S4 bands; -1.0 if ungradable."""
+        return _endpoint_keyword_recall(
+            self.data.primary_endpoint, _step_reply(trace, STEP_INDEX["s4_criteria"])
+        )
+
+    @vf.metric
+    async def s5_risk_tag_count(self, trace: vf.Trace) -> float:
+        """RISK: tags in S5 — the count the reward now uses, without the bullet fallback."""
+        reply = _step_reply(trace, STEP_INDEX["s5_risks"])
+        return float(len(RISK_TAG_RE.findall(reply or "")))
+
+    @vf.metric
     async def s3_reply_length(self, trace: vf.Trace) -> float:
         return float(len(_step_reply(trace, STEP_INDEX["s3_base_rate"]) or ""))
 
@@ -390,24 +428,22 @@ class TrialTask(vf.Task[TrialData]):
 
     @vf.reward(weight=0.10)
     async def s4_success_criteria(self, trace: vf.Trace) -> float:
-        """Does the success criterion name an endpoint, a statistical bar, and a design?
+        """Did the model name the trial's REGISTERED primary endpoint?
 
-        Keyword coverage only (0.4 / 0.3 / 0.3). It cannot tell a correct criterion
-        from a fluent wrong one — the rows carry no registered endpoint to check
-        against. Treat this as a floor on completeness, not a correctness score.
+        Banded keyword recall against `primary_endpoint`, which the prompt never
+        shows. Replaces a keyword-presence scorer that returned 1.0 on all 60 rows.
+        Still lexical: a model that says "objective response rate" scores the same
+        whether or not it understood the threshold.
         """
-        reply = _step_reply(trace, STEP_INDEX["s4_criteria"])
-        if reply is None:
+        recall = _endpoint_keyword_recall(
+            self.data.primary_endpoint, _step_reply(trace, STEP_INDEX["s4_criteria"])
+        )
+        if recall < 0:
             return 0.0
-        text = reply.lower()
-        score = 0.0
-        if any(kw in text for kw in S4_ENDPOINT_KEYWORDS):
-            score += 0.4
-        if any(kw in text for kw in S4_STAT_KEYWORDS):
-            score += 0.3
-        if any(kw in text for kw in S4_DESIGN_KEYWORDS):
-            score += 0.3
-        return score
+        for threshold, score in S4_RECALL_BANDS:
+            if recall >= threshold:
+                return score
+        return 0.0
 
     @vf.reward(weight=0.15)
     async def s5_risk_factors(self, trace: vf.Trace) -> float:
@@ -421,17 +457,16 @@ class TrialTask(vf.Task[TrialData]):
         if reply is None:
             return 0.0
 
+        # RISK: tags only. The markdown-bullet fallback this replaces counted every
+        # list item in a ~4600-character reply (mean 16.5), so the 3-5 band never
+        # fired and the score tracked verbosity instead of risk enumeration.
         risk_count = len(RISK_TAG_RE.findall(reply))
-        if risk_count == 0:
-            risk_count = len(RISK_ITEM_RE.findall(reply))
 
         score = 0.0
         if 3 <= risk_count <= 5:
             score += 0.5
-        elif 1 <= risk_count <= 2:
+        elif risk_count >= 1:
             score += 0.25
-        elif risk_count > 5:
-            score += 0.3
 
         likelihoods = len(LIKELIHOOD_RE.findall(reply))
         if likelihoods >= 3:
@@ -439,13 +474,8 @@ class TrialTask(vf.Task[TrialData]):
         elif likelihoods >= 1:
             score += 0.15
 
-        text = reply.lower()
-        specifics = [
-            value.lower()
-            for value in (self.data.indication, self.data.phase)
-            if value and value.lower() != "unknown"
-        ]
-        if any(value in text for value in specifics):
+        indication = (self.data.indication or "").strip().lower()
+        if indication and indication != "unknown" and indication in reply.lower():
             score += 0.2
 
         return min(score, 1.0)
@@ -560,6 +590,7 @@ class TrialReasoningTaskset(vf.Taskset[TrialTask, TrialReasoningConfig]):
                         sponsor=record.get("sponsor", "unknown"),
                         drug_name=record.get("drug_name", "unknown"),
                         trial_title=record.get("trial_title", record["nct_id"]),
+                        primary_endpoint=record.get("primary_endpoint", ""),
                         split=record.get("split", "unknown"),
                     ),
                     self.config.task,
