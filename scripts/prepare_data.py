@@ -12,7 +12,11 @@ Leakage policy (arm A is closed-book):
     than filtered downstream, so a leak cannot be introduced by a later edit to
     the taskset.
 
-The test split is deliberately not read: it stays held out.
+All three frozen splits are read. The `split` field is carried through so a
+held-out view can still be taken downstream; nothing here treats test as special.
+Widening from 60 to 100 rows is the only way to narrow the S6 confidence interval:
+repeated rollouts do not, because 77% of trials return an identical answer on all
+five draws — the variance is between trials, not within them.
 """
 
 from __future__ import annotations
@@ -26,7 +30,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_SOURCE = Path.home() / "clinical_data_llm_prediction"
 DEFAULT_OUT = PROJECT_ROOT / "data" / "trials.jsonl"
 
-SPLITS = ("train", "val")
+SPLITS = ("train", "val", "test")
 
 # Batch output directories that carry a per-trial ctg.json, newest first.
 CTG_BATCH_DIRS = ("batch_n11_b3", "batch_n9")
