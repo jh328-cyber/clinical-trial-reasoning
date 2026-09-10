@@ -73,3 +73,9 @@ data/cache/
 *.parquet
 *.sqlite
 *.sqlite3
+.env
+
+# Eval run artefacts. traces.jsonl is large and regenerable from the saved
+# config; the cross-model report is the part worth keeping in the history.
+results/*
+!results/cross_model_report.md
