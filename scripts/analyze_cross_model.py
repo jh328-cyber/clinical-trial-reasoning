@@ -662,6 +662,7 @@ def main() -> int:
         "verdicts below are computed from it."
     )
     best_per_model: dict[str, tuple[str, float, float]] = {}
+    all_pvalues: list[tuple[str, str, float]] = []
     for m in models:
         ans_n = m.answered()[0]
         r.console("")
@@ -701,6 +702,8 @@ def main() -> int:
             )
             if acorr is not None:
                 ranked.append((abs(acorr), name, acorr, ap))
+                if ap == ap:
+                    all_pvalues.append((m.name, name, ap))
         r.table(
             ["step", "n", "r(all)", "p", f"r(ans,n={ans_n})", "p", ""],
             rows,
@@ -725,6 +728,44 @@ def main() -> int:
                     if p == p and p < 0.05
                     else "  <- not significant; treat as no signal"
                 )
+            )
+
+    if all_pvalues:
+        n_tests = len(all_pvalues)
+        bonferroni = 0.05 / n_tests
+        survivors = [t for t in all_pvalues if t[2] < bonferroni]
+        # Benjamini-Hochberg at FDR 0.05.
+        ordered = sorted(all_pvalues, key=lambda t: t[2])
+        bh = 0
+        for i, (_, _, pv) in enumerate(ordered, 1):
+            if pv <= 0.05 * i / n_tests:
+                bh = i
+        r.console("")
+        r.p(
+            f"MULTIPLE COMPARISONS: section 5 runs {n_tests} correlation tests "
+            f"({len(INTERMEDIATE)} steps x {len(models)} models). At that many "
+            f"tests, ~{0.05 * n_tests:.1f} results reach p<0.05 by chance alone, "
+            "so an individual star here is not evidence on its own."
+        )
+        r.p(
+            f"  Bonferroni (p < {bonferroni:.4f}): "
+            + (
+                ", ".join(f"{mn}/{sn}" for mn, sn, _ in survivors)
+                if survivors
+                else "NO step survives in any model."
+            )
+        )
+        r.p(
+            f"  Benjamini-Hochberg (FDR 0.05): {bh} of {n_tests} rejections."
+            if bh
+            else f"  Benjamini-Hochberg (FDR 0.05): no rejections of {n_tests} tests."
+        )
+        if not survivors and not bh:
+            r.p(
+                "  So: no intermediate step reliably predicts S6 correctness in "
+                "any model once abstention and multiplicity are both accounted "
+                "for. Read the per-model 'strongest' lines below as the largest "
+                "of several noisy estimates, not as findings."
             )
 
     if best_per_model:
