@@ -79,3 +79,4 @@ data/cache/
 # config; the cross-model report is the part worth keeping in the history.
 results/*
 !results/cross_model_report.md
+!results/rollout_analysis.md
