@@ -65,6 +65,23 @@ run_one() {
     return 0
   fi
 
+  # Preflight: one authentication probe before committing to N episodes. An
+  # invalid key otherwise surfaces as 100 individually-failed rollouts, which
+  # looks like a bad model rather than a bad credential and costs the whole run
+  # to discover.
+  local probe
+  probe=$(curl -s -o /dev/null -w '%{http_code}' --max-time 30 \
+    -H "Authorization: Bearer $key" "${base_url%/}/models" 2>/dev/null || echo "000")
+  if [[ "$probe" == "401" || "$probe" == "403" ]]; then
+    echo "SKIP $name — \$$key_var was rejected by $base_url (HTTP $probe)." >&2
+    echo "     The key is present but not valid for this provider; nothing was run." >&2
+    return 0
+  fi
+  if [[ "$probe" == "000" ]]; then
+    echo "WARN $name — could not reach ${base_url%/}/models to preflight the key;" >&2
+    echo "     continuing anyway (the endpoint may not expose /models)." >&2
+  fi
+
   echo
   echo "=== $name  ($model @ $base_url) ==============================="
   uv run --project environments/clinical_trial_reasoning eval clinical-trial-reasoning \
