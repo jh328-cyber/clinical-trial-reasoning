@@ -1,0 +1,49 @@
+17:23:57    INFO running 20x1 rollouts on deepseek-chat via the env-server elastic pool
+17:23:57    INFO results: results/spec/deepseek-chat/pilot_baseline_rep
+17:24:00    INFO EnvServerPool up: address=tcp://127.0.0.1:61283 workers=1/inf multiplex=128 elastic=True
+17:24:02    INFO EnvServer up: taskset=clinical-trial-reasoning address=ipc:///tmp/vf-pool-4on9r656/0
+17:24:02    INFO interception up: url=http://127.0.0.1:61285
+17:24:02    INFO interception pool: 1 server(s), multiplex=32
+17:24:02    INFO rollout start: id=6bd67417eb804b3984da25da5188f86a task=0 harness=null runtime=subprocess
+17:24:02    INFO rollout start: id=280a5df0049f4f9fb3c3be9b62555379 task=1 harness=null runtime=subprocess
+17:24:02    INFO rollout start: id=4445d7d6e5da4881acf05969df8f688a task=2 harness=null runtime=subprocess
+17:24:02    INFO rollout start: id=5aed71e185c94ad8a80ef2d8455a29b7 task=3 harness=null runtime=subprocess
+17:24:37    INFO rollout done: id=6bd67417eb804b3984da25da5188f86a task=0 reward=0.925 turns=6 stop=user_closed
+17:24:37    INFO rollout start: id=f3e3d7a62d3b4dada67411c6c40b7ac8 task=4 harness=null runtime=subprocess
+17:24:37    INFO rollout done: id=280a5df0049f4f9fb3c3be9b62555379 task=1 reward=0.287 turns=6 stop=user_closed
+17:24:37    INFO rollout start: id=d6122750f9a84ec3ac596fe12148e090 task=5 harness=null runtime=subprocess
+17:24:40    INFO rollout done: id=4445d7d6e5da4881acf05969df8f688a task=2 reward=0.875 turns=6 stop=user_closed
+17:24:40    INFO rollout start: id=bd7a7854c7df45dcb783158c2e7fe66a task=6 harness=null runtime=subprocess
+17:24:40    INFO rollout done: id=5aed71e185c94ad8a80ef2d8455a29b7 task=3 reward=0.970 turns=6 stop=user_closed
+17:24:40    INFO rollout start: id=9ee43a7a94e841e1b8f3c1c18631143c task=7 harness=null runtime=subprocess
+17:25:10    INFO rollout done: id=9ee43a7a94e841e1b8f3c1c18631143c task=7 reward=0.900 turns=6 stop=user_closed
+17:25:10    INFO rollout start: id=02c20463f7a149da9b9802ddf2ef2391 task=8 harness=null runtime=subprocess
+17:25:14    INFO rollout done: id=d6122750f9a84ec3ac596fe12148e090 task=5 reward=0.755 turns=6 stop=user_closed
+17:25:14    INFO rollout start: id=96f4c72f1e1f48caa1cfcdaa82b63014 task=9 harness=null runtime=subprocess
+17:25:20    INFO rollout done: id=f3e3d7a62d3b4dada67411c6c40b7ac8 task=4 reward=0.825 turns=6 stop=user_closed
+17:25:20    INFO rollout start: id=5a9e08be5ba4443a97b957660dd8516b task=10 harness=null runtime=subprocess
+17:25:23    INFO rollout done: id=bd7a7854c7df45dcb783158c2e7fe66a task=6 reward=0.870 turns=6 stop=user_closed
+17:25:23    INFO rollout start: id=17bfc7edfbc947e9ae29c79a4bf209f5 task=11 harness=null runtime=subprocess
+17:25:50    INFO rollout done: id=02c20463f7a149da9b9802ddf2ef2391 task=8 reward=0.925 turns=6 stop=user_closed
+17:25:50    INFO rollout start: id=029db2116a474793b73db3b3ac2ecb4d task=12 harness=null runtime=subprocess
+17:25:50    INFO rollout done: id=96f4c72f1e1f48caa1cfcdaa82b63014 task=9 reward=0.875 turns=6 stop=user_closed
+17:25:50    INFO rollout start: id=fc098997d9144d8ea56b0aa0b964f77a task=13 harness=null runtime=subprocess
+17:25:58    INFO rollout done: id=17bfc7edfbc947e9ae29c79a4bf209f5 task=11 reward=0.405 turns=6 stop=user_closed
+17:25:58    INFO rollout start: id=2bb1fc1a7ddb4551a2013bd7f165d516 task=14 harness=null runtime=subprocess
+17:26:02    INFO rollout done: id=5a9e08be5ba4443a97b957660dd8516b task=10 reward=0.900 turns=6 stop=user_closed
+17:26:02    INFO rollout start: id=3adb7ec059b14bf285c652c3265bfd68 task=15 harness=null runtime=subprocess
+17:26:26    INFO rollout done: id=fc098997d9144d8ea56b0aa0b964f77a task=13 reward=0.500 turns=6 stop=user_closed
+17:26:26    INFO rollout start: id=704bc85456234c3aadbb0cd34905f1bb task=16 harness=null runtime=subprocess
+17:26:30    INFO rollout done: id=029db2116a474793b73db3b3ac2ecb4d task=12 reward=0.425 turns=6 stop=user_closed
+17:26:30    INFO rollout start: id=64be861b7a6f46049713d24b32986f14 task=17 harness=null runtime=subprocess
+17:26:33    INFO rollout done: id=2bb1fc1a7ddb4551a2013bd7f165d516 task=14 reward=0.875 turns=6 stop=user_closed
+17:26:33    INFO rollout start: id=1330f73bba814d57a583b90d578285b5 task=18 harness=null runtime=subprocess
+17:26:40    INFO rollout done: id=3adb7ec059b14bf285c652c3265bfd68 task=15 reward=0.688 turns=6 stop=user_closed
+17:26:40    INFO rollout start: id=271d8e064ef64d768fc147e04d97c84a task=19 harness=null runtime=subprocess
+17:27:01    INFO rollout done: id=704bc85456234c3aadbb0cd34905f1bb task=16 reward=0.970 turns=6 stop=user_closed
+17:27:06    INFO rollout done: id=64be861b7a6f46049713d24b32986f14 task=17 reward=0.720 turns=6 stop=user_closed
+17:27:12    INFO rollout done: id=271d8e064ef64d768fc147e04d97c84a task=19 reward=0.870 turns=6 stop=user_closed
+17:27:16    INFO rollout done: id=1330f73bba814d57a583b90d578285b5 task=18 reward=0.855 turns=6 stop=user_closed
+17:27:16    INFO EnvServer down: taskset=clinical-trial-reasoning
+17:27:16    INFO interception down: url=http://127.0.0.1:61285
+17:27:17    INFO EnvServerPool down

@@ -1,0 +1,679 @@
+16:07:40    INFO resuming results/spec/deepseek-chat/pilot_perturbed: 335 task(s), 335 rollout(s) owed
+16:07:40    INFO results: results/spec/deepseek-chat/pilot_perturbed
+16:07:41    INFO EnvServerPool up: address=tcp://127.0.0.1:58517 workers=1/inf multiplex=128 elastic=True
+16:07:43    INFO EnvServer up: taskset=clinical-trial-reasoning address=ipc:///tmp/vf-pool-ks9y06dn/0
+16:07:43    INFO interception up: url=http://127.0.0.1:58519
+16:07:43    INFO interception pool: 1 server(s), multiplex=32
+16:07:44    INFO rollout start: id=a08808c55d8d4713bca7eea86c49ffb3 task=79 harness=null runtime=subprocess
+16:07:44    INFO rollout start: id=728be6cc9afb45f99def19375e187034 task=80 harness=null runtime=subprocess
+16:07:44    INFO rollout start: id=dc216fb0eb104e72b98eb4d9c1b0fc17 task=81 harness=null runtime=subprocess
+16:07:44    INFO rollout start: id=0e10ac69cb2747b28eb312a96f09a015 task=82 harness=null runtime=subprocess
+16:08:20    INFO rollout done: id=728be6cc9afb45f99def19375e187034 task=80 reward=0.450 turns=6 stop=user_closed
+16:08:20    INFO rollout start: id=13989b09e9dc49a2b2f6998c016a8f76 task=83 harness=null runtime=subprocess
+16:08:24    INFO rollout done: id=0e10ac69cb2747b28eb312a96f09a015 task=82 reward=0.870 turns=6 stop=user_closed
+16:08:24    INFO rollout start: id=9a1a436a80044b1a9ea83ca6f4780f88 task=84 harness=null runtime=subprocess
+16:08:26    INFO rollout done: id=a08808c55d8d4713bca7eea86c49ffb3 task=79 reward=0.570 turns=6 stop=user_closed
+16:08:26    INFO rollout start: id=2e18d24f500c4404b382c325fa468d29 task=85 harness=null runtime=subprocess
+16:08:30    INFO rollout done: id=dc216fb0eb104e72b98eb4d9c1b0fc17 task=81 reward=0.875 turns=6 stop=user_closed
+16:08:30    INFO rollout start: id=02f320000e1f43918858a0f09d63a01b task=86 harness=null runtime=subprocess
+16:08:58    INFO rollout done: id=2e18d24f500c4404b382c325fa468d29 task=85 reward=0.870 turns=6 stop=user_closed
+16:08:58    INFO rollout start: id=b5702431a69c4d8dbc4c435da84f1ace task=87 harness=null runtime=subprocess
+16:08:59    INFO rollout done: id=9a1a436a80044b1a9ea83ca6f4780f88 task=84 reward=0.905 turns=6 stop=user_closed
+16:08:59    INFO rollout start: id=f892b12cbb2e4ea3af31e93235814e55 task=88 harness=null runtime=subprocess
+16:09:03    INFO rollout done: id=02f320000e1f43918858a0f09d63a01b task=86 reward=0.850 turns=6 stop=user_closed
+16:09:03    INFO rollout start: id=119265d843344b62955326fa2a2a60d7 task=89 harness=null runtime=subprocess
+16:09:04    INFO rollout done: id=13989b09e9dc49a2b2f6998c016a8f76 task=83 reward=0.825 turns=6 stop=user_closed
+16:09:04    INFO rollout start: id=258d8477ba0d4ca5aca62fed1758b660 task=90 harness=null runtime=subprocess
+16:09:32    INFO rollout done: id=f892b12cbb2e4ea3af31e93235814e55 task=88 reward=0.745 turns=6 stop=user_closed
+16:09:32    INFO rollout start: id=bc7abc2ac28f460eb673b0bb5dd392ce task=91 harness=null runtime=subprocess
+16:09:34    INFO rollout done: id=b5702431a69c4d8dbc4c435da84f1ace task=87 reward=0.925 turns=6 stop=user_closed
+16:09:34    INFO rollout start: id=bf593bdb99564742a94fd140f17dd906 task=92 harness=null runtime=subprocess
+16:09:37    INFO rollout done: id=258d8477ba0d4ca5aca62fed1758b660 task=90 reward=0.455 turns=6 stop=user_closed
+16:09:37    INFO rollout start: id=f8a9fe26084b48af82bb9c4d1f7871c2 task=93 harness=null runtime=subprocess
+16:09:40    INFO rollout done: id=119265d843344b62955326fa2a2a60d7 task=89 reward=0.675 turns=6 stop=user_closed
+16:09:40    INFO rollout start: id=7e1fcda8bf8a480cb8d85073ffcf117d task=94 harness=null runtime=subprocess
+16:10:07    INFO rollout done: id=bf593bdb99564742a94fd140f17dd906 task=92 reward=0.470 turns=6 stop=user_closed
+16:10:07    INFO rollout start: id=b1a09fdbcceb41b7b159bc91992ece65 task=95 harness=null runtime=subprocess
+16:10:08    INFO rollout done: id=bc7abc2ac28f460eb673b0bb5dd392ce task=91 reward=0.470 turns=6 stop=user_closed
+16:10:08    INFO rollout start: id=722da94321634a48aaad36abf67e4dc1 task=96 harness=null runtime=subprocess
+16:10:14    INFO rollout done: id=7e1fcda8bf8a480cb8d85073ffcf117d task=94 reward=0.870 turns=6 stop=user_closed
+16:10:14    INFO rollout start: id=b50366ef7953433693671bda79381b2b task=97 harness=null runtime=subprocess
+16:10:16    INFO rollout done: id=f8a9fe26084b48af82bb9c4d1f7871c2 task=93 reward=0.833 turns=6 stop=user_closed
+16:10:16    INFO rollout start: id=9e075d723f1148869c6068ea74579898 task=98 harness=null runtime=subprocess
+16:10:42    INFO rollout done: id=b1a09fdbcceb41b7b159bc91992ece65 task=95 reward=0.920 turns=6 stop=user_closed
+16:10:42    INFO rollout start: id=2125d06909be4330bfdbfd1331e4e1e6 task=99 harness=null runtime=subprocess
+16:10:50    INFO rollout done: id=9e075d723f1148869c6068ea74579898 task=98 reward=0.870 turns=6 stop=user_closed
+16:10:50    INFO rollout start: id=3b54568d144c4d5c878ca9e63dd892ce task=100 harness=null runtime=subprocess
+16:10:54    INFO rollout done: id=722da94321634a48aaad36abf67e4dc1 task=96 reward=0.870 turns=6 stop=user_closed
+16:10:54    INFO rollout start: id=185389233b23477392094bcaf07547c6 task=101 harness=null runtime=subprocess
+16:10:54    INFO rollout done: id=b50366ef7953433693671bda79381b2b task=97 reward=0.955 turns=6 stop=user_closed
+16:10:54    INFO rollout start: id=c60ed9fa8dd2416f90f844c08cb0bba6 task=102 harness=null runtime=subprocess
+16:11:15    INFO rollout done: id=2125d06909be4330bfdbfd1331e4e1e6 task=99 reward=0.570 turns=6 stop=user_closed
+16:11:15    INFO rollout start: id=5c7a4eeb5b3642ff9fb53871d5c70117 task=103 harness=null runtime=subprocess
+16:11:23    INFO rollout done: id=3b54568d144c4d5c878ca9e63dd892ce task=100 reward=0.318 turns=6 stop=user_closed
+16:11:23    INFO rollout start: id=53b18969db2e423abba0dbe8b19c81cc task=104 harness=null runtime=subprocess
+16:11:35    INFO rollout done: id=185389233b23477392094bcaf07547c6 task=101 reward=0.875 turns=6 stop=user_closed
+16:11:35    INFO rollout start: id=e37deaef0ffe41bfbb23b89f3dd355ff task=105 harness=null runtime=subprocess
+16:11:36    INFO rollout done: id=c60ed9fa8dd2416f90f844c08cb0bba6 task=102 reward=0.825 turns=6 stop=user_closed
+16:11:36    INFO rollout start: id=8112d33102984ca6ae01749fa4284b10 task=106 harness=null runtime=subprocess
+16:11:53    INFO rollout done: id=5c7a4eeb5b3642ff9fb53871d5c70117 task=103 reward=0.725 turns=6 stop=user_closed
+16:11:53    INFO rollout start: id=41693a7e8ee641f2a8aeb9e3a9bd4bd5 task=107 harness=null runtime=subprocess
+16:12:07    INFO rollout done: id=53b18969db2e423abba0dbe8b19c81cc task=104 reward=0.955 turns=6 stop=user_closed
+16:12:07    INFO rollout start: id=d09202b419314468a5a65e9fea7faf88 task=108 harness=null runtime=subprocess
+16:12:11    INFO rollout done: id=8112d33102984ca6ae01749fa4284b10 task=106 reward=0.855 turns=6 stop=user_closed
+16:12:11    INFO rollout start: id=7c1b139aa8f643ba923b628a8a2d3bd1 task=109 harness=null runtime=subprocess
+16:12:11    INFO rollout done: id=e37deaef0ffe41bfbb23b89f3dd355ff task=105 reward=0.870 turns=6 stop=user_closed
+16:12:11    INFO rollout start: id=1f9336e80198407cac442591578cd15b task=110 harness=null runtime=subprocess
+16:12:34    INFO rollout done: id=41693a7e8ee641f2a8aeb9e3a9bd4bd5 task=107 reward=0.925 turns=6 stop=user_closed
+16:12:34    INFO rollout start: id=6fed02ae82a049428bc31d130ee60920 task=111 harness=null runtime=subprocess
+16:12:43    INFO rollout done: id=1f9336e80198407cac442591578cd15b task=110 reward=0.520 turns=6 stop=user_closed
+16:12:43    INFO rollout start: id=3d68f896f5114f4981db14345169f383 task=112 harness=null runtime=subprocess
+16:12:46    INFO rollout done: id=d09202b419314468a5a65e9fea7faf88 task=108 reward=0.775 turns=6 stop=user_closed
+16:12:46    INFO rollout start: id=2f2f723317ff4c1ea5b551cd78a69a5e task=113 harness=null runtime=subprocess
+16:12:47    INFO rollout done: id=7c1b139aa8f643ba923b628a8a2d3bd1 task=109 reward=0.870 turns=6 stop=user_closed
+16:12:47    INFO rollout start: id=71aad94898d34ddfbbe32072db0a6633 task=114 harness=null runtime=subprocess
+16:13:10    INFO rollout done: id=6fed02ae82a049428bc31d130ee60920 task=111 reward=0.470 turns=6 stop=user_closed
+16:13:10    INFO rollout start: id=56a5b3b9f7b34a178ad202df7f327d08 task=115 harness=null runtime=subprocess
+16:13:14    INFO rollout done: id=2f2f723317ff4c1ea5b551cd78a69a5e task=113 reward=0.870 turns=6 stop=user_closed
+16:13:14    INFO rollout start: id=e73785c1bc454d82a853a188a734f3a2 task=116 harness=null runtime=subprocess
+16:13:20    INFO rollout done: id=3d68f896f5114f4981db14345169f383 task=112 reward=0.455 turns=6 stop=user_closed
+16:13:20    INFO rollout start: id=733afe78487846f5b4953853d04516ae task=117 harness=null runtime=subprocess
+16:13:21    INFO rollout done: id=71aad94898d34ddfbbe32072db0a6633 task=114 reward=0.870 turns=6 stop=user_closed
+16:13:21    INFO rollout start: id=d1d1c913287d47daa4f1423e4ab8328f task=118 harness=null runtime=subprocess
+16:13:47    INFO rollout done: id=56a5b3b9f7b34a178ad202df7f327d08 task=115 reward=0.900 turns=6 stop=user_closed
+16:13:47    INFO rollout start: id=f7ff1336327a40089a1aef686c65caec task=119 harness=null runtime=subprocess
+16:13:50    INFO rollout done: id=e73785c1bc454d82a853a188a734f3a2 task=116 reward=0.833 turns=6 stop=user_closed
+16:13:50    INFO rollout start: id=3a42b9922ca94fe087b47f4810a8bc8b task=120 harness=null runtime=subprocess
+16:13:56    INFO rollout done: id=733afe78487846f5b4953853d04516ae task=117 reward=0.855 turns=6 stop=user_closed
+16:13:56    INFO rollout start: id=871b398c6d2445869593101ef2209d00 task=121 harness=null runtime=subprocess
+16:14:01    INFO rollout done: id=d1d1c913287d47daa4f1423e4ab8328f task=118 reward=0.870 turns=6 stop=user_closed
+16:14:01    INFO rollout start: id=68443a18c0754c898d9ccb1c36e7cd1c task=122 harness=null runtime=subprocess
+16:14:24    INFO rollout done: id=3a42b9922ca94fe087b47f4810a8bc8b task=120 reward=0.350 turns=6 stop=user_closed
+16:14:24    INFO rollout start: id=e71aeead6157493e845d372cb44173ce task=123 harness=null runtime=subprocess
+16:14:26    INFO rollout done: id=f7ff1336327a40089a1aef686c65caec task=119 reward=0.525 turns=6 stop=user_closed
+16:14:26    INFO rollout start: id=a267b30701044e35b9e52a0b86707162 task=124 harness=null runtime=subprocess
+16:14:31    INFO rollout done: id=871b398c6d2445869593101ef2209d00 task=121 reward=0.820 turns=6 stop=user_closed
+16:14:31    INFO rollout start: id=3f7fe3163f1f4f8b8556623600a306ab task=125 harness=null runtime=subprocess
+16:14:35    INFO rollout done: id=68443a18c0754c898d9ccb1c36e7cd1c task=122 reward=0.925 turns=6 stop=user_closed
+16:14:35    INFO rollout start: id=e70fad426b48491dba79f02c42935658 task=126 harness=null runtime=subprocess
+16:15:08    INFO rollout done: id=e70fad426b48491dba79f02c42935658 task=126 reward=0.855 turns=6 stop=user_closed
+16:15:08    INFO rollout start: id=fef9c5420e7a4bb99b3a45dfafb835b5 task=127 harness=null runtime=subprocess
+16:15:08    INFO rollout done: id=3f7fe3163f1f4f8b8556623600a306ab task=125 reward=0.720 turns=6 stop=user_closed
+16:15:08    INFO rollout start: id=7da34ea831ba4851b7a3a58b84b7aa01 task=128 harness=null runtime=subprocess
+16:15:08    INFO rollout done: id=a267b30701044e35b9e52a0b86707162 task=124 reward=0.555 turns=6 stop=user_closed
+16:15:08    INFO rollout start: id=f1c5e5b5758b4ea7bd65dfb3c98b10bb task=129 harness=null runtime=subprocess
+16:15:10    INFO rollout done: id=e71aeead6157493e845d372cb44173ce task=123 reward=0.825 turns=6 stop=user_closed
+16:15:10    INFO rollout start: id=44ac40a4105d4313ae06e72599195fe4 task=130 harness=null runtime=subprocess
+16:15:43    INFO rollout done: id=f1c5e5b5758b4ea7bd65dfb3c98b10bb task=129 reward=0.870 turns=6 stop=user_closed
+16:15:43    INFO rollout start: id=0d9c205404194d18a2150a483ead15e2 task=131 harness=null runtime=subprocess
+16:15:44    INFO rollout done: id=fef9c5420e7a4bb99b3a45dfafb835b5 task=127 reward=0.970 turns=6 stop=user_closed
+16:15:44    INFO rollout start: id=f8407d46b1a6431aac0f2bd46e629934 task=132 harness=null runtime=subprocess
+16:15:44    INFO rollout done: id=44ac40a4105d4313ae06e72599195fe4 task=130 reward=0.950 turns=6 stop=user_closed
+16:15:44    INFO rollout start: id=5da8122b1ddd4a03b8424b15b0bed4d3 task=133 harness=null runtime=subprocess
+16:15:45    INFO rollout done: id=7da34ea831ba4851b7a3a58b84b7aa01 task=128 reward=0.870 turns=6 stop=user_closed
+16:15:45    INFO rollout start: id=ddbdae41b83544c0a82fc2efefa70346 task=134 harness=null runtime=subprocess
+16:16:16    INFO rollout done: id=f8407d46b1a6431aac0f2bd46e629934 task=132 reward=0.500 turns=6 stop=user_closed
+16:16:16    INFO rollout start: id=4a8b1469e2184c2092d51fb7e74e7179 task=135 harness=null runtime=subprocess
+16:16:18    INFO rollout done: id=0d9c205404194d18a2150a483ead15e2 task=131 reward=0.420 turns=6 stop=user_closed
+16:16:18    INFO rollout start: id=6269b7cf2ffd42c8a754d523645b2898 task=136 harness=null runtime=subprocess
+16:16:20    INFO rollout done: id=ddbdae41b83544c0a82fc2efefa70346 task=134 reward=0.825 turns=6 stop=user_closed
+16:16:20    INFO rollout start: id=26615c519a254f6e95b255deb51130bd task=137 harness=null runtime=subprocess
+16:16:23    INFO rollout done: id=5da8122b1ddd4a03b8424b15b0bed4d3 task=133 reward=0.883 turns=6 stop=user_closed
+16:16:23    INFO rollout start: id=665f5e24560041948a1a5a7e1dbcf7f4 task=138 harness=null runtime=subprocess
+16:16:52    INFO rollout done: id=4a8b1469e2184c2092d51fb7e74e7179 task=135 reward=0.932 turns=6 stop=user_closed
+16:16:52    INFO rollout start: id=9fc1dfcd13a749b794ed346223914725 task=139 harness=null runtime=subprocess
+16:16:57    INFO rollout done: id=665f5e24560041948a1a5a7e1dbcf7f4 task=138 reward=0.820 turns=6 stop=user_closed
+16:16:57    INFO rollout start: id=bec7a2acc8384227b241656d6ffc55c8 task=140 harness=null runtime=subprocess
+16:16:58    INFO rollout done: id=26615c519a254f6e95b255deb51130bd task=137 reward=0.818 turns=6 stop=user_closed
+16:16:58    INFO rollout start: id=42890a9bf0ea41e6b7a4245a73548e4a task=141 harness=null runtime=subprocess
+16:16:59    INFO rollout done: id=6269b7cf2ffd42c8a754d523645b2898 task=136 reward=0.775 turns=6 stop=user_closed
+16:16:59    INFO rollout start: id=dae172561dcf4a02803162d779f57dbe task=142 harness=null runtime=subprocess
+16:17:28    INFO rollout done: id=9fc1dfcd13a749b794ed346223914725 task=139 reward=0.932 turns=6 stop=user_closed
+16:17:28    INFO rollout start: id=02a54823e57141afa0d55b86a2ca7e63 task=143 harness=null runtime=subprocess
+16:17:31    INFO rollout done: id=bec7a2acc8384227b241656d6ffc55c8 task=140 reward=0.455 turns=6 stop=user_closed
+16:17:31    INFO rollout start: id=c3e7ee287067414b8c5b451fbe29d73e task=144 harness=null runtime=subprocess
+16:17:34    INFO rollout done: id=dae172561dcf4a02803162d779f57dbe task=142 reward=0.870 turns=6 stop=user_closed
+16:17:34    INFO rollout start: id=1d3583be1f884c559c31d7b7719120ae task=145 harness=null runtime=subprocess
+16:17:36    INFO rollout done: id=42890a9bf0ea41e6b7a4245a73548e4a task=141 reward=0.920 turns=6 stop=user_closed
+16:17:36    INFO rollout start: id=f065bdce22fe4e1e9cf9b8a8c5d1f000 task=146 harness=null runtime=subprocess
+16:18:07    INFO rollout done: id=c3e7ee287067414b8c5b451fbe29d73e task=144 reward=0.955 turns=6 stop=user_closed
+16:18:07    INFO rollout start: id=1d440d08a98b438990763e208708ec3a task=147 harness=null runtime=subprocess
+16:18:09    INFO rollout done: id=1d3583be1f884c559c31d7b7719120ae task=145 reward=0.870 turns=6 stop=user_closed
+16:18:09    INFO rollout start: id=3eb12d405f08438da3c74108638ea645 task=148 harness=null runtime=subprocess
+16:18:12    INFO rollout done: id=02a54823e57141afa0d55b86a2ca7e63 task=143 reward=0.825 turns=6 stop=user_closed
+16:18:12    INFO rollout start: id=216fdf8da7524754ba9df5806b33abaf task=149 harness=null runtime=subprocess
+16:18:14    INFO rollout done: id=f065bdce22fe4e1e9cf9b8a8c5d1f000 task=146 reward=0.900 turns=6 stop=user_closed
+16:18:14    INFO rollout start: id=d43c312975a844b0b33df1e327facd55 task=150 harness=null runtime=subprocess
+16:18:41    INFO rollout done: id=1d440d08a98b438990763e208708ec3a task=147 reward=0.920 turns=6 stop=user_closed
+16:18:41    INFO rollout start: id=2c928afeb01c47b49ecbbeffa894e07a task=151 harness=null runtime=subprocess
+16:18:45    INFO rollout done: id=216fdf8da7524754ba9df5806b33abaf task=149 reward=0.725 turns=6 stop=user_closed
+16:18:45    INFO rollout start: id=3ef907087fe142eaae37bcb954dd12a6 task=152 harness=null runtime=subprocess
+16:18:47    INFO rollout done: id=3eb12d405f08438da3c74108638ea645 task=148 reward=0.820 turns=6 stop=user_closed
+16:18:47    INFO rollout start: id=454c41f463ca4a5a802aff524c41c097 task=153 harness=null runtime=subprocess
+16:18:49    INFO rollout done: id=d43c312975a844b0b33df1e327facd55 task=150 reward=0.555 turns=6 stop=user_closed
+16:18:49    INFO rollout start: id=bbaca352c1b1459a9c35d99ebde7690c task=154 harness=null runtime=subprocess
+16:19:20    INFO rollout done: id=454c41f463ca4a5a802aff524c41c097 task=153 reward=0.920 turns=6 stop=user_closed
+16:19:20    INFO rollout start: id=bc5847a440ad43e481525c363c62fcc4 task=155 harness=null runtime=subprocess
+16:19:21    INFO rollout done: id=3ef907087fe142eaae37bcb954dd12a6 task=152 reward=0.470 turns=6 stop=user_closed
+16:19:21    INFO rollout start: id=780e2991c69c41de8b908999ecd3da32 task=156 harness=null runtime=subprocess
+16:19:21    INFO rollout done: id=bbaca352c1b1459a9c35d99ebde7690c task=154 reward=0.820 turns=6 stop=user_closed
+16:19:21    INFO rollout start: id=d8d24a517dea4c12bfbe858a532b5df0 task=157 harness=null runtime=subprocess
+16:19:22    INFO rollout done: id=2c928afeb01c47b49ecbbeffa894e07a task=151 reward=0.470 turns=6 stop=user_closed
+16:19:22    INFO rollout start: id=3d859267c4c548c68a0c2e164d5f86c7 task=158 harness=null runtime=subprocess
+16:19:52    INFO rollout done: id=3d859267c4c548c68a0c2e164d5f86c7 task=158 reward=0.870 turns=6 stop=user_closed
+16:19:52    INFO rollout start: id=613831d0ab034c5e986e5f7e0b880cb8 task=159 harness=null runtime=subprocess
+16:19:55    INFO rollout done: id=d8d24a517dea4c12bfbe858a532b5df0 task=157 reward=0.825 turns=6 stop=user_closed
+16:19:55    INFO rollout start: id=1fb09e63af4141f6a30f3fd8727f62eb task=160 harness=null runtime=subprocess
+16:19:56    INFO rollout done: id=bc5847a440ad43e481525c363c62fcc4 task=155 reward=0.900 turns=6 stop=user_closed
+16:19:56    INFO rollout start: id=767a582efd3646488a82769f1374b494 task=161 harness=null runtime=subprocess
+16:20:00    INFO rollout done: id=780e2991c69c41de8b908999ecd3da32 task=156 reward=0.770 turns=6 stop=user_closed
+16:20:00    INFO rollout start: id=82b5b7ad7b32482b903427823604d34a task=162 harness=null runtime=subprocess
+16:20:26    INFO rollout done: id=613831d0ab034c5e986e5f7e0b880cb8 task=159 reward=0.525 turns=6 stop=user_closed
+16:20:26    INFO rollout start: id=efe48a20387c4449af0c539a755292eb task=163 harness=null runtime=subprocess
+16:20:30    INFO rollout done: id=767a582efd3646488a82769f1374b494 task=161 reward=0.970 turns=6 stop=user_closed
+16:20:30    INFO rollout start: id=f991d292308a486aa0a11fc0e355eecf task=164 harness=null runtime=subprocess
+16:20:33    INFO rollout done: id=1fb09e63af4141f6a30f3fd8727f62eb task=160 reward=0.355 turns=6 stop=user_closed
+16:20:33    INFO rollout start: id=fa0eb1d3067b42878d3db1bbfe83db88 task=165 harness=null runtime=subprocess
+16:20:46    INFO rollout done: id=82b5b7ad7b32482b903427823604d34a task=162 reward=0.888 turns=6 stop=user_closed
+16:20:46    INFO rollout start: id=6682be046da44f3e92a2c8322e745f60 task=166 harness=null runtime=subprocess
+16:21:02    INFO rollout done: id=efe48a20387c4449af0c539a755292eb task=163 reward=0.725 turns=6 stop=user_closed
+16:21:02    INFO rollout start: id=dbf687824f49481bbb145567a8040363 task=167 harness=null runtime=subprocess
+16:21:04    INFO rollout done: id=f991d292308a486aa0a11fc0e355eecf task=164 reward=0.763 turns=6 stop=user_closed
+16:21:04    INFO rollout start: id=1ada089008fe4131bf2df80510fbdfc6 task=168 harness=null runtime=subprocess
+16:21:05    INFO rollout done: id=fa0eb1d3067b42878d3db1bbfe83db88 task=165 reward=0.770 turns=6 stop=user_closed
+16:21:05    INFO rollout start: id=b7055f6b7fdb4572a384e7e2c56f862f task=169 harness=null runtime=subprocess
+16:21:20    INFO rollout done: id=6682be046da44f3e92a2c8322e745f60 task=166 reward=0.900 turns=6 stop=user_closed
+16:21:20    INFO rollout start: id=fccba5089c11499cb80c6c6848be03de task=170 harness=null runtime=subprocess
+16:21:35    INFO rollout done: id=dbf687824f49481bbb145567a8040363 task=167 reward=0.970 turns=6 stop=user_closed
+16:21:35    INFO rollout start: id=6df7002ee5c743349a8868b5c586465c task=171 harness=null runtime=subprocess
+16:21:42    INFO rollout done: id=b7055f6b7fdb4572a384e7e2c56f862f task=169 reward=0.750 turns=6 stop=user_closed
+16:21:42    INFO rollout start: id=cea8f14764f24738a31683690a139c2d task=172 harness=null runtime=subprocess
+16:21:52    INFO rollout done: id=1ada089008fe4131bf2df80510fbdfc6 task=168 reward=0.920 turns=6 stop=user_closed
+16:21:52    INFO rollout start: id=5844c968dec34374b2fbbc5934de4bd5 task=173 harness=null runtime=subprocess
+16:21:52    INFO rollout done: id=fccba5089c11499cb80c6c6848be03de task=170 reward=0.600 turns=6 stop=user_closed
+16:21:52    INFO rollout start: id=f6c64563361848e3ae3111862ea578ac task=174 harness=null runtime=subprocess
+16:22:15    INFO rollout done: id=cea8f14764f24738a31683690a139c2d task=172 reward=0.500 turns=6 stop=user_closed
+16:22:15    INFO rollout start: id=28623fa5775f42118380e15d04cc1059 task=175 harness=null runtime=subprocess
+16:22:15    INFO rollout done: id=6df7002ee5c743349a8868b5c586465c task=171 reward=0.425 turns=6 stop=user_closed
+16:22:15    INFO rollout start: id=fd17009ad52e4dd19a4161c2a0903e3b task=176 harness=null runtime=subprocess
+16:22:23    INFO rollout done: id=f6c64563361848e3ae3111862ea578ac task=174 reward=0.770 turns=6 stop=user_closed
+16:22:23    INFO rollout start: id=7bde16a76b14480282ecad93f7e0b2ff task=177 harness=null runtime=subprocess
+16:22:29    INFO rollout done: id=5844c968dec34374b2fbbc5934de4bd5 task=173 reward=0.870 turns=6 stop=user_closed
+16:22:29    INFO rollout start: id=8c2c52f965d249d1aab6fabbdc7ca805 task=178 harness=null runtime=subprocess
+16:22:48    INFO rollout done: id=fd17009ad52e4dd19a4161c2a0903e3b task=176 reward=0.870 turns=6 stop=user_closed
+16:22:48    INFO rollout start: id=5befc3cac27e4504be67bea14d977666 task=179 harness=null runtime=subprocess
+16:22:54    INFO rollout done: id=28623fa5775f42118380e15d04cc1059 task=175 reward=0.870 turns=6 stop=user_closed
+16:22:54    INFO rollout start: id=f63b24edd9534b29b90306212b559855 task=180 harness=null runtime=subprocess
+16:23:01    INFO rollout done: id=7bde16a76b14480282ecad93f7e0b2ff task=177 reward=0.818 turns=6 stop=user_closed
+16:23:01    INFO rollout start: id=5c68edcf9aa8438ab7ce90418c8d6a25 task=181 harness=null runtime=subprocess
+16:23:01    INFO rollout done: id=8c2c52f965d249d1aab6fabbdc7ca805 task=178 reward=0.920 turns=6 stop=user_closed
+16:23:01    INFO rollout start: id=76a73cece6ff4ee38e5d5048a5d8dd2d task=182 harness=null runtime=subprocess
+16:23:25    INFO rollout done: id=5befc3cac27e4504be67bea14d977666 task=179 reward=0.970 turns=6 stop=user_closed
+16:23:25    INFO rollout start: id=e8a490ea46f642029cfe60a1aacbfe21 task=183 harness=null runtime=subprocess
+16:23:25    INFO rollout done: id=f63b24edd9534b29b90306212b559855 task=180 reward=0.463 turns=6 stop=user_closed
+16:23:25    INFO rollout start: id=8d31b588d458438b8f483212b3906750 task=184 harness=null runtime=subprocess
+16:23:34    INFO rollout done: id=76a73cece6ff4ee38e5d5048a5d8dd2d task=182 reward=0.920 turns=6 stop=user_closed
+16:23:34    INFO rollout start: id=8615584d15a64265ac261411ca4af99d task=185 harness=null runtime=subprocess
+16:23:37    INFO rollout done: id=5c68edcf9aa8438ab7ce90418c8d6a25 task=181 reward=0.970 turns=6 stop=user_closed
+16:23:37    INFO rollout start: id=3f8a60f5b8ae4c2ca011c6c4d7a6a601 task=186 harness=null runtime=subprocess
+16:23:58    INFO rollout done: id=e8a490ea46f642029cfe60a1aacbfe21 task=183 reward=0.720 turns=6 stop=user_closed
+16:23:58    INFO rollout start: id=7d41cc44905c460a89100f4d17962159 task=187 harness=null runtime=subprocess
+16:24:01    INFO rollout done: id=8d31b588d458438b8f483212b3906750 task=184 reward=0.955 turns=6 stop=user_closed
+16:24:01    INFO rollout start: id=4b9a5a013bdb417bbfb58c601e6855d3 task=188 harness=null runtime=subprocess
+16:24:08    INFO rollout done: id=3f8a60f5b8ae4c2ca011c6c4d7a6a601 task=186 reward=0.805 turns=6 stop=user_closed
+16:24:08    INFO rollout start: id=aec6482ab21545cdb6bcd39caa9569e5 task=189 harness=null runtime=subprocess
+16:24:10    INFO rollout done: id=8615584d15a64265ac261411ca4af99d task=185 reward=0.770 turns=6 stop=user_closed
+16:24:10    INFO rollout start: id=5ea1c7139fd5455dab7b9ae2f17c9806 task=190 harness=null runtime=subprocess
+16:24:34    INFO rollout done: id=7d41cc44905c460a89100f4d17962159 task=187 reward=0.970 turns=6 stop=user_closed
+16:24:34    INFO rollout start: id=c13886deed284592b326342c8f79e75b task=191 harness=null runtime=subprocess
+16:24:37    INFO rollout done: id=4b9a5a013bdb417bbfb58c601e6855d3 task=188 reward=0.838 turns=6 stop=user_closed
+16:24:37    INFO rollout start: id=9acdd109d3134c94975db7a05cfc96b7 task=192 harness=null runtime=subprocess
+16:24:39    INFO rollout done: id=aec6482ab21545cdb6bcd39caa9569e5 task=189 reward=0.770 turns=6 stop=user_closed
+16:24:39    INFO rollout start: id=1e50e14ffb79411c94d530d2cef1ebd4 task=193 harness=null runtime=subprocess
+16:24:43    INFO rollout done: id=5ea1c7139fd5455dab7b9ae2f17c9806 task=190 reward=0.362 turns=6 stop=user_closed
+16:24:43    INFO rollout start: id=99540de5dbf14d7095e6d7a849563c6b task=194 harness=null runtime=subprocess
+16:25:08    INFO rollout done: id=9acdd109d3134c94975db7a05cfc96b7 task=192 reward=0.500 turns=6 stop=user_closed
+16:25:08    INFO rollout start: id=79fd71079a314f2aa2d5f267ad0ddfe9 task=195 harness=null runtime=subprocess
+16:25:11    INFO rollout done: id=c13886deed284592b326342c8f79e75b task=191 reward=0.470 turns=6 stop=user_closed
+16:25:11    INFO rollout start: id=eaa4adbeb964439cbac537b9205ea2a3 task=196 harness=null runtime=subprocess
+16:25:12    INFO rollout done: id=1e50e14ffb79411c94d530d2cef1ebd4 task=193 reward=0.825 turns=6 stop=user_closed
+16:25:12    INFO rollout start: id=f4174f2edd864c338c6089a4e9982f5b task=197 harness=null runtime=subprocess
+16:25:17    INFO rollout done: id=99540de5dbf14d7095e6d7a849563c6b task=194 reward=0.870 turns=6 stop=user_closed
+16:25:17    INFO rollout start: id=eb4b9a4524ac4d788b68c16518e48e2e task=198 harness=null runtime=subprocess
+16:25:45    INFO rollout done: id=eaa4adbeb964439cbac537b9205ea2a3 task=196 reward=0.870 turns=6 stop=user_closed
+16:25:45    INFO rollout start: id=1f5b4793126842de9f7c4ff3f8a89208 task=199 harness=null runtime=subprocess
+16:25:49    INFO rollout done: id=f4174f2edd864c338c6089a4e9982f5b task=197 reward=0.805 turns=6 stop=user_closed
+16:25:49    INFO rollout start: id=734bc1a23dfb4e64ada654c382341f92 task=200 harness=null runtime=subprocess
+16:25:49    INFO rollout done: id=eb4b9a4524ac4d788b68c16518e48e2e task=198 reward=0.870 turns=6 stop=user_closed
+16:25:49    INFO rollout start: id=7cf5260830b742618c1dbd07c00c2cc2 task=201 harness=null runtime=subprocess
+16:25:50    INFO rollout done: id=79fd71079a314f2aa2d5f267ad0ddfe9 task=195 reward=0.955 turns=6 stop=user_closed
+16:25:50    INFO rollout start: id=6a1da0796ebb4e97995b095117b6f536 task=202 harness=null runtime=subprocess
+16:26:20    INFO rollout done: id=1f5b4793126842de9f7c4ff3f8a89208 task=199 reward=0.400 turns=6 stop=user_closed
+16:26:20    INFO rollout start: id=d4d3684eedc240a3bbef5a88e03d8bef task=203 harness=null runtime=subprocess
+16:26:20    INFO rollout done: id=734bc1a23dfb4e64ada654c382341f92 task=200 reward=0.820 turns=6 stop=user_closed
+16:26:20    INFO rollout start: id=6cbc97e797384edd9ec341eee1366562 task=204 harness=null runtime=subprocess
+16:26:24    INFO rollout done: id=6a1da0796ebb4e97995b095117b6f536 task=202 reward=0.763 turns=6 stop=user_closed
+16:26:24    INFO rollout start: id=cf757bc50a614c6aa8aa281acd83b338 task=205 harness=null runtime=subprocess
+16:26:25    INFO rollout done: id=7cf5260830b742618c1dbd07c00c2cc2 task=201 reward=0.920 turns=6 stop=user_closed
+16:26:25    INFO rollout start: id=d778f3ba0b934c78babec72beb819a93 task=206 harness=null runtime=subprocess
+16:26:54    INFO rollout done: id=d4d3684eedc240a3bbef5a88e03d8bef task=203 reward=0.770 turns=6 stop=user_closed
+16:26:54    INFO rollout start: id=954246535d6f41eeb75d73ffad146d80 task=207 harness=null runtime=subprocess
+16:26:56    INFO rollout done: id=6cbc97e797384edd9ec341eee1366562 task=204 reward=0.855 turns=6 stop=user_closed
+16:26:56    INFO rollout start: id=1d5097a5e771442eaf1446025bd99ce5 task=208 harness=null runtime=subprocess
+16:26:58    INFO rollout done: id=cf757bc50a614c6aa8aa281acd83b338 task=205 reward=0.925 turns=6 stop=user_closed
+16:26:58    INFO rollout start: id=d5e45555e0a44cc8b37006b6d4b21a01 task=209 harness=null runtime=subprocess
+16:27:01    INFO rollout done: id=d778f3ba0b934c78babec72beb819a93 task=206 reward=0.820 turns=6 stop=user_closed
+16:27:01    INFO rollout start: id=7e6e8123148b4f1fb891340b97a60e57 task=210 harness=null runtime=subprocess
+16:27:29    INFO rollout done: id=954246535d6f41eeb75d73ffad146d80 task=207 reward=0.870 turns=6 stop=user_closed
+16:27:29    INFO rollout start: id=c36e3c805a7a4bcda88407103ca379b7 task=211 harness=null runtime=subprocess
+16:27:31    INFO rollout done: id=1d5097a5e771442eaf1446025bd99ce5 task=208 reward=0.900 turns=6 stop=user_closed
+16:27:31    INFO rollout start: id=1a6b5ef8c7424d7ea876dedd5cdd1b39 task=212 harness=null runtime=subprocess
+16:27:38    INFO rollout done: id=d5e45555e0a44cc8b37006b6d4b21a01 task=209 reward=0.375 turns=6 stop=user_closed
+16:27:38    INFO rollout start: id=e922341eba7e4350aa779db4740c2307 task=213 harness=null runtime=subprocess
+16:27:38    INFO rollout done: id=7e6e8123148b4f1fb891340b97a60e57 task=210 reward=0.833 turns=6 stop=user_closed
+16:27:38    INFO rollout start: id=d9c2de55d0d741eea0f9e2d55bc4054d task=214 harness=null runtime=subprocess
+16:28:02    INFO rollout done: id=c36e3c805a7a4bcda88407103ca379b7 task=211 reward=0.870 turns=6 stop=user_closed
+16:28:02    INFO rollout start: id=7acfff06056249d2b1b1f15425361e79 task=215 harness=null runtime=subprocess
+16:28:10    INFO rollout done: id=e922341eba7e4350aa779db4740c2307 task=213 reward=0.820 turns=6 stop=user_closed
+16:28:10    INFO rollout start: id=12e1c4b4e94241c5902dddb57670f26c task=216 harness=null runtime=subprocess
+16:28:11    INFO rollout done: id=1a6b5ef8c7424d7ea876dedd5cdd1b39 task=212 reward=0.920 turns=6 stop=user_closed
+16:28:11    INFO rollout start: id=be2b8cb983a64bfa9dda5d4b72b706e7 task=217 harness=null runtime=subprocess
+16:28:15    INFO rollout done: id=d9c2de55d0d741eea0f9e2d55bc4054d task=214 reward=0.925 turns=6 stop=user_closed
+16:28:15    INFO rollout start: id=3b329f1ecaf640f89ce109cfa6f64312 task=218 harness=null runtime=subprocess
+16:28:40    INFO rollout done: id=7acfff06056249d2b1b1f15425361e79 task=215 reward=0.325 turns=6 stop=user_closed
+16:28:40    INFO rollout start: id=569813133dc94a85b0a9fd92947e8da3 task=219 harness=null runtime=subprocess
+16:28:44    INFO rollout done: id=be2b8cb983a64bfa9dda5d4b72b706e7 task=217 reward=0.920 turns=6 stop=user_closed
+16:28:44    INFO rollout start: id=b7a5d4a62705473b9f3251c3e2b9911d task=220 harness=null runtime=subprocess
+16:28:51    INFO rollout done: id=3b329f1ecaf640f89ce109cfa6f64312 task=218 reward=0.820 turns=6 stop=user_closed
+16:28:51    INFO rollout start: id=836825c29bb94656bb7efc98e23e8362 task=221 harness=null runtime=subprocess
+16:28:54    INFO rollout done: id=12e1c4b4e94241c5902dddb57670f26c task=216 reward=0.970 turns=6 stop=user_closed
+16:28:54    INFO rollout start: id=084fc22352d94528892a204968d00592 task=222 harness=null runtime=subprocess
+16:29:14    INFO rollout done: id=569813133dc94a85b0a9fd92947e8da3 task=219 reward=1.000 turns=6 stop=user_closed
+16:29:14    INFO rollout start: id=e90448b6016a417b8d790468ac0cc9a8 task=223 harness=null runtime=subprocess
+16:29:17    INFO rollout done: id=b7a5d4a62705473b9f3251c3e2b9911d task=220 reward=0.688 turns=6 stop=user_closed
+16:29:17    INFO rollout start: id=0b8248ef9aa04df783b01baedbbc93df task=224 harness=null runtime=subprocess
+16:29:25    INFO rollout done: id=836825c29bb94656bb7efc98e23e8362 task=221 reward=0.855 turns=6 stop=user_closed
+16:29:25    INFO rollout start: id=8ce560b77df845ea8fc72143668f7afc task=225 harness=null runtime=subprocess
+16:29:28    INFO rollout done: id=084fc22352d94528892a204968d00592 task=222 reward=0.970 turns=6 stop=user_closed
+16:29:28    INFO rollout start: id=ed6ba92e03354f92b9a94e363ee91fcc task=226 harness=null runtime=subprocess
+16:29:52    INFO rollout done: id=0b8248ef9aa04df783b01baedbbc93df task=224 reward=0.800 turns=6 stop=user_closed
+16:29:52    INFO rollout start: id=6e681e161d0d4ade9b88e4ab337db13c task=227 harness=null runtime=subprocess
+16:29:52    INFO rollout done: id=e90448b6016a417b8d790468ac0cc9a8 task=223 reward=0.895 turns=6 stop=user_closed
+16:29:52    INFO rollout start: id=34f7c144ce2941e1b59ec6813205b6a4 task=228 harness=null runtime=subprocess
+16:30:03    INFO rollout done: id=8ce560b77df845ea8fc72143668f7afc task=225 reward=0.463 turns=6 stop=user_closed
+16:30:03    INFO rollout start: id=cd2b5411f3af4ce2bd24eb3081acfac9 task=229 harness=null runtime=subprocess
+16:30:07    INFO rollout done: id=ed6ba92e03354f92b9a94e363ee91fcc task=226 reward=0.425 turns=6 stop=user_closed
+16:30:07    INFO rollout start: id=2cb67ef1128d4b8d905893b83f7829d0 task=230 harness=null runtime=subprocess
+16:30:24    INFO rollout done: id=6e681e161d0d4ade9b88e4ab337db13c task=227 reward=0.500 turns=6 stop=user_closed
+16:30:24    INFO rollout start: id=fb0c03570f52405abb072e77e67aef0e task=231 harness=null runtime=subprocess
+16:30:28    INFO rollout done: id=34f7c144ce2941e1b59ec6813205b6a4 task=228 reward=0.875 turns=6 stop=user_closed
+16:30:28    INFO rollout start: id=d819645683ff4f9ba33677d2b62d1e13 task=232 harness=null runtime=subprocess
+16:30:37    INFO rollout done: id=cd2b5411f3af4ce2bd24eb3081acfac9 task=229 reward=0.725 turns=6 stop=user_closed
+16:30:37    INFO rollout start: id=80e95f66ebb94a528de6a87d37e6cd69 task=233 harness=null runtime=subprocess
+16:30:42    INFO rollout done: id=2cb67ef1128d4b8d905893b83f7829d0 task=230 reward=0.970 turns=6 stop=user_closed
+16:30:42    INFO rollout start: id=990fc583020a4ff5a0fc9d6d00c2f1f4 task=234 harness=null runtime=subprocess
+16:31:02    INFO rollout done: id=fb0c03570f52405abb072e77e67aef0e task=231 reward=0.825 turns=6 stop=user_closed
+16:31:02    INFO rollout start: id=e0f937c1229e4e77a3a66f968635f0bf task=235 harness=null runtime=subprocess
+16:31:05    INFO rollout done: id=80e95f66ebb94a528de6a87d37e6cd69 task=233 reward=0.770 turns=6 stop=user_closed
+16:31:05    INFO rollout start: id=43271b8ca8f04af3abafe6fb754934dd task=236 harness=null runtime=subprocess
+16:31:08    INFO rollout done: id=d819645683ff4f9ba33677d2b62d1e13 task=232 reward=0.900 turns=6 stop=user_closed
+16:31:08    INFO rollout start: id=46cb4809127443779c4101ddf47f5585 task=237 harness=null runtime=subprocess
+16:31:14    INFO rollout done: id=990fc583020a4ff5a0fc9d6d00c2f1f4 task=234 reward=0.570 turns=6 stop=user_closed
+16:31:14    INFO rollout start: id=20e4d1e0b517400a95cafae6791dfc1b task=238 harness=null runtime=subprocess
+16:31:32    INFO rollout done: id=e0f937c1229e4e77a3a66f968635f0bf task=235 reward=0.600 turns=6 stop=user_closed
+16:31:32    INFO rollout start: id=42a85fb678a34fb191413fb76a36cb8a task=239 harness=null runtime=subprocess
+16:31:42    INFO rollout done: id=46cb4809127443779c4101ddf47f5585 task=237 reward=0.970 turns=6 stop=user_closed
+16:31:42    INFO rollout start: id=bcbe69d1f1484158a2a19cdd0f642ae1 task=240 harness=null runtime=subprocess
+16:31:45    INFO rollout done: id=43271b8ca8f04af3abafe6fb754934dd task=236 reward=0.875 turns=6 stop=user_closed
+16:31:45    INFO rollout start: id=c06f359618354d92a393cd9aa568a878 task=241 harness=null runtime=subprocess
+16:31:49    INFO rollout done: id=20e4d1e0b517400a95cafae6791dfc1b task=238 reward=0.787 turns=6 stop=user_closed
+16:31:49    INFO rollout start: id=ac1b9dda02da4398923338f7a94a2679 task=242 harness=null runtime=subprocess
+16:32:02    INFO rollout done: id=42a85fb678a34fb191413fb76a36cb8a task=239 reward=0.970 turns=6 stop=user_closed
+16:32:02    INFO rollout start: id=754b8f739ecd4f1fb467376ea3779f47 task=243 harness=null runtime=subprocess
+16:32:16    INFO rollout done: id=bcbe69d1f1484158a2a19cdd0f642ae1 task=240 reward=0.775 turns=6 stop=user_closed
+16:32:16    INFO rollout start: id=be945d6896e241f5aceca78b56c1ade4 task=244 harness=null runtime=subprocess
+16:32:20    INFO rollout done: id=ac1b9dda02da4398923338f7a94a2679 task=242 reward=0.600 turns=6 stop=user_closed
+16:32:20    INFO rollout start: id=ae16e9f6269f4013a4f3a136a7d61d12 task=245 harness=null runtime=subprocess
+16:32:26    INFO rollout done: id=c06f359618354d92a393cd9aa568a878 task=241 reward=0.900 turns=6 stop=user_closed
+16:32:26    INFO rollout start: id=871bd0265c2e494ea314b7396e7e7ccb task=246 harness=null runtime=subprocess
+16:32:37    INFO rollout done: id=754b8f739ecd4f1fb467376ea3779f47 task=243 reward=0.520 turns=6 stop=user_closed
+16:32:37    INFO rollout start: id=6b0a75fe9cc64ac4bcc0dbc66b2e53a0 task=247 harness=null runtime=subprocess
+16:32:49    INFO rollout done: id=ae16e9f6269f4013a4f3a136a7d61d12 task=245 reward=0.770 turns=6 stop=user_closed
+16:32:49    INFO rollout start: id=86be35efed4e46b193abdbc4c7f58c0d task=248 harness=null runtime=subprocess
+16:32:54    INFO rollout done: id=be945d6896e241f5aceca78b56c1ade4 task=244 reward=0.455 turns=6 stop=user_closed
+16:32:54    INFO rollout start: id=42de0a3b968d40f890e4091fe2d9081a task=249 harness=null runtime=subprocess
+16:33:10    INFO rollout done: id=871bd0265c2e494ea314b7396e7e7ccb task=246 reward=0.920 turns=6 stop=user_closed
+16:33:10    INFO rollout start: id=45c89b07bb3f4de789f718c094ee9eec task=250 harness=null runtime=subprocess
+16:33:14    INFO rollout done: id=6b0a75fe9cc64ac4bcc0dbc66b2e53a0 task=247 reward=0.855 turns=6 stop=user_closed
+16:33:14    INFO rollout start: id=963728931bc64d048512d9483aebd600 task=251 harness=null runtime=subprocess
+16:33:22    INFO rollout done: id=86be35efed4e46b193abdbc4c7f58c0d task=248 reward=0.970 turns=6 stop=user_closed
+16:33:22    INFO rollout start: id=995d908793904a2b9fcfcc8f91366434 task=252 harness=null runtime=subprocess
+16:33:33    INFO rollout done: id=42de0a3b968d40f890e4091fe2d9081a task=249 reward=0.925 turns=6 stop=user_closed
+16:33:33    INFO rollout start: id=38a3f312774e419994fba68f459724e0 task=253 harness=null runtime=subprocess
+16:33:45    INFO rollout done: id=963728931bc64d048512d9483aebd600 task=251 reward=0.787 turns=6 stop=user_closed
+16:33:45    INFO rollout start: id=0695e68605004b558a35d903de0e17b0 task=254 harness=null runtime=subprocess
+16:33:47    INFO rollout done: id=45c89b07bb3f4de789f718c094ee9eec task=250 reward=0.970 turns=6 stop=user_closed
+16:33:47    INFO rollout start: id=b46442526379432b8b4f5867b98afd9a task=255 harness=null runtime=subprocess
+16:33:59    INFO rollout done: id=995d908793904a2b9fcfcc8f91366434 task=252 reward=0.970 turns=6 stop=user_closed
+16:33:59    INFO rollout start: id=1e8cf7252da342eea0cd278728cc460d task=256 harness=null runtime=subprocess
+16:34:13    INFO rollout done: id=38a3f312774e419994fba68f459724e0 task=253 reward=0.875 turns=6 stop=user_closed
+16:34:13    INFO rollout start: id=a5e660009d5645a8b28c952a452cfa55 task=257 harness=null runtime=subprocess
+16:34:18    INFO rollout done: id=b46442526379432b8b4f5867b98afd9a task=255 reward=0.870 turns=6 stop=user_closed
+16:34:18    INFO rollout start: id=85198fded01443d18bf4eea8ab2eee08 task=258 harness=null runtime=subprocess
+16:34:23    INFO rollout done: id=0695e68605004b558a35d903de0e17b0 task=254 reward=0.833 turns=6 stop=user_closed
+16:34:23    INFO rollout start: id=a5d565b277da44d19e5e4eb6b1c6d7d7 task=259 harness=null runtime=subprocess
+16:34:34    INFO rollout done: id=1e8cf7252da342eea0cd278728cc460d task=256 reward=0.870 turns=6 stop=user_closed
+16:34:34    INFO rollout start: id=c20f7f837d3c4a77813d0a019fcff4fb task=260 harness=null runtime=subprocess
+16:34:47    INFO rollout done: id=a5e660009d5645a8b28c952a452cfa55 task=257 reward=0.970 turns=6 stop=user_closed
+16:34:47    INFO rollout start: id=2d42401710204279ae99de544a42a9ce task=261 harness=null runtime=subprocess
+16:34:57    INFO rollout done: id=a5d565b277da44d19e5e4eb6b1c6d7d7 task=259 reward=0.905 turns=6 stop=user_closed
+16:34:57    INFO rollout start: id=41c019d4f442457d9dbfe9d59848815f task=262 harness=null runtime=subprocess
+16:35:01    INFO rollout done: id=85198fded01443d18bf4eea8ab2eee08 task=258 reward=0.888 turns=6 stop=user_closed
+16:35:01    INFO rollout start: id=8e05f84c3ab34b4a8dac0d27f5223e17 task=263 harness=null runtime=subprocess
+16:35:07    INFO rollout done: id=c20f7f837d3c4a77813d0a019fcff4fb task=260 reward=0.820 turns=6 stop=user_closed
+16:35:07    INFO rollout start: id=855aa34f09cd4d958003505ca758a031 task=264 harness=null runtime=subprocess
+16:35:23    INFO rollout done: id=2d42401710204279ae99de544a42a9ce task=261 reward=0.970 turns=6 stop=user_closed
+16:35:23    INFO rollout start: id=8be74afc1e7a4855bcc83f7b55024c6e task=265 harness=null runtime=subprocess
+16:35:33    INFO rollout done: id=41c019d4f442457d9dbfe9d59848815f task=262 reward=0.875 turns=6 stop=user_closed
+16:35:33    INFO rollout start: id=02da7358cf304fb9b9faf64715206bbb task=266 harness=null runtime=subprocess
+16:35:37    INFO rollout done: id=8e05f84c3ab34b4a8dac0d27f5223e17 task=263 reward=0.770 turns=6 stop=user_closed
+16:35:37    INFO rollout start: id=42c5e9fe095e4def9310a861f7eea64b task=267 harness=null runtime=subprocess
+16:35:44    INFO rollout done: id=855aa34f09cd4d958003505ca758a031 task=264 reward=0.370 turns=6 stop=user_closed
+16:35:44    INFO rollout start: id=ab271ecf11ac41e9aade608cade7f84a task=268 harness=null runtime=subprocess
+16:36:02    INFO rollout done: id=8be74afc1e7a4855bcc83f7b55024c6e task=265 reward=0.870 turns=6 stop=user_closed
+16:36:02    INFO rollout start: id=058efe358634465ebd521f4452c7c88f task=269 harness=null runtime=subprocess
+16:36:10    INFO rollout done: id=02da7358cf304fb9b9faf64715206bbb task=266 reward=0.725 turns=6 stop=user_closed
+16:36:10    INFO rollout start: id=41f890cf5e394f5da8f8a620d8867bcf task=270 harness=null runtime=subprocess
+16:36:14    INFO rollout done: id=42c5e9fe095e4def9310a861f7eea64b task=267 reward=0.475 turns=6 stop=user_closed
+16:36:14    INFO rollout start: id=a8bc89bb21df44da984d59cba8c579d1 task=271 harness=null runtime=subprocess
+16:36:16    INFO rollout done: id=ab271ecf11ac41e9aade608cade7f84a task=268 reward=0.920 turns=6 stop=user_closed
+16:36:16    INFO rollout start: id=b098b26750144d65b2a2910c4160a1cc task=272 harness=null runtime=subprocess
+16:36:38    INFO rollout done: id=058efe358634465ebd521f4452c7c88f task=269 reward=0.875 turns=6 stop=user_closed
+16:36:38    INFO rollout start: id=d9035d01adac474fac493ee85704f6fb task=273 harness=null runtime=subprocess
+16:36:44    INFO rollout done: id=a8bc89bb21df44da984d59cba8c579d1 task=271 reward=0.733 turns=6 stop=user_closed
+16:36:44    INFO rollout start: id=2a6c4a979d2e464782135e6ccffac2e4 task=274 harness=null runtime=subprocess
+16:36:47    INFO rollout done: id=41f890cf5e394f5da8f8a620d8867bcf task=270 reward=1.000 turns=6 stop=user_closed
+16:36:47    INFO rollout start: id=6333f9b61c6b402ca2a93ea053cd171d task=275 harness=null runtime=subprocess
+16:36:51    INFO rollout done: id=b098b26750144d65b2a2910c4160a1cc task=272 reward=0.970 turns=6 stop=user_closed
+16:36:51    INFO rollout start: id=5b385f6413b34cbcae703b9c18b298ba task=276 harness=null runtime=subprocess
+16:37:11    INFO rollout done: id=2a6c4a979d2e464782135e6ccffac2e4 task=274 reward=0.783 turns=6 stop=user_closed
+16:37:11    INFO rollout start: id=467e733cb3854e50a0f19a69ac39caeb task=277 harness=null runtime=subprocess
+16:37:16    INFO rollout done: id=d9035d01adac474fac493ee85704f6fb task=273 reward=0.825 turns=6 stop=user_closed
+16:37:16    INFO rollout start: id=5dba7e001272447098d55c3caf173c9d task=278 harness=null runtime=subprocess
+16:37:21    INFO rollout done: id=6333f9b61c6b402ca2a93ea053cd171d task=275 reward=0.770 turns=6 stop=user_closed
+16:37:21    INFO rollout start: id=4d239e780b044dddb27d0781b9b2a88f task=279 harness=null runtime=subprocess
+16:37:25    INFO rollout done: id=5b385f6413b34cbcae703b9c18b298ba task=276 reward=0.870 turns=6 stop=user_closed
+16:37:25    INFO rollout start: id=f1fdce2f5f4b409187a7c617a52ed94c task=280 harness=null runtime=subprocess
+16:37:45    INFO rollout done: id=467e733cb3854e50a0f19a69ac39caeb task=277 reward=0.920 turns=6 stop=user_closed
+16:37:45    INFO rollout start: id=41a460ace06f4479bd3202d0a9a63c85 task=281 harness=null runtime=subprocess
+16:37:49    INFO rollout done: id=5dba7e001272447098d55c3caf173c9d task=278 reward=0.600 turns=6 stop=user_closed
+16:37:49    INFO rollout start: id=de8eb4e64cfd4d26bc147b19f542f7d1 task=282 harness=null runtime=subprocess
+16:37:58    INFO rollout done: id=4d239e780b044dddb27d0781b9b2a88f task=279 reward=0.970 turns=6 stop=user_closed
+16:37:58    INFO rollout start: id=7f08cedec5d34bf09d238160df57ad0d task=283 harness=null runtime=subprocess
+16:38:05    INFO rollout done: id=f1fdce2f5f4b409187a7c617a52ed94c task=280 reward=0.970 turns=6 stop=user_closed
+16:38:05    INFO rollout start: id=82602d479d6343b39b8b67f1145faefc task=284 harness=null runtime=subprocess
+16:38:21    INFO rollout done: id=de8eb4e64cfd4d26bc147b19f542f7d1 task=282 reward=0.900 turns=6 stop=user_closed
+16:38:21    INFO rollout start: id=f4b9c25a852a424fac5adf99ebc56e93 task=285 harness=null runtime=subprocess
+16:38:23    INFO rollout done: id=41a460ace06f4479bd3202d0a9a63c85 task=281 reward=0.870 turns=6 stop=user_closed
+16:38:23    INFO rollout start: id=c9896e839829440cbd5298eed1375b68 task=286 harness=null runtime=subprocess
+16:38:35    INFO rollout done: id=7f08cedec5d34bf09d238160df57ad0d task=283 reward=0.820 turns=6 stop=user_closed
+16:38:35    INFO rollout start: id=0c34ffb90499409995bcc33bf4281a2b task=287 harness=null runtime=subprocess
+16:38:36    INFO rollout done: id=82602d479d6343b39b8b67f1145faefc task=284 reward=0.900 turns=6 stop=user_closed
+16:38:36    INFO rollout start: id=e8eb728a77af4f6aabf5cfc3add283a8 task=288 harness=null runtime=subprocess
+16:38:56    INFO rollout done: id=f4b9c25a852a424fac5adf99ebc56e93 task=285 reward=0.875 turns=6 stop=user_closed
+16:38:56    INFO rollout start: id=a066f19cca3d4531916e33c0d5e70809 task=289 harness=null runtime=subprocess
+16:39:02    INFO rollout done: id=c9896e839829440cbd5298eed1375b68 task=286 reward=0.820 turns=6 stop=user_closed
+16:39:02    INFO rollout start: id=872c9e0b63db4b7b9c0ed6fc61779ee4 task=290 harness=null runtime=subprocess
+16:39:05    INFO rollout done: id=0c34ffb90499409995bcc33bf4281a2b task=287 reward=0.950 turns=6 stop=user_closed
+16:39:05    INFO rollout start: id=d1f8c9b6b9cc421d8c730cbc12521f5e task=291 harness=null runtime=subprocess
+16:39:17    INFO rollout done: id=e8eb728a77af4f6aabf5cfc3add283a8 task=288 reward=0.287 turns=6 stop=user_closed
+16:39:17    INFO rollout start: id=6a75ac072354487796020f3aa333f2fc task=292 harness=null runtime=subprocess
+16:39:33    INFO rollout done: id=a066f19cca3d4531916e33c0d5e70809 task=289 reward=0.500 turns=6 stop=user_closed
+16:39:33    INFO rollout start: id=c0c07b94c30c4d509a587ecd589696cc task=293 harness=null runtime=subprocess
+16:39:40    INFO rollout done: id=d1f8c9b6b9cc421d8c730cbc12521f5e task=291 reward=0.870 turns=6 stop=user_closed
+16:39:40    INFO rollout start: id=b5712ba2266e4b44b09f893f4193a182 task=294 harness=null runtime=subprocess
+16:39:42    INFO rollout done: id=872c9e0b63db4b7b9c0ed6fc61779ee4 task=290 reward=0.920 turns=6 stop=user_closed
+16:39:42    INFO rollout start: id=6188abbcedc34c5e98da6925d7677351 task=295 harness=null runtime=subprocess
+16:39:56    INFO rollout done: id=6a75ac072354487796020f3aa333f2fc task=292 reward=0.825 turns=6 stop=user_closed
+16:39:56    INFO rollout start: id=bb1607b146004254bb1801f2269c7f5e task=296 harness=null runtime=subprocess
+16:40:07    INFO rollout done: id=c0c07b94c30c4d509a587ecd589696cc task=293 reward=0.820 turns=6 stop=user_closed
+16:40:07    INFO rollout start: id=1c155d5e17f74cdfacc8dee0abf06a2a task=297 harness=null runtime=subprocess
+16:40:12    INFO rollout done: id=6188abbcedc34c5e98da6925d7677351 task=295 reward=0.820 turns=6 stop=user_closed
+16:40:12    INFO rollout start: id=6d19435123f2452babb1983e8af8217a task=298 harness=null runtime=subprocess
+16:40:15    INFO rollout done: id=b5712ba2266e4b44b09f893f4193a182 task=294 reward=0.825 turns=6 stop=user_closed
+16:40:15    INFO rollout start: id=a99a3c99d2ab4fbd8c2167b6956cc8de task=299 harness=null runtime=subprocess
+16:40:40    INFO rollout done: id=1c155d5e17f74cdfacc8dee0abf06a2a task=297 reward=0.770 turns=6 stop=user_closed
+16:40:40    INFO rollout start: id=74fa0a85fbeb4665abb1e07aa48d93cb task=300 harness=null runtime=subprocess
+16:40:42    INFO rollout done: id=bb1607b146004254bb1801f2269c7f5e task=296 reward=0.925 turns=6 stop=user_closed
+16:40:42    INFO rollout start: id=35c6dc07fb654c219023519e73b97084 task=301 harness=null runtime=subprocess
+16:40:49    INFO rollout done: id=a99a3c99d2ab4fbd8c2167b6956cc8de task=299 reward=0.870 turns=6 stop=user_closed
+16:40:49    INFO rollout start: id=ffb379f6205541239169a8a6a5004a8b task=302 harness=null runtime=subprocess
+16:40:55    INFO rollout done: id=6d19435123f2452babb1983e8af8217a task=298 reward=0.825 turns=6 stop=user_closed
+16:40:55    INFO rollout start: id=dda54903ed7147dca113500d82110f2a task=303 harness=null runtime=subprocess
+16:41:13    INFO rollout done: id=74fa0a85fbeb4665abb1e07aa48d93cb task=300 reward=0.770 turns=6 stop=user_closed
+16:41:13    INFO rollout start: id=89368bc4f31f444ba89991f2766dc267 task=304 harness=null runtime=subprocess
+16:41:15    INFO rollout done: id=35c6dc07fb654c219023519e73b97084 task=301 reward=0.970 turns=6 stop=user_closed
+16:41:15    INFO rollout start: id=ee89512be9a945ac82dd6cfe0e867aa4 task=305 harness=null runtime=subprocess
+16:41:27    INFO rollout done: id=ffb379f6205541239169a8a6a5004a8b task=302 reward=0.367 turns=6 stop=user_closed
+16:41:27    INFO rollout start: id=5604ae3a7cc6441d96821bf8c8c477f3 task=306 harness=null runtime=subprocess
+16:41:29    INFO rollout done: id=dda54903ed7147dca113500d82110f2a task=303 reward=0.970 turns=6 stop=user_closed
+16:41:29    INFO rollout start: id=fffabd48fca545b088a7fdf7af78beca task=307 harness=null runtime=subprocess
+16:41:47    INFO rollout done: id=89368bc4f31f444ba89991f2766dc267 task=304 reward=0.970 turns=6 stop=user_closed
+16:41:47    INFO rollout start: id=1290838e0a8f48ae88bd1445d64e3716 task=308 harness=null runtime=subprocess
+16:41:56    INFO rollout done: id=ee89512be9a945ac82dd6cfe0e867aa4 task=305 reward=0.870 turns=6 stop=user_closed
+16:41:56    INFO rollout start: id=4dfd655a77f64f98b06a85d1f69b9ee3 task=309 harness=null runtime=subprocess
+16:42:00    INFO rollout done: id=fffabd48fca545b088a7fdf7af78beca task=307 reward=1.000 turns=6 stop=user_closed
+16:42:00    INFO rollout start: id=bd2c6f18dc1d41a8925a6564dd950d41 task=310 harness=null runtime=subprocess
+16:42:01    INFO rollout done: id=5604ae3a7cc6441d96821bf8c8c477f3 task=306 reward=0.770 turns=6 stop=user_closed
+16:42:01    INFO rollout start: id=48ce68235a2f487b8a55e33e66b6b116 task=311 harness=null runtime=subprocess
+16:42:33    INFO rollout done: id=4dfd655a77f64f98b06a85d1f69b9ee3 task=309 reward=0.500 turns=6 stop=user_closed
+16:42:33    INFO rollout start: id=bb98c05e4f8340388693234e1b7c1e1e task=312 harness=null runtime=subprocess
+16:42:34    INFO rollout done: id=48ce68235a2f487b8a55e33e66b6b116 task=311 reward=0.920 turns=6 stop=user_closed
+16:42:34    INFO rollout start: id=5b71ec36105749ec98268accf4267cbd task=313 harness=null runtime=subprocess
+16:42:36    INFO rollout done: id=bd2c6f18dc1d41a8925a6564dd950d41 task=310 reward=0.855 turns=6 stop=user_closed
+16:42:36    INFO rollout start: id=92d2549bb65d472aa476bd78b99f1376 task=314 harness=null runtime=subprocess
+16:42:37    INFO rollout done: id=1290838e0a8f48ae88bd1445d64e3716 task=308 reward=0.475 turns=6 stop=user_closed
+16:42:37    INFO rollout start: id=a7cebeb450514e2690242aedafc3d3d1 task=315 harness=null runtime=subprocess
+16:43:06    INFO rollout done: id=5b71ec36105749ec98268accf4267cbd task=313 reward=0.400 turns=6 stop=user_closed
+16:43:06    INFO rollout start: id=e139bcdb4c4e4a02a89b90da6fb11ad7 task=316 harness=null runtime=subprocess
+16:43:09    INFO rollout done: id=bb98c05e4f8340388693234e1b7c1e1e task=312 reward=0.970 turns=6 stop=user_closed
+16:43:09    INFO rollout start: id=dbb378db48f14bd59fce9dd9e4874f74 task=317 harness=null runtime=subprocess
+16:43:10    INFO rollout done: id=92d2549bb65d472aa476bd78b99f1376 task=314 reward=0.970 turns=6 stop=user_closed
+16:43:10    INFO rollout start: id=f057c76db71c4ea38ad3b63c31e029d8 task=318 harness=null runtime=subprocess
+16:43:15    INFO rollout done: id=a7cebeb450514e2690242aedafc3d3d1 task=315 reward=0.970 turns=6 stop=user_closed
+16:43:15    INFO rollout start: id=34c684adf6684b09ae143e6867e8eb97 task=319 harness=null runtime=subprocess
+16:43:47    INFO rollout done: id=dbb378db48f14bd59fce9dd9e4874f74 task=317 reward=0.805 turns=6 stop=user_closed
+16:43:47    INFO rollout start: id=ce8952d80c814f4fb4290859197e35ec task=320 harness=null runtime=subprocess
+16:43:47    INFO rollout done: id=f057c76db71c4ea38ad3b63c31e029d8 task=318 reward=0.770 turns=6 stop=user_closed
+16:43:47    INFO rollout start: id=a78e0a25b15047b597d200ee3c495a66 task=321 harness=null runtime=subprocess
+16:43:48    INFO rollout done: id=34c684adf6684b09ae143e6867e8eb97 task=319 reward=0.855 turns=6 stop=user_closed
+16:43:48    INFO rollout start: id=04f033e6096e435abd8983279f986478 task=322 harness=null runtime=subprocess
+16:43:49    INFO rollout done: id=e139bcdb4c4e4a02a89b90da6fb11ad7 task=316 reward=0.825 turns=6 stop=user_closed
+16:43:49    INFO rollout start: id=284ba796f8c848ea978d1e19df93c75c task=323 harness=null runtime=subprocess
+16:44:20    INFO rollout done: id=ce8952d80c814f4fb4290859197e35ec task=320 reward=0.920 turns=6 stop=user_closed
+16:44:20    INFO rollout start: id=7bcbdbd036cf468ea7ed12377dd7432f task=324 harness=null runtime=subprocess
+16:44:21    INFO rollout done: id=284ba796f8c848ea978d1e19df93c75c task=323 reward=0.500 turns=6 stop=user_closed
+16:44:21    INFO rollout start: id=0e5839d9c7644d6d86b089daef87ff3a task=325 harness=null runtime=subprocess
+16:44:24    INFO rollout done: id=a78e0a25b15047b597d200ee3c495a66 task=321 reward=0.948 turns=6 stop=user_closed
+16:44:24    INFO rollout start: id=a5aeb8b255204f24accf0a7c67d85b0e task=326 harness=null runtime=subprocess
+16:44:24    INFO rollout done: id=04f033e6096e435abd8983279f986478 task=322 reward=0.688 turns=6 stop=user_closed
+16:44:24    INFO rollout start: id=5d6af7aca03145d78f6234353e43a2c7 task=327 harness=null runtime=subprocess
+16:44:54    INFO rollout done: id=7bcbdbd036cf468ea7ed12377dd7432f task=324 reward=0.325 turns=6 stop=user_closed
+16:44:54    INFO rollout start: id=a2437af90c1643b080155bc6dcd7a75f task=328 harness=null runtime=subprocess
+16:44:55    INFO rollout done: id=0e5839d9c7644d6d86b089daef87ff3a task=325 reward=0.500 turns=6 stop=user_closed
+16:44:55    INFO rollout start: id=3f4fd6a2a72f405b809502f52dfeb8b5 task=329 harness=null runtime=subprocess
+16:44:58    INFO rollout done: id=a5aeb8b255204f24accf0a7c67d85b0e task=326 reward=0.875 turns=6 stop=user_closed
+16:44:58    INFO rollout start: id=82e3dc5c7fe04280baa844e028feae9b task=330 harness=null runtime=subprocess
+16:45:00    INFO rollout done: id=5d6af7aca03145d78f6234353e43a2c7 task=327 reward=0.870 turns=6 stop=user_closed
+16:45:00    INFO rollout start: id=ae80fb0a4b244081ae2cb4ce52bb9993 task=331 harness=null runtime=subprocess
+16:45:28    INFO rollout done: id=3f4fd6a2a72f405b809502f52dfeb8b5 task=329 reward=0.870 turns=6 stop=user_closed
+16:45:28    INFO rollout start: id=7df47747821c43a1aac17af50c956fb8 task=332 harness=null runtime=subprocess
+16:45:31    INFO rollout done: id=ae80fb0a4b244081ae2cb4ce52bb9993 task=331 reward=0.770 turns=6 stop=user_closed
+16:45:31    INFO rollout start: id=d918ecc162414cbda1509b582cfdb8a3 task=333 harness=null runtime=subprocess
+16:45:39    INFO rollout done: id=a2437af90c1643b080155bc6dcd7a75f task=328 reward=0.920 turns=6 stop=user_closed
+16:45:39    INFO rollout start: id=b3390d86150d4b9fa1364ec6f2238cbd task=334 harness=null runtime=subprocess
+16:45:42    INFO rollout done: id=82e3dc5c7fe04280baa844e028feae9b task=330 reward=0.925 turns=6 stop=user_closed
+16:45:42    INFO rollout start: id=e7e6db50a9d14647b99595b3829d00e8 task=335 harness=null runtime=subprocess
+16:46:07    INFO rollout done: id=7df47747821c43a1aac17af50c956fb8 task=332 reward=0.970 turns=6 stop=user_closed
+16:46:07    INFO rollout start: id=25ceaba130ed457387e248e75568f8ad task=336 harness=null runtime=subprocess
+16:46:14    INFO rollout done: id=b3390d86150d4b9fa1364ec6f2238cbd task=334 reward=0.888 turns=6 stop=user_closed
+16:46:14    INFO rollout start: id=bde2bff17c4f4bd0927c031e6aa1a543 task=337 harness=null runtime=subprocess
+16:46:17    INFO rollout done: id=d918ecc162414cbda1509b582cfdb8a3 task=333 reward=0.920 turns=6 stop=user_closed
+16:46:17    INFO rollout start: id=0832d77eaefc4991be5da56b5d091988 task=338 harness=null runtime=subprocess
+16:46:18    INFO rollout done: id=e7e6db50a9d14647b99595b3829d00e8 task=335 reward=0.950 turns=6 stop=user_closed
+16:46:18    INFO rollout start: id=fa35041fcba84a62bca7dfcd435370b3 task=339 harness=null runtime=subprocess
+16:46:42    INFO rollout done: id=25ceaba130ed457387e248e75568f8ad task=336 reward=0.820 turns=6 stop=user_closed
+16:46:42    INFO rollout start: id=125511a58ad94b4cb670f6220d014d70 task=340 harness=null runtime=subprocess
+16:46:52    INFO rollout done: id=0832d77eaefc4991be5da56b5d091988 task=338 reward=0.770 turns=6 stop=user_closed
+16:46:52    INFO rollout start: id=63a06a1513d142deb61729b756db6f2b task=341 harness=null runtime=subprocess
+16:46:53    INFO rollout done: id=bde2bff17c4f4bd0927c031e6aa1a543 task=337 reward=0.970 turns=6 stop=user_closed
+16:46:53    INFO rollout start: id=21ac58247ce84d1f8f1815695539ce71 task=342 harness=null runtime=subprocess
+16:46:57    INFO rollout done: id=fa35041fcba84a62bca7dfcd435370b3 task=339 reward=0.725 turns=6 stop=user_closed
+16:46:57    INFO rollout start: id=ec9d6ef5837744e68c1dd5fb13385a22 task=343 harness=null runtime=subprocess
+16:47:17    INFO rollout done: id=125511a58ad94b4cb670f6220d014d70 task=340 reward=0.870 turns=6 stop=user_closed
+16:47:17    INFO rollout start: id=4c8a83033b3c40698194c0d74fe29599 task=344 harness=null runtime=subprocess
+16:47:26    INFO rollout done: id=63a06a1513d142deb61729b756db6f2b task=341 reward=0.833 turns=6 stop=user_closed
+16:47:26    INFO rollout start: id=6b4c425d12784df0a122564e2fd4daf7 task=345 harness=null runtime=subprocess
+16:47:26    INFO rollout done: id=21ac58247ce84d1f8f1815695539ce71 task=342 reward=0.970 turns=6 stop=user_closed
+16:47:26    INFO rollout start: id=61e3f77d4bb14afcb53fc5c0c0a6737e task=346 harness=null runtime=subprocess
+16:47:27    INFO rollout done: id=ec9d6ef5837744e68c1dd5fb13385a22 task=343 reward=0.400 turns=6 stop=user_closed
+16:47:27    INFO rollout start: id=3f04169f86994a1e81607040cfb38317 task=347 harness=null runtime=subprocess
+16:47:52    INFO rollout done: id=4c8a83033b3c40698194c0d74fe29599 task=344 reward=0.970 turns=6 stop=user_closed
+16:47:52    INFO rollout start: id=d027b2eb719d4511abf2df4f383acc4d task=348 harness=null runtime=subprocess
+16:47:57    INFO rollout done: id=6b4c425d12784df0a122564e2fd4daf7 task=345 reward=0.970 turns=6 stop=user_closed
+16:47:57    INFO rollout start: id=ff2782c66bbe4a3784988b0cc441d3ab task=349 harness=null runtime=subprocess
+16:48:04    INFO rollout done: id=61e3f77d4bb14afcb53fc5c0c0a6737e task=346 reward=0.820 turns=6 stop=user_closed
+16:48:04    INFO rollout start: id=0f18c2ef9c144c479f9591ab764e0df0 task=350 harness=null runtime=subprocess
+16:48:05    INFO rollout done: id=3f04169f86994a1e81607040cfb38317 task=347 reward=0.855 turns=6 stop=user_closed
+16:48:05    INFO rollout start: id=63f7ac1e3d6a46dba12491f9f855eae3 task=351 harness=null runtime=subprocess
+16:48:30    INFO rollout done: id=d027b2eb719d4511abf2df4f383acc4d task=348 reward=0.770 turns=6 stop=user_closed
+16:48:30    INFO rollout start: id=141d5e961e154b99ba76375a5e4e7660 task=352 harness=null runtime=subprocess
+16:48:32    INFO rollout done: id=ff2782c66bbe4a3784988b0cc441d3ab task=349 reward=0.812 turns=6 stop=user_closed
+16:48:32    INFO rollout start: id=11eea913bbcd4502bf329c2296b9b926 task=353 harness=null runtime=subprocess
+16:48:40    INFO rollout done: id=63f7ac1e3d6a46dba12491f9f855eae3 task=351 reward=0.870 turns=6 stop=user_closed
+16:48:40    INFO rollout start: id=224397fda55d4e268104f89947aa8a8c task=354 harness=null runtime=subprocess
+16:48:41    INFO rollout done: id=0f18c2ef9c144c479f9591ab764e0df0 task=350 reward=0.970 turns=6 stop=user_closed
+16:48:41    INFO rollout start: id=014f0d6bac1e4b70b2c87336d2ce0397 task=355 harness=null runtime=subprocess
+16:49:02    INFO rollout done: id=11eea913bbcd4502bf329c2296b9b926 task=353 reward=0.420 turns=6 stop=user_closed
+16:49:02    INFO rollout start: id=b84fbd9447b5496091841444b5ba5977 task=356 harness=null runtime=subprocess
+16:49:06    INFO rollout done: id=141d5e961e154b99ba76375a5e4e7660 task=352 reward=0.733 turns=6 stop=user_closed
+16:49:06    INFO rollout start: id=17b607930f46443a9adad62af80c1ba7 task=357 harness=null runtime=subprocess
+16:49:14    INFO rollout done: id=224397fda55d4e268104f89947aa8a8c task=354 reward=0.370 turns=6 stop=user_closed
+16:49:14    INFO rollout start: id=c56108463fc040fb8cbf348a581e0d10 task=358 harness=null runtime=subprocess
+16:49:20    INFO rollout done: id=014f0d6bac1e4b70b2c87336d2ce0397 task=355 reward=0.455 turns=6 stop=user_closed
+16:49:20    INFO rollout start: id=e95221959d7d432cb8d5e210c4d242b0 task=359 harness=null runtime=subprocess
+16:49:34    INFO rollout done: id=b84fbd9447b5496091841444b5ba5977 task=356 reward=0.920 turns=6 stop=user_closed
+16:49:34    INFO rollout start: id=4217890052984ef6afb4c44afa747fea task=360 harness=null runtime=subprocess
+16:49:37    INFO rollout done: id=17b607930f46443a9adad62af80c1ba7 task=357 reward=0.820 turns=6 stop=user_closed
+16:49:37    INFO rollout start: id=78b78350085040b69f71048698eda4a0 task=361 harness=null runtime=subprocess
+16:49:55    INFO rollout done: id=c56108463fc040fb8cbf348a581e0d10 task=358 reward=0.870 turns=6 stop=user_closed
+16:49:55    INFO rollout start: id=5013426e7532469eb87babc5bc7da488 task=362 harness=null runtime=subprocess
+16:49:58    INFO rollout done: id=e95221959d7d432cb8d5e210c4d242b0 task=359 reward=0.787 turns=6 stop=user_closed
+16:49:58    INFO rollout start: id=98aed74bdfc54fc38393d60282d105e3 task=363 harness=null runtime=subprocess
+16:50:08    INFO rollout done: id=4217890052984ef6afb4c44afa747fea task=360 reward=0.855 turns=6 stop=user_closed
+16:50:08    INFO rollout start: id=48ec73441cd546f58772e2c9f1d8da91 task=364 harness=null runtime=subprocess
+16:50:12    INFO rollout done: id=78b78350085040b69f71048698eda4a0 task=361 reward=0.820 turns=6 stop=user_closed
+16:50:12    INFO rollout start: id=dcb817e295c74d65890692687f2400f7 task=365 harness=null runtime=subprocess
+16:50:31    INFO rollout done: id=5013426e7532469eb87babc5bc7da488 task=362 reward=0.870 turns=6 stop=user_closed
+16:50:31    INFO rollout start: id=36c2b357464c427da766e1f3505a30a1 task=366 harness=null runtime=subprocess
+16:50:36    INFO rollout done: id=98aed74bdfc54fc38393d60282d105e3 task=363 reward=0.875 turns=6 stop=user_closed
+16:50:36    INFO rollout start: id=d362ef2a34ad4e76a493fa5f0f73c30c task=367 harness=null runtime=subprocess
+16:50:46    INFO rollout done: id=48ec73441cd546f58772e2c9f1d8da91 task=364 reward=0.925 turns=6 stop=user_closed
+16:50:46    INFO rollout start: id=5e19d68b5c2f4f859dcf93e81668c315 task=368 harness=null runtime=subprocess
+16:50:51    INFO rollout done: id=dcb817e295c74d65890692687f2400f7 task=365 reward=0.955 turns=6 stop=user_closed
+16:50:51    INFO rollout start: id=ac2e57f294544636943c505087f7e4c4 task=369 harness=null runtime=subprocess
+16:51:08    INFO rollout done: id=36c2b357464c427da766e1f3505a30a1 task=366 reward=0.775 turns=6 stop=user_closed
+16:51:08    INFO rollout start: id=f3d594275b664b40bdc68b71ecc2363c task=370 harness=null runtime=subprocess
+16:51:13    INFO rollout done: id=d362ef2a34ad4e76a493fa5f0f73c30c task=367 reward=0.970 turns=6 stop=user_closed
+16:51:13    INFO rollout start: id=42fa68e0ba954168a555134464061ae5 task=371 harness=null runtime=subprocess
+16:51:25    INFO rollout done: id=ac2e57f294544636943c505087f7e4c4 task=369 reward=0.950 turns=6 stop=user_closed
+16:51:25    INFO rollout start: id=6917ffa8ae2e4936a6006e1202c4d4df task=372 harness=null runtime=subprocess
+16:51:25    INFO rollout done: id=5e19d68b5c2f4f859dcf93e81668c315 task=368 reward=0.825 turns=6 stop=user_closed
+16:51:25    INFO rollout start: id=a7feb18584094a3a819e39e95df7613b task=373 harness=null runtime=subprocess
+16:51:41    INFO rollout done: id=f3d594275b664b40bdc68b71ecc2363c task=370 reward=0.420 turns=6 stop=user_closed
+16:51:41    INFO rollout start: id=577b489676f54709826f29b63821af66 task=374 harness=null runtime=subprocess
+16:51:50    INFO rollout done: id=42fa68e0ba954168a555134464061ae5 task=371 reward=0.925 turns=6 stop=user_closed
+16:51:50    INFO rollout start: id=16fe58746c5b4784a94d70e648349b4a task=375 harness=null runtime=subprocess
+16:52:00    INFO rollout done: id=a7feb18584094a3a819e39e95df7613b task=373 reward=0.870 turns=6 stop=user_closed
+16:52:00    INFO rollout start: id=b828d5d616da41308e5ee24242664d9c task=376 harness=null runtime=subprocess
+16:52:06    INFO rollout done: id=6917ffa8ae2e4936a6006e1202c4d4df task=372 reward=0.825 turns=6 stop=user_closed
+16:52:06    INFO rollout start: id=759637c1d3cd4f319976e9062f6bc55a task=377 harness=null runtime=subprocess
+16:52:14    INFO rollout done: id=577b489676f54709826f29b63821af66 task=374 reward=0.925 turns=6 stop=user_closed
+16:52:14    INFO rollout start: id=099db0ff702c42fc82832e8477ce217c task=378 harness=null runtime=subprocess
+16:52:22    INFO rollout done: id=16fe58746c5b4784a94d70e648349b4a task=375 reward=0.400 turns=6 stop=user_closed
+16:52:22    INFO rollout start: id=fb9621a28a584be1b0354c6f7f4820ea task=379 harness=null runtime=subprocess
+16:52:34    INFO rollout done: id=b828d5d616da41308e5ee24242664d9c task=376 reward=0.970 turns=6 stop=user_closed
+16:52:34    INFO rollout start: id=e1632814972642479cdef4f472ea99df task=380 harness=null runtime=subprocess
+16:52:43    INFO rollout done: id=759637c1d3cd4f319976e9062f6bc55a task=377 reward=0.925 turns=6 stop=user_closed
+16:52:43    INFO rollout start: id=7d1ac4f5f84146fc9a1ac4cf6bc716b1 task=381 harness=null runtime=subprocess
+16:52:56    INFO rollout done: id=fb9621a28a584be1b0354c6f7f4820ea task=379 reward=0.805 turns=6 stop=user_closed
+16:52:56    INFO rollout done: id=099db0ff702c42fc82832e8477ce217c task=378 reward=0.825 turns=6 stop=user_closed
+16:52:56    INFO rollout start: id=47f892c8ebf246f38f87db642014943d task=382 harness=null runtime=subprocess
+16:52:56    INFO rollout start: id=48a927f4263b464f83b5ecb92b2e9a34 task=383 harness=null runtime=subprocess
+16:53:10    INFO rollout done: id=e1632814972642479cdef4f472ea99df task=380 reward=0.770 turns=6 stop=user_closed
+16:53:10    INFO rollout start: id=acf61f9282fd4df0ac9f7382d997c114 task=384 harness=null runtime=subprocess
+16:53:14    INFO rollout done: id=7d1ac4f5f84146fc9a1ac4cf6bc716b1 task=381 reward=0.850 turns=6 stop=user_closed
+16:53:14    INFO rollout start: id=5ce804f4b5c64b0ea4d65915feac1d05 task=385 harness=null runtime=subprocess
+16:53:29    INFO rollout done: id=48a927f4263b464f83b5ecb92b2e9a34 task=383 reward=0.840 turns=6 stop=user_closed
+16:53:29    INFO rollout start: id=91970cd7f9f94058abc8e0a752cefd9d task=386 harness=null runtime=subprocess
+16:53:33    INFO rollout done: id=47f892c8ebf246f38f87db642014943d task=382 reward=0.948 turns=6 stop=user_closed
+16:53:33    INFO rollout start: id=693d9a99e39243a884fe2cac2d81bf9a task=387 harness=null runtime=subprocess
+16:53:46    INFO rollout done: id=acf61f9282fd4df0ac9f7382d997c114 task=384 reward=0.870 turns=6 stop=user_closed
+16:53:46    INFO rollout start: id=b4677d086b754b1a9b3d28092add297a task=388 harness=null runtime=subprocess
+16:53:46    INFO rollout done: id=5ce804f4b5c64b0ea4d65915feac1d05 task=385 reward=0.600 turns=6 stop=user_closed
+16:53:46    INFO rollout start: id=de6cea54ff7741c7b005287da1539fb8 task=389 harness=null runtime=subprocess
+16:54:06    INFO rollout done: id=693d9a99e39243a884fe2cac2d81bf9a task=387 reward=0.432 turns=6 stop=user_closed
+16:54:06    INFO rollout start: id=08c9b057d5de4927ad0f50f27268a13d task=390 harness=null runtime=subprocess
+16:54:06    INFO rollout done: id=91970cd7f9f94058abc8e0a752cefd9d task=386 reward=0.520 turns=6 stop=user_closed
+16:54:06    INFO rollout start: id=4a2e1e25d3b5469591d47b13864b4455 task=391 harness=null runtime=subprocess
+16:54:17    INFO rollout done: id=de6cea54ff7741c7b005287da1539fb8 task=389 reward=0.870 turns=6 stop=user_closed
+16:54:17    INFO rollout start: id=5c8263dfbd054a1d9751deaf57b8ea49 task=392 harness=null runtime=subprocess
+16:54:18    INFO rollout done: id=b4677d086b754b1a9b3d28092add297a task=388 reward=0.870 turns=6 stop=user_closed
+16:54:18    INFO rollout start: id=1ca151e296b4450fa25dd3fe876180b5 task=393 harness=null runtime=subprocess
+16:54:42    INFO rollout done: id=4a2e1e25d3b5469591d47b13864b4455 task=391 reward=0.770 turns=6 stop=user_closed
+16:54:42    INFO rollout start: id=30c77200e6a9409abefd9210c0f8fd86 task=394 harness=null runtime=subprocess
+16:54:44    INFO rollout done: id=08c9b057d5de4927ad0f50f27268a13d task=390 reward=0.870 turns=6 stop=user_closed
+16:54:44    INFO rollout start: id=4248632e91924786bac9c6efa2ec9b77 task=395 harness=null runtime=subprocess
+16:54:56    INFO rollout done: id=1ca151e296b4450fa25dd3fe876180b5 task=393 reward=0.870 turns=6 stop=user_closed
+16:54:56    INFO rollout start: id=d6959549adb64e48bdbaea830e234ebc task=396 harness=null runtime=subprocess
+16:55:02    INFO rollout done: id=5c8263dfbd054a1d9751deaf57b8ea49 task=392 reward=0.855 turns=6 stop=user_closed
+16:55:02    INFO rollout start: id=93ba66b018ea48a5a776162e3d73040a task=397 harness=null runtime=subprocess
+16:55:16    INFO rollout done: id=4248632e91924786bac9c6efa2ec9b77 task=395 reward=0.500 turns=6 stop=user_closed
+16:55:16    INFO rollout done: id=30c77200e6a9409abefd9210c0f8fd86 task=394 reward=0.970 turns=6 stop=user_closed
+16:55:16    INFO rollout start: id=989512912a8b40259f82b8da57a6b0aa task=398 harness=null runtime=subprocess
+16:55:16    INFO rollout start: id=fdc87971572244368e3c6aed5ba5819e task=399 harness=null runtime=subprocess
+16:55:30    INFO rollout done: id=d6959549adb64e48bdbaea830e234ebc task=396 reward=0.932 turns=6 stop=user_closed
+16:55:30    INFO rollout start: id=fe16664556f54c8db18bdbd311d1fe9a task=400 harness=null runtime=subprocess
+16:55:38    INFO rollout done: id=93ba66b018ea48a5a776162e3d73040a task=397 reward=0.470 turns=6 stop=user_closed
+16:55:38    INFO rollout start: id=03f9a5a2a4ca4c3cb4080228a3f04756 task=401 harness=null runtime=subprocess
+16:55:49    INFO rollout done: id=fdc87971572244368e3c6aed5ba5819e task=399 reward=0.900 turns=6 stop=user_closed
+16:55:49    INFO rollout start: id=d27c08133f3c4911925327d0b57b23c9 task=402 harness=null runtime=subprocess
+16:55:50    INFO rollout done: id=989512912a8b40259f82b8da57a6b0aa task=398 reward=0.820 turns=6 stop=user_closed
+16:55:50    INFO rollout start: id=ff1d74cef43442ad85f4f5e8b8ea0bce task=403 harness=null runtime=subprocess
+16:56:03    INFO rollout done: id=fe16664556f54c8db18bdbd311d1fe9a task=400 reward=0.770 turns=6 stop=user_closed
+16:56:04    INFO rollout start: id=2b8daadeea9d4b19a443398567bdfe44 task=404 harness=null runtime=subprocess
+16:56:10    INFO rollout done: id=03f9a5a2a4ca4c3cb4080228a3f04756 task=401 reward=0.850 turns=6 stop=user_closed
+16:56:10    INFO rollout start: id=3347da90100d4a7392e1ccd1ab11b33d task=405 harness=null runtime=subprocess
+16:56:26    INFO rollout done: id=d27c08133f3c4911925327d0b57b23c9 task=402 reward=0.920 turns=6 stop=user_closed
+16:56:26    INFO rollout start: id=af30909a11ee4a12abf867ae23592de5 task=406 harness=null runtime=subprocess
+16:56:27    INFO rollout done: id=ff1d74cef43442ad85f4f5e8b8ea0bce task=403 reward=0.870 turns=6 stop=user_closed
+16:56:27    INFO rollout start: id=c2a29aefe1964f2e8350f88786a20433 task=407 harness=null runtime=subprocess
+16:56:43    INFO rollout done: id=3347da90100d4a7392e1ccd1ab11b33d task=405 reward=0.512 turns=6 stop=user_closed
+16:56:43    INFO rollout start: id=3b41a48182014f0f856d129af9a3745f task=408 harness=null runtime=subprocess
+16:56:44    INFO rollout done: id=2b8daadeea9d4b19a443398567bdfe44 task=404 reward=0.800 turns=6 stop=user_closed
+16:56:44    INFO rollout start: id=99b333033db642c9a7fa8326c6a5b655 task=409 harness=null runtime=subprocess
+16:57:03    INFO rollout done: id=c2a29aefe1964f2e8350f88786a20433 task=407 reward=0.350 turns=6 stop=user_closed
+16:57:03    INFO rollout start: id=fb86e416ab144e74911ee8d86fcc9f4d task=410 harness=null runtime=subprocess
+16:57:03    INFO rollout done: id=af30909a11ee4a12abf867ae23592de5 task=406 reward=0.325 turns=6 stop=user_closed
+16:57:03    INFO rollout start: id=d711f6dfee4c427ab9050309b5e5ff6a task=411 harness=null runtime=subprocess
+16:57:16    INFO rollout done: id=3b41a48182014f0f856d129af9a3745f task=408 reward=0.870 turns=6 stop=user_closed
+16:57:16    INFO rollout start: id=7cc0cf52f13e4f5d91fde385e6206024 task=412 harness=null runtime=subprocess
+16:57:21    INFO rollout done: id=99b333033db642c9a7fa8326c6a5b655 task=409 reward=0.675 turns=6 stop=user_closed
+16:57:21    INFO rollout start: id=c00d107f83bd476f9ca5c23165c37c33 task=413 harness=null runtime=subprocess
+16:57:39    INFO rollout done: id=d711f6dfee4c427ab9050309b5e5ff6a task=411 reward=0.825 turns=6 stop=user_closed
+16:57:45    INFO rollout done: id=fb86e416ab144e74911ee8d86fcc9f4d task=410 reward=0.870 turns=6 stop=user_closed
+16:57:52    INFO rollout done: id=7cc0cf52f13e4f5d91fde385e6206024 task=412 reward=0.870 turns=6 stop=user_closed
+16:57:52    INFO rollout done: id=c00d107f83bd476f9ca5c23165c37c33 task=413 reward=0.870 turns=6 stop=user_closed
+16:57:53    INFO EnvServer down: taskset=clinical-trial-reasoning
+16:57:53    INFO interception down: url=http://127.0.0.1:58519
+16:57:53    INFO EnvServerPool down

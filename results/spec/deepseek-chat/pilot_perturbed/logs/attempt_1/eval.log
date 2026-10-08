@@ -1,0 +1,1172 @@
+15:41:53    INFO running 414x1 rollouts on deepseek-chat via the env-server elastic pool
+15:41:53    INFO results: results/spec/deepseek-chat/pilot_perturbed
+15:41:55    INFO EnvServerPool up: address=tcp://127.0.0.1:57445 workers=1/inf multiplex=128 elastic=True
+15:41:57    INFO EnvServer up: taskset=clinical-trial-reasoning address=ipc:///tmp/vf-pool-nbbmjoqy/0
+15:41:57    INFO interception up: url=http://127.0.0.1:57447
+15:41:57    INFO interception pool: 1 server(s), multiplex=32
+15:41:57    INFO rollout start: id=d018c7ce767b4b7d9c109016a72f5033 task=0 harness=null runtime=subprocess
+15:41:57    INFO rollout start: id=af37e0ea3a14479f9b26542c2109d3ec task=1 harness=null runtime=subprocess
+15:41:57    INFO rollout start: id=40fc0c88749745bdab4db6ee1096b7b3 task=2 harness=null runtime=subprocess
+15:41:57    INFO rollout start: id=096729a53e2c471797f3991a9c620b17 task=3 harness=null runtime=subprocess
+15:42:32    INFO rollout done: id=af37e0ea3a14479f9b26542c2109d3ec task=1 reward=0.370 turns=6 stop=user_closed
+15:42:32    INFO rollout start: id=f0c2c16957d74274b232318c2f61753d task=4 harness=null runtime=subprocess
+15:42:35    INFO rollout done: id=d018c7ce767b4b7d9c109016a72f5033 task=0 reward=0.925 turns=6 stop=user_closed
+15:42:35    INFO rollout start: id=b7381c82157b440e8fe9fe62b5f75361 task=5 harness=null runtime=subprocess
+15:42:35    INFO rollout done: id=096729a53e2c471797f3991a9c620b17 task=3 reward=0.870 turns=6 stop=user_closed
+15:42:35    INFO rollout start: id=3a50324461f54bf3b608e94ca95e0bdf task=6 harness=null runtime=subprocess
+15:42:37    INFO rollout done: id=40fc0c88749745bdab4db6ee1096b7b3 task=2 reward=0.925 turns=6 stop=user_closed
+15:42:37    INFO rollout start: id=3cb423cad43e490c8956a1b5bf543876 task=7 harness=null runtime=subprocess
+15:43:10    INFO rollout done: id=b7381c82157b440e8fe9fe62b5f75361 task=5 reward=1.000 turns=6 stop=user_closed
+15:43:10    INFO rollout start: id=9ed8f60c28c54dcd8be2b556b682f02a task=8 harness=null runtime=subprocess
+15:43:14    INFO rollout done: id=3a50324461f54bf3b608e94ca95e0bdf task=6 reward=0.775 turns=6 stop=user_closed
+15:43:14    INFO rollout start: id=0f05111b32574607a8f1a1a5521497f2 task=9 harness=null runtime=subprocess
+15:43:15    INFO rollout done: id=f0c2c16957d74274b232318c2f61753d task=4 reward=0.820 turns=6 stop=user_closed
+15:43:15    INFO rollout start: id=1a3f532d68cc4475b8abd585d83bf989 task=10 harness=null runtime=subprocess
+15:43:21    INFO rollout done: id=3cb423cad43e490c8956a1b5bf543876 task=7 reward=0.900 turns=6 stop=user_closed
+15:43:21    INFO rollout start: id=dae47e7250844c2eaff3c78311b5d72b task=11 harness=null runtime=subprocess
+15:43:46    INFO rollout done: id=9ed8f60c28c54dcd8be2b556b682f02a task=8 reward=0.925 turns=6 stop=user_closed
+15:43:46    INFO rollout start: id=8354446936d84c4cb3b4e7bd6a4b8bfb task=12 harness=null runtime=subprocess
+15:43:51    INFO rollout done: id=0f05111b32574607a8f1a1a5521497f2 task=9 reward=0.870 turns=6 stop=user_closed
+15:43:51    INFO rollout start: id=5c132a8af7bf4795a4199cb8984ccd38 task=13 harness=null runtime=subprocess
+15:43:57    INFO rollout done: id=1a3f532d68cc4475b8abd585d83bf989 task=10 reward=0.855 turns=6 stop=user_closed
+15:43:57    INFO rollout start: id=1869b224436444a79c093a550e914909 task=14 harness=null runtime=subprocess
+15:44:01    INFO rollout done: id=dae47e7250844c2eaff3c78311b5d72b task=11 reward=0.455 turns=6 stop=user_closed
+15:44:01    INFO rollout start: id=7039bfab35db4521824c4eb101e08b6f task=15 harness=null runtime=subprocess
+15:44:23    INFO rollout done: id=8354446936d84c4cb3b4e7bd6a4b8bfb task=12 reward=0.425 turns=6 stop=user_closed
+15:44:23    INFO rollout start: id=8366a77a0562491c904fbf9df53bbd03 task=16 harness=null runtime=subprocess
+15:44:26    INFO rollout done: id=5c132a8af7bf4795a4199cb8984ccd38 task=13 reward=0.455 turns=6 stop=user_closed
+15:44:26    INFO rollout start: id=aad25f8900a74b7cb028d0aca744b51e task=17 harness=null runtime=subprocess
+15:44:32    INFO rollout done: id=1869b224436444a79c093a550e914909 task=14 reward=0.920 turns=6 stop=user_closed
+15:44:32    INFO rollout start: id=b5e72d0b43a84801bdcc2b73b884211b task=18 harness=null runtime=subprocess
+15:44:34    INFO rollout done: id=7039bfab35db4521824c4eb101e08b6f task=15 reward=0.870 turns=6 stop=user_closed
+15:44:34    INFO rollout start: id=3e249e6e174343d5999c3f89a06fd751 task=19 harness=null runtime=subprocess
+15:45:04    INFO rollout done: id=aad25f8900a74b7cb028d0aca744b51e task=17 reward=0.870 turns=6 stop=user_closed
+15:45:04    INFO rollout start: id=47c65ad3363d4036b8a9be29a215ad1c task=20 harness=null runtime=subprocess
+15:45:08    INFO rollout done: id=3e249e6e174343d5999c3f89a06fd751 task=19 reward=0.725 turns=6 stop=user_closed
+15:45:08    INFO rollout start: id=4207a90fc1f64074a129b99b4aa59d65 task=21 harness=null runtime=subprocess
+15:45:08    INFO rollout done: id=8366a77a0562491c904fbf9df53bbd03 task=16 reward=0.925 turns=6 stop=user_closed
+15:45:08    INFO rollout start: id=f3afe96f5c5d4def86a28d726e958aef task=22 harness=null runtime=subprocess
+15:45:15    INFO rollout done: id=b5e72d0b43a84801bdcc2b73b884211b task=18 reward=0.855 turns=6 stop=user_closed
+15:45:15    INFO rollout start: id=3f55721757174d4ba341eb14884d1426 task=23 harness=null runtime=subprocess
+15:45:36    INFO rollout done: id=47c65ad3363d4036b8a9be29a215ad1c task=20 reward=0.970 turns=6 stop=user_closed
+15:45:36    INFO rollout start: id=0752402b36324871b12219fce30e1330 task=24 harness=null runtime=subprocess
+15:45:38    INFO rollout done: id=4207a90fc1f64074a129b99b4aa59d65 task=21 reward=0.500 turns=6 stop=user_closed
+15:45:38    INFO rollout start: id=ce35fcdc104a48498f8338c115ff5e79 task=25 harness=null runtime=subprocess
+15:45:40    INFO rollout done: id=f3afe96f5c5d4def86a28d726e958aef task=22 reward=0.920 turns=6 stop=user_closed
+15:45:40    INFO rollout start: id=e3c327198c374de5bd37c4d9c8ffc13e task=26 harness=null runtime=subprocess
+15:45:48    INFO rollout done: id=3f55721757174d4ba341eb14884d1426 task=23 reward=0.970 turns=6 stop=user_closed
+15:45:48    INFO rollout start: id=85f2cad4a6944f7e84bb096714d77968 task=27 harness=null runtime=subprocess
+15:46:09    INFO rollout done: id=ce35fcdc104a48498f8338c115ff5e79 task=25 reward=0.900 turns=6 stop=user_closed
+15:46:09    INFO rollout start: id=a4f6f80c336d4e87852f412c54b93098 task=28 harness=null runtime=subprocess
+15:46:14    INFO rollout done: id=e3c327198c374de5bd37c4d9c8ffc13e task=26 reward=0.825 turns=6 stop=user_closed
+15:46:14    INFO rollout start: id=39e5c4d569024b6eac9103a481641feb task=29 harness=null runtime=subprocess
+15:46:19    INFO rollout done: id=0752402b36324871b12219fce30e1330 task=24 reward=0.870 turns=6 stop=user_closed
+15:46:19    INFO rollout start: id=dff6bf28221a4dd18ee008d97bc573bc task=30 harness=null runtime=subprocess
+15:46:19    INFO rollout done: id=85f2cad4a6944f7e84bb096714d77968 task=27 reward=0.850 turns=6 stop=user_closed
+15:46:19    INFO rollout start: id=ef5d1472e6d244e3925637d5cb157aa7 task=31 harness=null runtime=subprocess
+15:46:46    INFO rollout done: id=a4f6f80c336d4e87852f412c54b93098 task=28 reward=0.850 turns=6 stop=user_closed
+15:46:46    INFO rollout start: id=094b16e988af4b28b367043c36812614 task=32 harness=null runtime=subprocess
+15:46:53    INFO rollout done: id=ef5d1472e6d244e3925637d5cb157aa7 task=31 reward=0.600 turns=6 stop=user_closed
+15:46:53    INFO rollout start: id=07ca8404e7514db584517773d67d2dcf task=33 harness=null runtime=subprocess
+15:46:53    INFO rollout done: id=39e5c4d569024b6eac9103a481641feb task=29 reward=0.870 turns=6 stop=user_closed
+15:46:53    INFO rollout start: id=a5519f12729947c38c2261cbf456e8ef task=34 harness=null runtime=subprocess
+15:46:57    INFO rollout done: id=dff6bf28221a4dd18ee008d97bc573bc task=30 reward=0.770 turns=6 stop=user_closed
+15:46:57    INFO rollout start: id=58f8cfba35e04c288b4a60511bd75826 task=35 harness=null runtime=subprocess
+15:47:25    INFO rollout done: id=094b16e988af4b28b367043c36812614 task=32 reward=0.425 turns=6 stop=user_closed
+15:47:25    INFO rollout start: id=41c0cb2171ff4987a29e4b5e4008fbe1 task=36 harness=null runtime=subprocess
+15:47:26    INFO rollout done: id=07ca8404e7514db584517773d67d2dcf task=33 reward=0.450 turns=6 stop=user_closed
+15:47:26    INFO rollout start: id=60e3f2ccc7ca43289105fcf0a8d15c0f task=37 harness=null runtime=subprocess
+15:47:30    INFO rollout done: id=58f8cfba35e04c288b4a60511bd75826 task=35 reward=0.682 turns=6 stop=user_closed
+15:47:30    INFO rollout start: id=c9e45364dca845358615a189ba6ed357 task=38 harness=null runtime=subprocess
+15:47:30    INFO rollout done: id=a5519f12729947c38c2261cbf456e8ef task=34 reward=0.970 turns=6 stop=user_closed
+15:47:30    INFO rollout start: id=f6065eb7aa8e477fbccec68c55d8a4ef task=39 harness=null runtime=subprocess
+15:47:58    INFO rollout done: id=60e3f2ccc7ca43289105fcf0a8d15c0f task=37 reward=0.870 turns=6 stop=user_closed
+15:47:58    INFO rollout start: id=9c6085c24a0b4bf68afab0ffda8dbffd task=40 harness=null runtime=subprocess
+15:48:03    INFO rollout done: id=41c0cb2171ff4987a29e4b5e4008fbe1 task=36 reward=0.870 turns=6 stop=user_closed
+15:48:03    INFO rollout start: id=9bdd7ab0d2a44e9095e61b5e0ce713f8 task=41 harness=null runtime=subprocess
+15:48:04    INFO rollout done: id=f6065eb7aa8e477fbccec68c55d8a4ef task=39 reward=0.675 turns=6 stop=user_closed
+15:48:04    INFO rollout start: id=8b14790bb37144a4b4056f43a7c6c973 task=42 harness=null runtime=subprocess
+15:48:07    INFO rollout done: id=c9e45364dca845358615a189ba6ed357 task=38 reward=0.855 turns=6 stop=user_closed
+15:48:07    INFO rollout start: id=42912102167a42ff90738f1f59914df0 task=43 harness=null runtime=subprocess
+15:48:31    INFO rollout done: id=9c6085c24a0b4bf68afab0ffda8dbffd task=40 reward=0.920 turns=6 stop=user_closed
+15:48:31    INFO rollout start: id=cd1b2ade9b424db483ec51f8ca3f0d61 task=44 harness=null runtime=subprocess
+15:48:32    INFO rollout done: id=9bdd7ab0d2a44e9095e61b5e0ce713f8 task=41 reward=0.500 turns=6 stop=user_closed
+15:48:32    INFO rollout start: id=7c213baa8f364c66a18d88a3abf44ac0 task=45 harness=null runtime=subprocess
+15:48:39    INFO rollout done: id=8b14790bb37144a4b4056f43a7c6c973 task=42 reward=0.920 turns=6 stop=user_closed
+15:48:39    INFO rollout start: id=608469efdafd412cbf3fd3d09f785ce3 task=46 harness=null runtime=subprocess
+15:48:44    INFO rollout done: id=42912102167a42ff90738f1f59914df0 task=43 reward=0.875 turns=6 stop=user_closed
+15:48:44    INFO rollout start: id=eee17cfe8b8c425b9ce2d6dc7916da36 task=47 harness=null runtime=subprocess
+15:49:11    INFO rollout done: id=cd1b2ade9b424db483ec51f8ca3f0d61 task=44 reward=0.825 turns=6 stop=user_closed
+15:49:11    INFO rollout start: id=47dac5adaf6842d6857ff1d85a2ca77b task=48 harness=null runtime=subprocess
+15:49:14    INFO rollout done: id=7c213baa8f364c66a18d88a3abf44ac0 task=45 reward=0.900 turns=6 stop=user_closed
+15:49:14    INFO rollout start: id=d0ffbb22dabe4545ab341a4f62eaadda task=49 harness=null runtime=subprocess
+15:49:15    INFO rollout done: id=608469efdafd412cbf3fd3d09f785ce3 task=46 reward=0.775 turns=6 stop=user_closed
+15:49:15    INFO rollout start: id=068cf8d782af4feeafd14ab279dfce82 task=50 harness=null runtime=subprocess
+15:49:16    INFO rollout done: id=eee17cfe8b8c425b9ce2d6dc7916da36 task=47 reward=0.900 turns=6 stop=user_closed
+15:49:16    INFO rollout start: id=3d8253223de042d68bb8c249b04b4630 task=51 harness=null runtime=subprocess
+15:49:44    INFO rollout done: id=47dac5adaf6842d6857ff1d85a2ca77b task=48 reward=0.775 turns=6 stop=user_closed
+15:49:44    INFO rollout start: id=81797d07dc454bc7b7150ed7df54aae1 task=52 harness=null runtime=subprocess
+15:49:48    INFO rollout done: id=068cf8d782af4feeafd14ab279dfce82 task=50 reward=0.555 turns=6 stop=user_closed
+15:49:48    INFO rollout start: id=2785fbe3b4d245fbad4fde34ee67ca83 task=53 harness=null runtime=subprocess
+15:49:52    INFO rollout done: id=d0ffbb22dabe4545ab341a4f62eaadda task=49 reward=0.763 turns=6 stop=user_closed
+15:49:52    INFO rollout start: id=bd467c3e848c4b9699be85c69c663a07 task=54 harness=null runtime=subprocess
+15:49:54    INFO rollout done: id=3d8253223de042d68bb8c249b04b4630 task=51 reward=0.375 turns=6 stop=user_closed
+15:49:54    INFO rollout start: id=3b9a7d6eec1d4722ba846a1eb2ad7096 task=55 harness=null runtime=subprocess
+15:50:17    INFO rollout done: id=81797d07dc454bc7b7150ed7df54aae1 task=52 reward=0.500 turns=6 stop=user_closed
+15:50:17    INFO rollout start: id=e357a4366bb24b3c884d85de0586fac9 task=56 harness=null runtime=subprocess
+15:50:25    INFO rollout done: id=bd467c3e848c4b9699be85c69c663a07 task=54 reward=0.770 turns=6 stop=user_closed
+15:50:25    INFO rollout start: id=fa84f75999e34dce8d3e148068ab6fd2 task=57 harness=null runtime=subprocess
+15:50:28    INFO rollout done: id=2785fbe3b4d245fbad4fde34ee67ca83 task=53 reward=0.875 turns=6 stop=user_closed
+15:50:28    INFO rollout start: id=bcc3bd50351f4b45af503e53b28f7721 task=58 harness=null runtime=subprocess
+15:50:31    INFO rollout done: id=3b9a7d6eec1d4722ba846a1eb2ad7096 task=55 reward=0.963 turns=6 stop=user_closed
+15:50:31    INFO rollout start: id=82cf729d243f4a01b8e9280a4d4864e5 task=59 harness=null runtime=subprocess
+15:50:51    INFO rollout done: id=e357a4366bb24b3c884d85de0586fac9 task=56 reward=0.870 turns=6 stop=user_closed
+15:50:51    INFO rollout start: id=eb486c307ea5431e902d2f2327460a8d task=60 harness=null runtime=subprocess
+15:51:03    INFO rollout done: id=bcc3bd50351f4b45af503e53b28f7721 task=58 reward=0.920 turns=6 stop=user_closed
+15:51:03    INFO rollout start: id=300b1d6e43ea4f9d8875c9810e8d06ae task=61 harness=null runtime=subprocess
+15:51:03    INFO rollout done: id=fa84f75999e34dce8d3e148068ab6fd2 task=57 reward=0.900 turns=6 stop=user_closed
+15:51:03    INFO rollout start: id=f6f6a44de2df429192ab5f967d3dc8dc task=62 harness=null runtime=subprocess
+15:51:12    INFO rollout done: id=82cf729d243f4a01b8e9280a4d4864e5 task=59 reward=0.850 turns=6 stop=user_closed
+15:51:12    INFO rollout start: id=9540188be72448ab85a2d6b688bf6ca2 task=63 harness=null runtime=subprocess
+15:51:27    INFO rollout done: id=eb486c307ea5431e902d2f2327460a8d task=60 reward=0.420 turns=6 stop=user_closed
+15:51:27    INFO rollout start: id=f4a85e29386243b998301467f49af4b0 task=64 harness=null runtime=subprocess
+15:51:38    INFO rollout done: id=f6f6a44de2df429192ab5f967d3dc8dc task=62 reward=0.925 turns=6 stop=user_closed
+15:51:38    INFO rollout start: id=770cdf99d5464479a6547508afe4887d task=65 harness=null runtime=subprocess
+15:51:39    INFO rollout done: id=300b1d6e43ea4f9d8875c9810e8d06ae task=61 reward=0.970 turns=6 stop=user_closed
+15:51:39    INFO rollout start: id=823c83f3b2a74ad4a760ec57dcf27bf3 task=66 harness=null runtime=subprocess
+15:51:49    INFO rollout done: id=9540188be72448ab85a2d6b688bf6ca2 task=63 reward=0.825 turns=6 stop=user_closed
+15:51:49    INFO rollout start: id=4420c37f553348e09981afe7c69be3e6 task=67 harness=null runtime=subprocess
+15:52:08    INFO rollout done: id=f4a85e29386243b998301467f49af4b0 task=64 reward=0.900 turns=6 stop=user_closed
+15:52:08    INFO rollout start: id=7ce44330b1554db380dbbd3c61d0eae3 task=68 harness=null runtime=subprocess
+15:52:12    INFO rollout done: id=770cdf99d5464479a6547508afe4887d task=65 reward=0.770 turns=6 stop=user_closed
+15:52:12    INFO rollout start: id=220574f922184d4d8e13832576d751a0 task=69 harness=null runtime=subprocess
+15:52:16    INFO rollout done: id=823c83f3b2a74ad4a760ec57dcf27bf3 task=66 reward=0.900 turns=6 stop=user_closed
+15:52:16    INFO rollout start: id=74e0f340cfec41dbb2c30c85b8927e9c task=70 harness=null runtime=subprocess
+15:52:26    INFO rollout done: id=4420c37f553348e09981afe7c69be3e6 task=67 reward=0.925 turns=6 stop=user_closed
+15:52:26    INFO rollout start: id=41cdc4de37ad4e758ca2d8c4ada87eea task=71 harness=null runtime=subprocess
+15:52:43    INFO rollout done: id=7ce44330b1554db380dbbd3c61d0eae3 task=68 reward=0.825 turns=6 stop=user_closed
+15:52:43    INFO rollout start: id=3cbef9eb7fde464daa434f6744a5420b task=72 harness=null runtime=subprocess
+15:52:51    INFO rollout done: id=74e0f340cfec41dbb2c30c85b8927e9c task=70 reward=0.505 turns=6 stop=user_closed
+15:52:51    INFO rollout start: id=9a0dfb3ae1124171ab38bab99b5a4f5d task=73 harness=null runtime=subprocess
+15:52:53    INFO rollout done: id=220574f922184d4d8e13832576d751a0 task=69 reward=0.825 turns=6 stop=user_closed
+15:52:53    INFO rollout start: id=915455167ae8418c9737f63c69e032a9 task=74 harness=null runtime=subprocess
+15:52:57    INFO rollout done: id=41cdc4de37ad4e758ca2d8c4ada87eea task=71 reward=0.370 turns=6 stop=user_closed
+15:52:57    INFO rollout start: id=e58919561dc24ffda42f962855bcdfb5 task=75 harness=null runtime=subprocess
+15:53:20    INFO rollout done: id=3cbef9eb7fde464daa434f6744a5420b task=72 reward=0.463 turns=6 stop=user_closed
+15:53:20    INFO rollout start: id=0dfbee14ab4547f2a550ec8af566b15b task=76 harness=null runtime=subprocess
+15:53:28    INFO rollout done: id=915455167ae8418c9737f63c69e032a9 task=74 reward=0.825 turns=6 stop=user_closed
+15:53:28    INFO rollout start: id=0d8b71fd0d9c460f9ca269caffbdf593 task=77 harness=null runtime=subprocess
+15:53:28    INFO rollout done: id=9a0dfb3ae1124171ab38bab99b5a4f5d task=73 reward=0.875 turns=6 stop=user_closed
+15:53:28    INFO rollout start: id=a81535f4909648dab3cd744c20360e95 task=78 harness=null runtime=subprocess
+15:53:38    INFO rollout done: id=e58919561dc24ffda42f962855bcdfb5 task=75 reward=0.970 turns=6 stop=user_closed
+15:53:38    INFO rollout start: id=47681f12e3e54dd49e1aef38d2b88b97 task=79 harness=null runtime=subprocess
+15:53:56    INFO rollout done: id=0dfbee14ab4547f2a550ec8af566b15b task=76 reward=0.825 turns=6 stop=user_closed
+15:53:56    INFO rollout start: id=563819c0e80841e4b1c6c4661c29aade task=80 harness=null runtime=subprocess
+15:54:00    INFO rollout done: id=a81535f4909648dab3cd744c20360e95 task=78 reward=0.870 turns=6 stop=user_closed
+15:54:00    INFO rollout start: id=6aec8586e66e4e7b9421fc39158a74f8 task=81 harness=null runtime=subprocess
+15:54:05    INFO rollout done: id=0d8b71fd0d9c460f9ca269caffbdf593 task=77 reward=0.855 turns=6 stop=user_closed
+15:54:05    INFO rollout start: id=bffd0f07ba954393a9347c213e8f72b7 task=82 harness=null runtime=subprocess
+15:54:05 WARNING model call failed: id=47681f12e3e54dd49e1aef38d2b88b97 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 666b4e5f-6b60-4b5f-b6bc-aa4dd429e04b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:05    INFO rollout done: id=47681f12e3e54dd49e1aef38d2b88b97 task=79 reward=0.000 turns=4 stop=ProviderError
+15:54:05    INFO rollout start: id=f8fc54ff5cb644daab811c4d63a869e8 task=83 harness=null runtime=subprocess
+15:54:06 WARNING model call failed: id=bffd0f07ba954393a9347c213e8f72b7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b209f486-082b-42b4-9114-e128a81661fe)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:07 WARNING model call failed: id=f8fc54ff5cb644daab811c4d63a869e8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: f42b8b50-b66f-4764-9492-b0e913a30447)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:07    INFO rollout done: id=bffd0f07ba954393a9347c213e8f72b7 task=82 reward=0.000 turns=0 stop=ProviderError
+15:54:07    INFO rollout start: id=1f614cb3d4594ac18d85f3265b51d124 task=84 harness=null runtime=subprocess
+15:54:07    INFO rollout done: id=f8fc54ff5cb644daab811c4d63a869e8 task=83 reward=0.000 turns=0 stop=ProviderError
+15:54:07    INFO rollout start: id=2aa9615e86b447a7a15e2f1470aff10b task=85 harness=null runtime=subprocess
+15:54:08 WARNING model call failed: id=6aec8586e66e4e7b9421fc39158a74f8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 12f3c95f-2faa-4400-80f8-fbd5ad3fd635)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:09    INFO rollout done: id=6aec8586e66e4e7b9421fc39158a74f8 task=81 reward=0.000 turns=1 stop=ProviderError
+15:54:09    INFO rollout start: id=5a7cd18fbc5240d48c6662d3d0d899fa task=86 harness=null runtime=subprocess
+15:54:09 WARNING model call failed: id=1f614cb3d4594ac18d85f3265b51d124 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2400fc9b-5ffd-41e8-a1fb-14b05b31b6ff)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:09 WARNING model call failed: id=2aa9615e86b447a7a15e2f1470aff10b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c578338c-6148-4bc7-ad66-dd6346a5449e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:09    INFO rollout done: id=2aa9615e86b447a7a15e2f1470aff10b task=85 reward=0.000 turns=0 stop=ProviderError
+15:54:09    INFO rollout start: id=069039508772409493a5ec45ec3bbbe8 task=87 harness=null runtime=subprocess
+15:54:09    INFO rollout done: id=1f614cb3d4594ac18d85f3265b51d124 task=84 reward=0.000 turns=0 stop=ProviderError
+15:54:09    INFO rollout start: id=3a67ee5179784c4f84c690b885e06260 task=88 harness=null runtime=subprocess
+15:54:10 WARNING model call failed: id=563819c0e80841e4b1c6c4661c29aade ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: d603c8a4-0c86-4ea4-b765-28bf5813be4a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:10    INFO rollout done: id=563819c0e80841e4b1c6c4661c29aade task=80 reward=0.000 turns=2 stop=ProviderError
+15:54:10    INFO rollout start: id=6e638c4bfd0445ed995f57dd3c14b313 task=89 harness=null runtime=subprocess
+15:54:11 WARNING model call failed: id=5a7cd18fbc5240d48c6662d3d0d899fa ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 23a5d2be-815b-4859-880f-9b57ca3abd96)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:11    INFO rollout done: id=5a7cd18fbc5240d48c6662d3d0d899fa task=86 reward=0.000 turns=0 stop=ProviderError
+15:54:11    INFO rollout start: id=7cfe34ead216477e873b45ffd3d22820 task=90 harness=null runtime=subprocess
+15:54:11 WARNING model call failed: id=3a67ee5179784c4f84c690b885e06260 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 87e89c5d-5c30-4e43-bf84-00392e9e9f4a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:11 WARNING model call failed: id=069039508772409493a5ec45ec3bbbe8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8fc7fb9c-5051-445d-ab72-886a25adfb62)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:11    INFO rollout done: id=3a67ee5179784c4f84c690b885e06260 task=88 reward=0.000 turns=0 stop=ProviderError
+15:54:11    INFO rollout start: id=78fd77029290466cac82443b468def45 task=91 harness=null runtime=subprocess
+15:54:11    INFO rollout done: id=069039508772409493a5ec45ec3bbbe8 task=87 reward=0.000 turns=0 stop=ProviderError
+15:54:11    INFO rollout start: id=25b892034d9b4b7bb7c9ccdf518a7750 task=92 harness=null runtime=subprocess
+15:54:12 WARNING model call failed: id=6e638c4bfd0445ed995f57dd3c14b313 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: eec0a29d-4c34-4e0b-8f38-49da15ec4cae)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:12    INFO rollout done: id=6e638c4bfd0445ed995f57dd3c14b313 task=89 reward=0.000 turns=0 stop=ProviderError
+15:54:12    INFO rollout start: id=5e4ed5b665af431cae65232b6ad15785 task=93 harness=null runtime=subprocess
+15:54:13 WARNING model call failed: id=7cfe34ead216477e873b45ffd3d22820 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8d91d485-0f7d-46a2-b81a-e22d4a5a34f2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:13    INFO rollout done: id=7cfe34ead216477e873b45ffd3d22820 task=90 reward=0.000 turns=0 stop=ProviderError
+15:54:13    INFO rollout start: id=d6bade976fd6489086b557718c144be6 task=94 harness=null runtime=subprocess
+15:54:13 WARNING model call failed: id=78fd77029290466cac82443b468def45 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b1063199-8d45-4a7b-bff8-1fd7b55872d3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:13 WARNING model call failed: id=25b892034d9b4b7bb7c9ccdf518a7750 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: f4e1c257-8ee0-4cf3-8b2c-0d38a8c9645b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:14    INFO rollout done: id=78fd77029290466cac82443b468def45 task=91 reward=0.000 turns=0 stop=ProviderError
+15:54:14    INFO rollout start: id=3f64f378d95f435191faccecb7654188 task=95 harness=null runtime=subprocess
+15:54:14    INFO rollout done: id=25b892034d9b4b7bb7c9ccdf518a7750 task=92 reward=0.000 turns=0 stop=ProviderError
+15:54:14    INFO rollout start: id=46f56803fe6f4301984b308c7aa667c8 task=96 harness=null runtime=subprocess
+15:54:14 WARNING model call failed: id=5e4ed5b665af431cae65232b6ad15785 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c6efc11e-ec0e-4bed-91c5-2e38ec6876c2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:14 WARNING model call failed: id=d6bade976fd6489086b557718c144be6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c38f5ee0-b915-4601-a686-cf7d9f1b246e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:15    INFO rollout done: id=5e4ed5b665af431cae65232b6ad15785 task=93 reward=0.000 turns=0 stop=ProviderError
+15:54:15    INFO rollout start: id=e3748e5aad84496b9b07cf5c8cafc475 task=97 harness=null runtime=subprocess
+15:54:15    INFO rollout done: id=d6bade976fd6489086b557718c144be6 task=94 reward=0.000 turns=0 stop=ProviderError
+15:54:15    INFO rollout start: id=3a5ef8d0c09741c0b262cb7077a44020 task=98 harness=null runtime=subprocess
+15:54:15 WARNING model call failed: id=46f56803fe6f4301984b308c7aa667c8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3bec0edc-2b8d-4163-bcf9-c8c692770938)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:15 WARNING model call failed: id=3f64f378d95f435191faccecb7654188 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7fc6241d-249d-4979-9a07-bb313c74ddf9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:16    INFO rollout done: id=3f64f378d95f435191faccecb7654188 task=95 reward=0.000 turns=0 stop=ProviderError
+15:54:16    INFO rollout done: id=46f56803fe6f4301984b308c7aa667c8 task=96 reward=0.000 turns=0 stop=ProviderError
+15:54:16    INFO rollout start: id=e8241c504c2c456ca31ae09366bb32f5 task=99 harness=null runtime=subprocess
+15:54:16    INFO rollout start: id=b302e0e4cfe647d8bc7cc3c3d80d491a task=100 harness=null runtime=subprocess
+15:54:17 WARNING model call failed: id=3a5ef8d0c09741c0b262cb7077a44020 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5c95c8b2-d9f1-4dc5-83c0-95c416005648)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:17 WARNING model call failed: id=e3748e5aad84496b9b07cf5c8cafc475 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5dfd1baf-7060-4814-a504-4f3a54447818)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:17    INFO rollout done: id=3a5ef8d0c09741c0b262cb7077a44020 task=98 reward=0.000 turns=0 stop=ProviderError
+15:54:17    INFO rollout done: id=e3748e5aad84496b9b07cf5c8cafc475 task=97 reward=0.000 turns=0 stop=ProviderError
+15:54:17    INFO rollout start: id=a3cdedfa08cf4c689291209f6813877e task=101 harness=null runtime=subprocess
+15:54:17    INFO rollout start: id=fe80e96fad4347c082dab7b7e70ee59b task=102 harness=null runtime=subprocess
+15:54:18 WARNING model call failed: id=e8241c504c2c456ca31ae09366bb32f5 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c3e03b7c-9689-419b-a560-08f558366d68)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:18 WARNING model call failed: id=b302e0e4cfe647d8bc7cc3c3d80d491a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 007ec78a-a30d-4b59-a63e-58a46260b384)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:18    INFO rollout done: id=e8241c504c2c456ca31ae09366bb32f5 task=99 reward=0.000 turns=0 stop=ProviderError
+15:54:18    INFO rollout start: id=b74072c39f17454d90ac2467501733f4 task=103 harness=null runtime=subprocess
+15:54:18    INFO rollout done: id=b302e0e4cfe647d8bc7cc3c3d80d491a task=100 reward=0.000 turns=0 stop=ProviderError
+15:54:18    INFO rollout start: id=da4ed7054375421881dd6246851d5e50 task=104 harness=null runtime=subprocess
+15:54:19 WARNING model call failed: id=a3cdedfa08cf4c689291209f6813877e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0e1a70ce-3645-46d1-8f12-b4de01712cc1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:19 WARNING model call failed: id=fe80e96fad4347c082dab7b7e70ee59b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 837e3a15-0c31-4ddf-b793-93af47dd3242)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:19    INFO rollout done: id=fe80e96fad4347c082dab7b7e70ee59b task=102 reward=0.000 turns=0 stop=ProviderError
+15:54:19    INFO rollout done: id=a3cdedfa08cf4c689291209f6813877e task=101 reward=0.000 turns=0 stop=ProviderError
+15:54:19    INFO rollout start: id=0841f6afad3b466593f2c46eff5b3502 task=105 harness=null runtime=subprocess
+15:54:19    INFO rollout start: id=2bdd4b775dcd46dfbe5f92272555e8cf task=106 harness=null runtime=subprocess
+15:54:20 WARNING model call failed: id=da4ed7054375421881dd6246851d5e50 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 114df1da-a2cb-4f10-b385-b60c1c254fc8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:20 WARNING model call failed: id=b74072c39f17454d90ac2467501733f4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0d2eac9a-81d7-4a12-86ca-4235dfebbda3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:20    INFO rollout done: id=da4ed7054375421881dd6246851d5e50 task=104 reward=0.000 turns=0 stop=ProviderError
+15:54:20    INFO rollout done: id=b74072c39f17454d90ac2467501733f4 task=103 reward=0.000 turns=0 stop=ProviderError
+15:54:20    INFO rollout start: id=5650514e66a64909b791a7f1a013b893 task=107 harness=null runtime=subprocess
+15:54:20    INFO rollout start: id=b7bf71df90c34b1380217b95e50dc9ab task=108 harness=null runtime=subprocess
+15:54:21 WARNING model call failed: id=0841f6afad3b466593f2c46eff5b3502 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ac8f18d1-62c1-4525-a8f6-5dd9d8e6e12c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:21 WARNING model call failed: id=2bdd4b775dcd46dfbe5f92272555e8cf ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 4d9450fa-e371-49a5-8bf9-26be5853dfa3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:21    INFO rollout done: id=0841f6afad3b466593f2c46eff5b3502 task=105 reward=0.000 turns=0 stop=ProviderError
+15:54:21    INFO rollout start: id=741c14788d0a43f683cccf2bfcc8ae39 task=109 harness=null runtime=subprocess
+15:54:21    INFO rollout done: id=2bdd4b775dcd46dfbe5f92272555e8cf task=106 reward=0.000 turns=0 stop=ProviderError
+15:54:21    INFO rollout start: id=97c32afb976844ca8358c75bcb400911 task=110 harness=null runtime=subprocess
+15:54:22 WARNING model call failed: id=5650514e66a64909b791a7f1a013b893 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 19e79d60-4e33-4452-9741-1d76920872d4)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:22 WARNING model call failed: id=b7bf71df90c34b1380217b95e50dc9ab ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b825c358-f7fa-4179-b69b-0d5ad28b9c68)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:22    INFO rollout done: id=b7bf71df90c34b1380217b95e50dc9ab task=108 reward=0.000 turns=0 stop=ProviderError
+15:54:22    INFO rollout done: id=5650514e66a64909b791a7f1a013b893 task=107 reward=0.000 turns=0 stop=ProviderError
+15:54:22    INFO rollout start: id=df16c4d70c834601b6d57dde55c5c738 task=111 harness=null runtime=subprocess
+15:54:22    INFO rollout start: id=5deed740953f4a66919b987a34cd5a85 task=112 harness=null runtime=subprocess
+15:54:23 WARNING model call failed: id=741c14788d0a43f683cccf2bfcc8ae39 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ca2f7481-3cab-4a13-9035-0eacf6f60719)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:23 WARNING model call failed: id=97c32afb976844ca8358c75bcb400911 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3804273c-1701-407f-98f5-5c4f58e5f807)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:24    INFO rollout done: id=741c14788d0a43f683cccf2bfcc8ae39 task=109 reward=0.000 turns=0 stop=ProviderError
+15:54:24    INFO rollout done: id=97c32afb976844ca8358c75bcb400911 task=110 reward=0.000 turns=0 stop=ProviderError
+15:54:24    INFO rollout start: id=d64177c817f540f6961d81eb625607f8 task=113 harness=null runtime=subprocess
+15:54:24    INFO rollout start: id=e1d64f7d068e44e5b95add301d2f368c task=114 harness=null runtime=subprocess
+15:54:24 WARNING model call failed: id=df16c4d70c834601b6d57dde55c5c738 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 521af624-9d40-4562-aca9-fb5d3ee71738)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:24 WARNING model call failed: id=5deed740953f4a66919b987a34cd5a85 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 76c4aefa-4a99-4425-9781-3a2fa10d41d2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:25    INFO rollout done: id=df16c4d70c834601b6d57dde55c5c738 task=111 reward=0.000 turns=0 stop=ProviderError
+15:54:25    INFO rollout done: id=5deed740953f4a66919b987a34cd5a85 task=112 reward=0.000 turns=0 stop=ProviderError
+15:54:25    INFO rollout start: id=8ad42d8beaff40d1bcc7cd2301e739bd task=115 harness=null runtime=subprocess
+15:54:25    INFO rollout start: id=a7a8c18f586541179dbb2034834fd4d8 task=116 harness=null runtime=subprocess
+15:54:25 WARNING model call failed: id=e1d64f7d068e44e5b95add301d2f368c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 141d4789-b123-4324-8f77-c387c7d65172)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:25 WARNING model call failed: id=d64177c817f540f6961d81eb625607f8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a2671503-53fe-45dc-9dcc-27363b060007)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:26    INFO rollout done: id=e1d64f7d068e44e5b95add301d2f368c task=114 reward=0.000 turns=0 stop=ProviderError
+15:54:26    INFO rollout done: id=d64177c817f540f6961d81eb625607f8 task=113 reward=0.000 turns=0 stop=ProviderError
+15:54:26    INFO rollout start: id=c6a44b92becb4a2e8e9c6fdb80bb4c46 task=117 harness=null runtime=subprocess
+15:54:26    INFO rollout start: id=e5552589c4084a4a89ef32f80169950d task=118 harness=null runtime=subprocess
+15:54:26 WARNING model call failed: id=8ad42d8beaff40d1bcc7cd2301e739bd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e7d1ddf8-b9ef-4fd3-95b4-4a390af25790)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:27 WARNING model call failed: id=a7a8c18f586541179dbb2034834fd4d8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cb4e962f-1c8a-4982-98cf-fe162375b4c5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:27    INFO rollout done: id=8ad42d8beaff40d1bcc7cd2301e739bd task=115 reward=0.000 turns=0 stop=ProviderError
+15:54:27    INFO rollout done: id=a7a8c18f586541179dbb2034834fd4d8 task=116 reward=0.000 turns=0 stop=ProviderError
+15:54:27    INFO rollout start: id=27eca570c6e7445fb3f71b3deef48786 task=119 harness=null runtime=subprocess
+15:54:27    INFO rollout start: id=ca68f4f12cee484ea84704233dc49a8b task=120 harness=null runtime=subprocess
+15:54:27 WARNING model call failed: id=e5552589c4084a4a89ef32f80169950d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 285c9d96-4b0e-4990-8921-6daa565d4546)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:28 WARNING model call failed: id=c6a44b92becb4a2e8e9c6fdb80bb4c46 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 184c1b02-2701-4d00-8958-abc78050cff3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:28    INFO rollout done: id=c6a44b92becb4a2e8e9c6fdb80bb4c46 task=117 reward=0.000 turns=0 stop=ProviderError
+15:54:28    INFO rollout done: id=e5552589c4084a4a89ef32f80169950d task=118 reward=0.000 turns=0 stop=ProviderError
+15:54:28    INFO rollout start: id=ddf445b33b6c45f98ec1c2862b1d0bae task=121 harness=null runtime=subprocess
+15:54:28    INFO rollout start: id=b13a785bc3334b93a26563a174eb4f29 task=122 harness=null runtime=subprocess
+15:54:29 WARNING model call failed: id=ca68f4f12cee484ea84704233dc49a8b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e606d550-a6e4-4d55-9111-ad48e2cf6d68)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:29 WARNING model call failed: id=27eca570c6e7445fb3f71b3deef48786 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ee597a92-3577-462c-9b0d-75fae9e929ce)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:29    INFO rollout done: id=ca68f4f12cee484ea84704233dc49a8b task=120 reward=0.000 turns=0 stop=ProviderError
+15:54:29    INFO rollout done: id=27eca570c6e7445fb3f71b3deef48786 task=119 reward=0.000 turns=0 stop=ProviderError
+15:54:29    INFO rollout start: id=b810370474214529b7c2dbe23fe08b3a task=123 harness=null runtime=subprocess
+15:54:29    INFO rollout start: id=ec270b9e98114b1b9a691dd94cd3a2e7 task=124 harness=null runtime=subprocess
+15:54:30 WARNING model call failed: id=b13a785bc3334b93a26563a174eb4f29 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7bb64108-3f24-4863-a76d-c07d21c895a7)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:30 WARNING model call failed: id=ddf445b33b6c45f98ec1c2862b1d0bae ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cb6cd2e1-2567-41fe-97e1-c0f7c7d9d5a6)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:30    INFO rollout done: id=b13a785bc3334b93a26563a174eb4f29 task=122 reward=0.000 turns=0 stop=ProviderError
+15:54:30    INFO rollout done: id=ddf445b33b6c45f98ec1c2862b1d0bae task=121 reward=0.000 turns=0 stop=ProviderError
+15:54:30    INFO rollout start: id=d7d569a7f16b48699e509907bc98a4c3 task=125 harness=null runtime=subprocess
+15:54:30    INFO rollout start: id=5f425aae67b841fc8f258b9ce5f3ee3a task=126 harness=null runtime=subprocess
+15:54:31 WARNING model call failed: id=ec270b9e98114b1b9a691dd94cd3a2e7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: fd1392e5-fbcd-42f0-97ce-d82bd609f6aa)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:31 WARNING model call failed: id=b810370474214529b7c2dbe23fe08b3a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2d863ac1-68c4-42c6-bf8e-7b3a0d40f0f3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:31    INFO rollout done: id=b810370474214529b7c2dbe23fe08b3a task=123 reward=0.000 turns=0 stop=ProviderError
+15:54:31    INFO rollout done: id=ec270b9e98114b1b9a691dd94cd3a2e7 task=124 reward=0.000 turns=0 stop=ProviderError
+15:54:31    INFO rollout start: id=cf55df98a11743868430c6549bf637a3 task=127 harness=null runtime=subprocess
+15:54:31    INFO rollout start: id=68527cc72235420bb36bc775c27fc726 task=128 harness=null runtime=subprocess
+15:54:32 WARNING model call failed: id=5f425aae67b841fc8f258b9ce5f3ee3a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 96dc7bdb-bf4a-40f2-b129-0808f4ad7c0f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:32 WARNING model call failed: id=d7d569a7f16b48699e509907bc98a4c3 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5819ffce-ef90-4aab-abae-efa0ebe22723)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:32    INFO rollout done: id=5f425aae67b841fc8f258b9ce5f3ee3a task=126 reward=0.000 turns=0 stop=ProviderError
+15:54:32    INFO rollout start: id=67fe6b2581f84fdd8ef8ce1b171e4e59 task=129 harness=null runtime=subprocess
+15:54:32    INFO rollout done: id=d7d569a7f16b48699e509907bc98a4c3 task=125 reward=0.000 turns=0 stop=ProviderError
+15:54:32    INFO rollout start: id=6d1dabcc498d46dd80dee86530485a06 task=130 harness=null runtime=subprocess
+15:54:33 WARNING model call failed: id=68527cc72235420bb36bc775c27fc726 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e5c08726-6ee6-43e3-addc-29323c5481e5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:33 WARNING model call failed: id=cf55df98a11743868430c6549bf637a3 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b45463a5-9f27-433e-86c2-14740b98f3fd)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:33    INFO rollout done: id=68527cc72235420bb36bc775c27fc726 task=128 reward=0.000 turns=0 stop=ProviderError
+15:54:33    INFO rollout done: id=cf55df98a11743868430c6549bf637a3 task=127 reward=0.000 turns=0 stop=ProviderError
+15:54:33    INFO rollout start: id=e4ccf8b80f644184b9de75f645cbfd5f task=131 harness=null runtime=subprocess
+15:54:33    INFO rollout start: id=7c5ee038ac464692877c7ff92982473d task=132 harness=null runtime=subprocess
+15:54:34 WARNING model call failed: id=67fe6b2581f84fdd8ef8ce1b171e4e59 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8f27a5db-b8bb-4af1-83e8-8658342b5f89)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:34 WARNING model call failed: id=6d1dabcc498d46dd80dee86530485a06 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 286c6ee5-7ec9-42d5-95bf-4425ae7f74d3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:34    INFO rollout done: id=6d1dabcc498d46dd80dee86530485a06 task=130 reward=0.000 turns=0 stop=ProviderError
+15:54:34    INFO rollout done: id=67fe6b2581f84fdd8ef8ce1b171e4e59 task=129 reward=0.000 turns=0 stop=ProviderError
+15:54:34    INFO rollout start: id=b140abe11dfa48fbb25836e960b17a80 task=133 harness=null runtime=subprocess
+15:54:34    INFO rollout start: id=36df77e6cfa9470391c692a17c15f7b3 task=134 harness=null runtime=subprocess
+15:54:35 WARNING model call failed: id=e4ccf8b80f644184b9de75f645cbfd5f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e2e06230-081c-48e1-9d55-bfa421bab5ed)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:35 WARNING model call failed: id=7c5ee038ac464692877c7ff92982473d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e2cef14e-e3ae-47af-a651-8c84eeb058b8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:36    INFO rollout done: id=e4ccf8b80f644184b9de75f645cbfd5f task=131 reward=0.000 turns=0 stop=ProviderError
+15:54:36    INFO rollout done: id=7c5ee038ac464692877c7ff92982473d task=132 reward=0.000 turns=0 stop=ProviderError
+15:54:36    INFO rollout start: id=d1b6c6dee3794d7090b4b32fe9643696 task=135 harness=null runtime=subprocess
+15:54:36    INFO rollout start: id=e52f68c51c5f4223bf293f91452d4ce8 task=136 harness=null runtime=subprocess
+15:54:36 WARNING model call failed: id=b140abe11dfa48fbb25836e960b17a80 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: f283fa96-7659-40df-ba83-df448dd5604a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:36 WARNING model call failed: id=36df77e6cfa9470391c692a17c15f7b3 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: d1ad7ac6-d0df-4e74-bf46-b126608a5b64)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:37    INFO rollout done: id=b140abe11dfa48fbb25836e960b17a80 task=133 reward=0.000 turns=0 stop=ProviderError
+15:54:37    INFO rollout start: id=f2a1b6daca2e4d42bd5f301062fb3ff8 task=137 harness=null runtime=subprocess
+15:54:37    INFO rollout done: id=36df77e6cfa9470391c692a17c15f7b3 task=134 reward=0.000 turns=0 stop=ProviderError
+15:54:37    INFO rollout start: id=96adfe7d8cac43d893637009a8c7e93b task=138 harness=null runtime=subprocess
+15:54:37 WARNING model call failed: id=d1b6c6dee3794d7090b4b32fe9643696 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7aa00216-0441-4a9c-8fd3-dc40d7d2bcf2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:37 WARNING model call failed: id=e52f68c51c5f4223bf293f91452d4ce8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 51f37afb-207f-407e-987d-4fbbb2a8ed4c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:38    INFO rollout done: id=d1b6c6dee3794d7090b4b32fe9643696 task=135 reward=0.000 turns=0 stop=ProviderError
+15:54:38    INFO rollout done: id=e52f68c51c5f4223bf293f91452d4ce8 task=136 reward=0.000 turns=0 stop=ProviderError
+15:54:38    INFO rollout start: id=4b60549131b64286a83b357b5343a617 task=139 harness=null runtime=subprocess
+15:54:38    INFO rollout start: id=4d0f232d653b4141b5b4db6af58bb5bb task=140 harness=null runtime=subprocess
+15:54:38 WARNING model call failed: id=96adfe7d8cac43d893637009a8c7e93b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6a23efbb-fa21-44c2-b313-91e4a04a3281)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:38 WARNING model call failed: id=f2a1b6daca2e4d42bd5f301062fb3ff8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0c32067b-75d6-4482-bd0c-933dff91e8fe)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:39    INFO rollout done: id=96adfe7d8cac43d893637009a8c7e93b task=138 reward=0.000 turns=0 stop=ProviderError
+15:54:39    INFO rollout done: id=f2a1b6daca2e4d42bd5f301062fb3ff8 task=137 reward=0.000 turns=0 stop=ProviderError
+15:54:39    INFO rollout start: id=b8a7504b9caa4e42a22c78756c51a1d3 task=141 harness=null runtime=subprocess
+15:54:39    INFO rollout start: id=33084a9e67e5433baf1738371fc60b95 task=142 harness=null runtime=subprocess
+15:54:40 WARNING model call failed: id=4d0f232d653b4141b5b4db6af58bb5bb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 902a3280-1596-4133-804e-7542963b4b5b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:40 WARNING model call failed: id=4b60549131b64286a83b357b5343a617 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9b5fa0ff-99f7-4fee-ab1c-dda87c5cfe7b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:40    INFO rollout done: id=4b60549131b64286a83b357b5343a617 task=139 reward=0.000 turns=0 stop=ProviderError
+15:54:40    INFO rollout done: id=4d0f232d653b4141b5b4db6af58bb5bb task=140 reward=0.000 turns=0 stop=ProviderError
+15:54:40    INFO rollout start: id=2bbd7329c805447e9425ed3f64f946ce task=143 harness=null runtime=subprocess
+15:54:40    INFO rollout start: id=d9de64be7b8844ef871ddfbb1ee7260a task=144 harness=null runtime=subprocess
+15:54:41 WARNING model call failed: id=b8a7504b9caa4e42a22c78756c51a1d3 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5b2d4d71-84c8-437c-a3b1-bb4a42907d48)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:41 WARNING model call failed: id=33084a9e67e5433baf1738371fc60b95 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: afa762df-c54e-4563-ac0f-129054ec82ca)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:41    INFO rollout done: id=b8a7504b9caa4e42a22c78756c51a1d3 task=141 reward=0.000 turns=0 stop=ProviderError
+15:54:41    INFO rollout done: id=33084a9e67e5433baf1738371fc60b95 task=142 reward=0.000 turns=0 stop=ProviderError
+15:54:41    INFO rollout start: id=e4120343d64f43b5ae879aafab0315b0 task=145 harness=null runtime=subprocess
+15:54:41    INFO rollout start: id=d7f0f8aecd5445faa8d6d36ca37ce6a1 task=146 harness=null runtime=subprocess
+15:54:42 WARNING model call failed: id=2bbd7329c805447e9425ed3f64f946ce ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 76bfb536-2c28-4cb1-a492-b722786fd30d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:42 WARNING model call failed: id=d9de64be7b8844ef871ddfbb1ee7260a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cf4d15a7-6199-4def-9a49-44af35b7aec1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:42    INFO rollout done: id=2bbd7329c805447e9425ed3f64f946ce task=143 reward=0.000 turns=0 stop=ProviderError
+15:54:42    INFO rollout start: id=1400cd415bc1463da738e44b0969f900 task=147 harness=null runtime=subprocess
+15:54:42    INFO rollout done: id=d9de64be7b8844ef871ddfbb1ee7260a task=144 reward=0.000 turns=0 stop=ProviderError
+15:54:42    INFO rollout start: id=9a61ba313eae46a5ab15e4ea9738d4dd task=148 harness=null runtime=subprocess
+15:54:43 WARNING model call failed: id=e4120343d64f43b5ae879aafab0315b0 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1ce150d4-a1b3-4e0a-937e-16bda9aa0898)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:43 WARNING model call failed: id=d7f0f8aecd5445faa8d6d36ca37ce6a1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2d4dac3b-e9e9-4db4-8a0b-3c4be2cc9431)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:43    INFO rollout done: id=d7f0f8aecd5445faa8d6d36ca37ce6a1 task=146 reward=0.000 turns=0 stop=ProviderError
+15:54:43    INFO rollout done: id=e4120343d64f43b5ae879aafab0315b0 task=145 reward=0.000 turns=0 stop=ProviderError
+15:54:43    INFO rollout start: id=aeedcbcd7fdd40c58375ca7209fc3d98 task=149 harness=null runtime=subprocess
+15:54:43    INFO rollout start: id=e1325cad9a3d4c6099aa2f59482917f1 task=150 harness=null runtime=subprocess
+15:54:44 WARNING model call failed: id=1400cd415bc1463da738e44b0969f900 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a4c53203-cd60-4603-9c91-6a57c37038ce)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:44 WARNING model call failed: id=9a61ba313eae46a5ab15e4ea9738d4dd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 74a0a456-bfe0-42e3-9b6b-d06ebb205a01)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:44    INFO rollout done: id=1400cd415bc1463da738e44b0969f900 task=147 reward=0.000 turns=0 stop=ProviderError
+15:54:44    INFO rollout done: id=9a61ba313eae46a5ab15e4ea9738d4dd task=148 reward=0.000 turns=0 stop=ProviderError
+15:54:44    INFO rollout start: id=4a42335b7d2341a8ae491fd362e0085e task=151 harness=null runtime=subprocess
+15:54:44    INFO rollout start: id=59d6ed690aca41ddbcd8d05b73e2ff4e task=152 harness=null runtime=subprocess
+15:54:45 WARNING model call failed: id=e1325cad9a3d4c6099aa2f59482917f1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 95d532c0-19fe-45ec-8d73-fb9e4b8eaa17)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:45 WARNING model call failed: id=aeedcbcd7fdd40c58375ca7209fc3d98 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: fe3d3766-1b59-4aac-894d-d1dd6114e813)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:45    INFO rollout done: id=aeedcbcd7fdd40c58375ca7209fc3d98 task=149 reward=0.000 turns=0 stop=ProviderError
+15:54:45    INFO rollout done: id=e1325cad9a3d4c6099aa2f59482917f1 task=150 reward=0.000 turns=0 stop=ProviderError
+15:54:45    INFO rollout start: id=22b0124453484dabbd328a9bf64bd598 task=153 harness=null runtime=subprocess
+15:54:45    INFO rollout start: id=6678acfdb2644ab79cbf02033a368f36 task=154 harness=null runtime=subprocess
+15:54:46 WARNING model call failed: id=4a42335b7d2341a8ae491fd362e0085e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1ca94399-2d49-4013-ad93-8a49dad01b9a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:46 WARNING model call failed: id=59d6ed690aca41ddbcd8d05b73e2ff4e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: d466a7ee-cfad-4293-b554-4b70ecbf5513)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:47    INFO rollout done: id=4a42335b7d2341a8ae491fd362e0085e task=151 reward=0.000 turns=0 stop=ProviderError
+15:54:47    INFO rollout done: id=59d6ed690aca41ddbcd8d05b73e2ff4e task=152 reward=0.000 turns=0 stop=ProviderError
+15:54:47    INFO rollout start: id=343a63fb069a419db640e804c400237b task=155 harness=null runtime=subprocess
+15:54:47    INFO rollout start: id=5debefd2e859429390834a19370315b9 task=156 harness=null runtime=subprocess
+15:54:47 WARNING model call failed: id=22b0124453484dabbd328a9bf64bd598 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2d2b067e-a0d3-4852-80ab-0e7585622fb4)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:47 WARNING model call failed: id=6678acfdb2644ab79cbf02033a368f36 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 038f7c03-3346-4638-ba33-00e3b7dd1165)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:48    INFO rollout done: id=22b0124453484dabbd328a9bf64bd598 task=153 reward=0.000 turns=0 stop=ProviderError
+15:54:48    INFO rollout start: id=c3cb4d37756f41dd9d7b9a8ac6f88a92 task=157 harness=null runtime=subprocess
+15:54:48    INFO rollout done: id=6678acfdb2644ab79cbf02033a368f36 task=154 reward=0.000 turns=0 stop=ProviderError
+15:54:48    INFO rollout start: id=8f792038426f496496a80ddac6a9ffe9 task=158 harness=null runtime=subprocess
+15:54:48 WARNING model call failed: id=5debefd2e859429390834a19370315b9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 52a05b33-c4de-4168-91e7-1de0f8b00c70)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:48 WARNING model call failed: id=343a63fb069a419db640e804c400237b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8e1b3877-2802-498c-854b-0ef42a2e2295)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:49    INFO rollout done: id=5debefd2e859429390834a19370315b9 task=156 reward=0.000 turns=0 stop=ProviderError
+15:54:49    INFO rollout start: id=d275648f49854136acf3f308ffce5623 task=159 harness=null runtime=subprocess
+15:54:49    INFO rollout done: id=343a63fb069a419db640e804c400237b task=155 reward=0.000 turns=0 stop=ProviderError
+15:54:49    INFO rollout start: id=4f3502c19e5e4ff59eafbad2ee3d20f2 task=160 harness=null runtime=subprocess
+15:54:50 WARNING model call failed: id=8f792038426f496496a80ddac6a9ffe9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c78b7e06-20eb-4951-9a3b-05b921feea5e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:50 WARNING model call failed: id=c3cb4d37756f41dd9d7b9a8ac6f88a92 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 18968960-07d2-402b-90db-321c259cd1d4)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:51    INFO rollout done: id=8f792038426f496496a80ddac6a9ffe9 task=158 reward=0.000 turns=0 stop=ProviderError
+15:54:51    INFO rollout start: id=81db93b95404418cae9dfae9598aacf1 task=161 harness=null runtime=subprocess
+15:54:51    INFO rollout done: id=c3cb4d37756f41dd9d7b9a8ac6f88a92 task=157 reward=0.000 turns=0 stop=ProviderError
+15:54:51    INFO rollout start: id=d99a1db4b3014cc9a0a1690ddf9895d0 task=162 harness=null runtime=subprocess
+15:54:53 WARNING model call failed: id=4f3502c19e5e4ff59eafbad2ee3d20f2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a1c78627-46dc-487d-9843-bb6bed21ecee)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:53 WARNING model call failed: id=d275648f49854136acf3f308ffce5623 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: aeb64c03-9231-472e-9ae2-9347d66fb555)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:53    INFO rollout done: id=4f3502c19e5e4ff59eafbad2ee3d20f2 task=160 reward=0.000 turns=0 stop=ProviderError
+15:54:53    INFO rollout start: id=0765069e8e404ced8deb8571d6b4cea0 task=163 harness=null runtime=subprocess
+15:54:53    INFO rollout done: id=d275648f49854136acf3f308ffce5623 task=159 reward=0.000 turns=0 stop=ProviderError
+15:54:53    INFO rollout start: id=d64251402e28434e888574b305137d2c task=164 harness=null runtime=subprocess
+15:54:54 WARNING model call failed: id=81db93b95404418cae9dfae9598aacf1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 260c082a-2590-446c-afc5-869aa9704b66)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:54 WARNING model call failed: id=d99a1db4b3014cc9a0a1690ddf9895d0 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 43553b7a-b1e1-4afb-979c-b297b1595468)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:54    INFO rollout done: id=d99a1db4b3014cc9a0a1690ddf9895d0 task=162 reward=0.000 turns=0 stop=ProviderError
+15:54:54    INFO rollout start: id=a86e8f5fe1f84dd7b56a3592ab38f975 task=165 harness=null runtime=subprocess
+15:54:54    INFO rollout done: id=81db93b95404418cae9dfae9598aacf1 task=161 reward=0.000 turns=0 stop=ProviderError
+15:54:54    INFO rollout start: id=211a5873b9e34e31848a7e9364e035f0 task=166 harness=null runtime=subprocess
+15:54:55 WARNING model call failed: id=0765069e8e404ced8deb8571d6b4cea0 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 79faeb35-0c7e-49b3-b4e3-0ff63ff64f9a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:55 WARNING model call failed: id=d64251402e28434e888574b305137d2c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cde2401a-039d-4468-9715-4a9ac3ecaa28)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:55    INFO rollout done: id=0765069e8e404ced8deb8571d6b4cea0 task=163 reward=0.000 turns=0 stop=ProviderError
+15:54:55    INFO rollout start: id=9cb8005e227f4444953c0b2b0d661a1b task=167 harness=null runtime=subprocess
+15:54:55    INFO rollout done: id=d64251402e28434e888574b305137d2c task=164 reward=0.000 turns=0 stop=ProviderError
+15:54:55    INFO rollout start: id=79c354a4e68d4ca5b94f29a29c2b40a6 task=168 harness=null runtime=subprocess
+15:54:56 WARNING model call failed: id=211a5873b9e34e31848a7e9364e035f0 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5d93ed6c-96b7-4ff3-a44d-5aeaef2c9da7)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:56 WARNING model call failed: id=a86e8f5fe1f84dd7b56a3592ab38f975 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 63846e78-a5fa-4ac9-8134-fa595f454b03)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:57    INFO rollout done: id=211a5873b9e34e31848a7e9364e035f0 task=166 reward=0.000 turns=0 stop=ProviderError
+15:54:57    INFO rollout done: id=a86e8f5fe1f84dd7b56a3592ab38f975 task=165 reward=0.000 turns=0 stop=ProviderError
+15:54:57    INFO rollout start: id=8c6c392e5faa488ba0f2ce6d4fba9da4 task=169 harness=null runtime=subprocess
+15:54:57    INFO rollout start: id=2945c186a8724015baf12b4e35dce877 task=170 harness=null runtime=subprocess
+15:54:57 WARNING model call failed: id=79c354a4e68d4ca5b94f29a29c2b40a6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2e6dee58-6ba1-4649-a595-4922ac2ffb39)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:57 WARNING model call failed: id=9cb8005e227f4444953c0b2b0d661a1b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1863c304-01af-42e3-8c13-d022d97c8433)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:58    INFO rollout done: id=9cb8005e227f4444953c0b2b0d661a1b task=167 reward=0.000 turns=0 stop=ProviderError
+15:54:58    INFO rollout done: id=79c354a4e68d4ca5b94f29a29c2b40a6 task=168 reward=0.000 turns=0 stop=ProviderError
+15:54:58    INFO rollout start: id=827a9de7287b43908226f78dc5cb85a8 task=171 harness=null runtime=subprocess
+15:54:58    INFO rollout start: id=6dddcfb12baa484cbf1724ca0bc8ecb7 task=172 harness=null runtime=subprocess
+15:54:58 WARNING model call failed: id=2945c186a8724015baf12b4e35dce877 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9192aeb2-3361-4b0e-85fd-8ad92823a044)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:58 WARNING model call failed: id=8c6c392e5faa488ba0f2ce6d4fba9da4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: da54b4db-6430-436c-acd5-467bd81759af)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:54:59    INFO rollout done: id=8c6c392e5faa488ba0f2ce6d4fba9da4 task=169 reward=0.000 turns=0 stop=ProviderError
+15:54:59    INFO rollout start: id=462acef878d84c3ea564e7bd669182c9 task=173 harness=null runtime=subprocess
+15:54:59    INFO rollout done: id=2945c186a8724015baf12b4e35dce877 task=170 reward=0.000 turns=0 stop=ProviderError
+15:54:59    INFO rollout start: id=b2b6e154f7b2434b8ff3087ec08fcadd task=174 harness=null runtime=subprocess
+15:55:00 WARNING model call failed: id=6dddcfb12baa484cbf1724ca0bc8ecb7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ba03deb0-f8b5-4b22-a0d7-aefc50654194)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:00 WARNING model call failed: id=827a9de7287b43908226f78dc5cb85a8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a4f27ce6-6642-4252-8c41-f4b1db977ca5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:00    INFO rollout done: id=827a9de7287b43908226f78dc5cb85a8 task=171 reward=0.000 turns=0 stop=ProviderError
+15:55:00    INFO rollout start: id=181046cfa7c848cca7875c04f4aa9e75 task=175 harness=null runtime=subprocess
+15:55:00    INFO rollout done: id=6dddcfb12baa484cbf1724ca0bc8ecb7 task=172 reward=0.000 turns=0 stop=ProviderError
+15:55:00    INFO rollout start: id=5e54edba79ed43a88a2bca91ee313db2 task=176 harness=null runtime=subprocess
+15:55:01 WARNING model call failed: id=462acef878d84c3ea564e7bd669182c9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 21df1b71-bb4e-4e65-a4e5-232118e38f8e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:01 WARNING model call failed: id=b2b6e154f7b2434b8ff3087ec08fcadd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c6373e16-6c67-4fd0-a2f7-21b6364e4feb)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:01    INFO rollout done: id=b2b6e154f7b2434b8ff3087ec08fcadd task=174 reward=0.000 turns=0 stop=ProviderError
+15:55:01    INFO rollout done: id=462acef878d84c3ea564e7bd669182c9 task=173 reward=0.000 turns=0 stop=ProviderError
+15:55:01    INFO rollout start: id=4c1537e23ba8428f82ffe2f3e4034976 task=177 harness=null runtime=subprocess
+15:55:01    INFO rollout start: id=442859842e61489ca573eea51bbbaedc task=178 harness=null runtime=subprocess
+15:55:02 WARNING model call failed: id=181046cfa7c848cca7875c04f4aa9e75 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cc15dbd7-a76a-4df0-bf5a-4e4307b82f46)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:02 WARNING model call failed: id=5e54edba79ed43a88a2bca91ee313db2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ffe8bfe3-90b7-4e1e-b088-80b459b6fd38)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:03    INFO rollout done: id=5e54edba79ed43a88a2bca91ee313db2 task=176 reward=0.000 turns=0 stop=ProviderError
+15:55:03    INFO rollout start: id=37b5db3ff0d84cce9ddd58e54ce54f61 task=179 harness=null runtime=subprocess
+15:55:03    INFO rollout done: id=181046cfa7c848cca7875c04f4aa9e75 task=175 reward=0.000 turns=0 stop=ProviderError
+15:55:03    INFO rollout start: id=4ce06aa0a8f34e13a003038ede311a85 task=180 harness=null runtime=subprocess
+15:55:05 WARNING model call failed: id=4ce06aa0a8f34e13a003038ede311a85 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 765a4107-4460-4c70-990a-a2123c77014e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:05 WARNING model call failed: id=37b5db3ff0d84cce9ddd58e54ce54f61 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 31ef7df2-af74-44f4-9b55-37c52e081a4b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:06    INFO rollout done: id=4ce06aa0a8f34e13a003038ede311a85 task=180 reward=0.000 turns=0 stop=ProviderError
+15:55:06    INFO rollout done: id=37b5db3ff0d84cce9ddd58e54ce54f61 task=179 reward=0.000 turns=0 stop=ProviderError
+15:55:06    INFO rollout start: id=b7a128e288154fc0835a3c5e0e3d00cc task=181 harness=null runtime=subprocess
+15:55:06    INFO rollout start: id=2be3470e94044c4796068df1e8f385dc task=182 harness=null runtime=subprocess
+15:55:08 WARNING model call failed: id=2be3470e94044c4796068df1e8f385dc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: de4112bc-4079-4ce6-aa98-440103def531)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:08 WARNING model call failed: id=b7a128e288154fc0835a3c5e0e3d00cc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 42afd890-6aa6-4a1c-bbb6-04e6ce41e3db)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:08    INFO rollout done: id=2be3470e94044c4796068df1e8f385dc task=182 reward=0.000 turns=0 stop=ProviderError
+15:55:08    INFO rollout done: id=b7a128e288154fc0835a3c5e0e3d00cc task=181 reward=0.000 turns=0 stop=ProviderError
+15:55:08    INFO rollout start: id=a84607d4e4804773bff47df94ebf58fe task=183 harness=null runtime=subprocess
+15:55:08    INFO rollout start: id=1651e7f6c66e4dcdbe8b730257fd0970 task=184 harness=null runtime=subprocess
+15:55:10 WARNING model call failed: id=1651e7f6c66e4dcdbe8b730257fd0970 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5a9d65f8-6664-4230-88fe-c7f5cdcdfb5e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:11 WARNING model call failed: id=a84607d4e4804773bff47df94ebf58fe ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b0f8c199-d517-4d5a-a2cc-d4650d8bac17)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:11 WARNING model call failed: id=442859842e61489ca573eea51bbbaedc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: edfc4f98-f449-44f5-94b4-450f5d9cdbc2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:11    INFO rollout done: id=1651e7f6c66e4dcdbe8b730257fd0970 task=184 reward=0.000 turns=0 stop=ProviderError
+15:55:11    INFO rollout start: id=81842c6f05f743da840a6fe4720ed306 task=185 harness=null runtime=subprocess
+15:55:11    INFO rollout done: id=a84607d4e4804773bff47df94ebf58fe task=183 reward=0.000 turns=0 stop=ProviderError
+15:55:11    INFO rollout start: id=b4da967196964150be7e857f624983e9 task=186 harness=null runtime=subprocess
+15:55:11    INFO rollout done: id=442859842e61489ca573eea51bbbaedc task=178 reward=0.000 turns=1 stop=ProviderError
+15:55:11    INFO rollout start: id=891a8d15626e418996e3cd653c14a2eb task=187 harness=null runtime=subprocess
+15:55:11 WARNING model call failed: id=4c1537e23ba8428f82ffe2f3e4034976 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 779ebca5-8548-4cd5-ac08-0e8f9f45ed05)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:12    INFO rollout done: id=4c1537e23ba8428f82ffe2f3e4034976 task=177 reward=0.000 turns=1 stop=ProviderError
+15:55:12    INFO rollout start: id=39e3d4fea37a4414b2ebbda664a69023 task=188 harness=null runtime=subprocess
+15:55:13 WARNING model call failed: id=81842c6f05f743da840a6fe4720ed306 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1d5e1ab5-a13e-4eaa-a829-e7819d1c2ed3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:13 WARNING model call failed: id=b4da967196964150be7e857f624983e9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3cc3fc59-68ad-4bdf-baa6-9054ff91b71d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:13 WARNING model call failed: id=891a8d15626e418996e3cd653c14a2eb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8e6bc647-bb63-49e2-9c0c-2a6ac2644d1e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:14    INFO rollout done: id=81842c6f05f743da840a6fe4720ed306 task=185 reward=0.000 turns=0 stop=ProviderError
+15:55:14    INFO rollout done: id=b4da967196964150be7e857f624983e9 task=186 reward=0.000 turns=0 stop=ProviderError
+15:55:14    INFO rollout done: id=891a8d15626e418996e3cd653c14a2eb task=187 reward=0.000 turns=0 stop=ProviderError
+15:55:14    INFO rollout start: id=1a655f1561384e0a8bc471971ae49cff task=189 harness=null runtime=subprocess
+15:55:14    INFO rollout start: id=3d910da878bc4257a882663c4440ee38 task=190 harness=null runtime=subprocess
+15:55:14    INFO rollout start: id=5cece6e3dab145ad8b7439d3cd1ba141 task=191 harness=null runtime=subprocess
+15:55:14 WARNING model call failed: id=39e3d4fea37a4414b2ebbda664a69023 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: d7b67af7-370b-4e1e-85b2-934bee8af744)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:15    INFO rollout done: id=39e3d4fea37a4414b2ebbda664a69023 task=188 reward=0.000 turns=0 stop=ProviderError
+15:55:15    INFO rollout start: id=83a21f2a01c34371abc3276c9c0f7f5a task=192 harness=null runtime=subprocess
+15:55:16 WARNING model call failed: id=5cece6e3dab145ad8b7439d3cd1ba141 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3289ea73-d320-4692-a56a-1812374b4521)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:16 WARNING model call failed: id=3d910da878bc4257a882663c4440ee38 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: effa1551-29f4-4945-9073-9652e9bac156)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:16 WARNING model call failed: id=1a655f1561384e0a8bc471971ae49cff ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1b62bb98-9c3b-4bad-a7bb-50800af41e8e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:16    INFO rollout done: id=5cece6e3dab145ad8b7439d3cd1ba141 task=191 reward=0.000 turns=0 stop=ProviderError
+15:55:16    INFO rollout start: id=d539f8a947a84fc294f1ef3ee889a043 task=193 harness=null runtime=subprocess
+15:55:16    INFO rollout done: id=3d910da878bc4257a882663c4440ee38 task=190 reward=0.000 turns=0 stop=ProviderError
+15:55:16    INFO rollout start: id=2fc6aee0fc204dbd800df7fc10adb535 task=194 harness=null runtime=subprocess
+15:55:16    INFO rollout done: id=1a655f1561384e0a8bc471971ae49cff task=189 reward=0.000 turns=0 stop=ProviderError
+15:55:16    INFO rollout start: id=d3eea6cc4eb94436ba343f5449f18d41 task=195 harness=null runtime=subprocess
+15:55:17 WARNING model call failed: id=83a21f2a01c34371abc3276c9c0f7f5a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 163ab688-fb88-4e3f-bc5a-27e87d499017)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:17    INFO rollout done: id=83a21f2a01c34371abc3276c9c0f7f5a task=192 reward=0.000 turns=0 stop=ProviderError
+15:55:17    INFO rollout start: id=aeced45e97464242bca93239b99075bd task=196 harness=null runtime=subprocess
+15:55:18 WARNING model call failed: id=d3eea6cc4eb94436ba343f5449f18d41 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 57ff1c56-e9e3-481e-9917-1cede495d56d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:18 WARNING model call failed: id=2fc6aee0fc204dbd800df7fc10adb535 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 214fa16d-8fb9-48dd-bbee-b2eb7d9de4db)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:18 WARNING model call failed: id=d539f8a947a84fc294f1ef3ee889a043 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 36f2abb1-cf59-4a93-9230-9d3b1586d676)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:19    INFO rollout done: id=2fc6aee0fc204dbd800df7fc10adb535 task=194 reward=0.000 turns=0 stop=ProviderError
+15:55:19    INFO rollout done: id=d3eea6cc4eb94436ba343f5449f18d41 task=195 reward=0.000 turns=0 stop=ProviderError
+15:55:19    INFO rollout start: id=0e9cd941263b42409b8f660f66df016f task=197 harness=null runtime=subprocess
+15:55:19    INFO rollout start: id=944bf0aa5b1b49df889fb5b6d48c19a9 task=198 harness=null runtime=subprocess
+15:55:19    INFO rollout done: id=d539f8a947a84fc294f1ef3ee889a043 task=193 reward=0.000 turns=0 stop=ProviderError
+15:55:19    INFO rollout start: id=9383c675953a4939a9d34f9a7ed7d303 task=199 harness=null runtime=subprocess
+15:55:19 WARNING model call failed: id=aeced45e97464242bca93239b99075bd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: acadec61-403e-42d8-9616-7fc7034da04c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:20    INFO rollout done: id=aeced45e97464242bca93239b99075bd task=196 reward=0.000 turns=0 stop=ProviderError
+15:55:20    INFO rollout start: id=c01542b4c5ed4703992476ae563caf07 task=200 harness=null runtime=subprocess
+15:55:21 WARNING model call failed: id=0e9cd941263b42409b8f660f66df016f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 4cd46fb8-0f50-4a57-92f7-dc90c4e39d3f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:21 WARNING model call failed: id=9383c675953a4939a9d34f9a7ed7d303 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 4abe9532-11f9-4cbc-8acd-b66036d5bb45)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:21 WARNING model call failed: id=944bf0aa5b1b49df889fb5b6d48c19a9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6e014bde-3d45-4693-b7d2-b198c5a696f9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:21    INFO rollout done: id=944bf0aa5b1b49df889fb5b6d48c19a9 task=198 reward=0.000 turns=0 stop=ProviderError
+15:55:21    INFO rollout done: id=0e9cd941263b42409b8f660f66df016f task=197 reward=0.000 turns=0 stop=ProviderError
+15:55:21    INFO rollout done: id=9383c675953a4939a9d34f9a7ed7d303 task=199 reward=0.000 turns=0 stop=ProviderError
+15:55:21    INFO rollout start: id=c173f245008f405c86a7d3195094114c task=201 harness=null runtime=subprocess
+15:55:21    INFO rollout start: id=fb268097fcdc4c9aa61854260031f2b3 task=202 harness=null runtime=subprocess
+15:55:21    INFO rollout start: id=7ab4bce23f54442a8b3de02f9d933970 task=203 harness=null runtime=subprocess
+15:55:22 WARNING model call failed: id=c01542b4c5ed4703992476ae563caf07 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 36351646-0870-4646-9224-5f28a6983bc1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:22    INFO rollout done: id=c01542b4c5ed4703992476ae563caf07 task=200 reward=0.000 turns=0 stop=ProviderError
+15:55:22    INFO rollout start: id=f0a979a674fb473288cb68fa7f482d61 task=204 harness=null runtime=subprocess
+15:55:23 WARNING model call failed: id=fb268097fcdc4c9aa61854260031f2b3 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b47f1c79-c86c-48e8-aea8-093697288fe1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:23 WARNING model call failed: id=c173f245008f405c86a7d3195094114c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b9121364-c289-4582-85b1-fd15d7067223)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:23 WARNING model call failed: id=7ab4bce23f54442a8b3de02f9d933970 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ac8dc735-602c-4e17-93e3-c13a737581d9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:24    INFO rollout done: id=fb268097fcdc4c9aa61854260031f2b3 task=202 reward=0.000 turns=0 stop=ProviderError
+15:55:24    INFO rollout start: id=e5bd7f239971478cbb7c475329d7f052 task=205 harness=null runtime=subprocess
+15:55:24    INFO rollout done: id=c173f245008f405c86a7d3195094114c task=201 reward=0.000 turns=0 stop=ProviderError
+15:55:24    INFO rollout start: id=02eaead2514d45cfa7839de1a51a1dbc task=206 harness=null runtime=subprocess
+15:55:24    INFO rollout done: id=7ab4bce23f54442a8b3de02f9d933970 task=203 reward=0.000 turns=0 stop=ProviderError
+15:55:24    INFO rollout start: id=7ef54856a3f94317a9dbff6bfeb3f8b4 task=207 harness=null runtime=subprocess
+15:55:25 WARNING model call failed: id=f0a979a674fb473288cb68fa7f482d61 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 89eef132-98c4-45de-a0f9-579565f7d026)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:25    INFO rollout done: id=f0a979a674fb473288cb68fa7f482d61 task=204 reward=0.000 turns=0 stop=ProviderError
+15:55:25    INFO rollout start: id=641f293d6a8a4ef1b3abe4098a43bd28 task=208 harness=null runtime=subprocess
+15:55:27 WARNING model call failed: id=7ef54856a3f94317a9dbff6bfeb3f8b4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7b1f2224-a1c0-4b22-9f61-ac3abbe1e82b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:27 WARNING model call failed: id=e5bd7f239971478cbb7c475329d7f052 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 90f4405f-bce1-4de7-afaa-b575ab04b650)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:27 WARNING model call failed: id=02eaead2514d45cfa7839de1a51a1dbc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6474f517-d765-4fbd-809a-987e9a34f01c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:27    INFO rollout done: id=7ef54856a3f94317a9dbff6bfeb3f8b4 task=207 reward=0.000 turns=0 stop=ProviderError
+15:55:27    INFO rollout done: id=e5bd7f239971478cbb7c475329d7f052 task=205 reward=0.000 turns=0 stop=ProviderError
+15:55:27    INFO rollout start: id=0947dca4b58c4d00bcbc08795a13d742 task=209 harness=null runtime=subprocess
+15:55:27    INFO rollout start: id=9a176857520647688032bf8155844212 task=210 harness=null runtime=subprocess
+15:55:27    INFO rollout done: id=02eaead2514d45cfa7839de1a51a1dbc task=206 reward=0.000 turns=0 stop=ProviderError
+15:55:27    INFO rollout start: id=72934dfe0d3a4a7782a9a1bfc7c8b54d task=211 harness=null runtime=subprocess
+15:55:27 WARNING model call failed: id=641f293d6a8a4ef1b3abe4098a43bd28 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b8aac1c6-17de-440c-b8a7-83bd6a03d0c1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:28    INFO rollout done: id=641f293d6a8a4ef1b3abe4098a43bd28 task=208 reward=0.000 turns=0 stop=ProviderError
+15:55:28    INFO rollout start: id=3c652eb2463446e48fc00b5b85020992 task=212 harness=null runtime=subprocess
+15:55:29 WARNING model call failed: id=9a176857520647688032bf8155844212 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2843d74a-afd7-48a8-91c4-906abe92cb35)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:29 WARNING model call failed: id=72934dfe0d3a4a7782a9a1bfc7c8b54d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: fb0e7e0c-2802-42cc-a59b-26d52f8451bc)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:29 WARNING model call failed: id=0947dca4b58c4d00bcbc08795a13d742 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6c5fff3f-3460-428d-89db-a37a31584358)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:30    INFO rollout done: id=9a176857520647688032bf8155844212 task=210 reward=0.000 turns=0 stop=ProviderError
+15:55:30    INFO rollout done: id=72934dfe0d3a4a7782a9a1bfc7c8b54d task=211 reward=0.000 turns=0 stop=ProviderError
+15:55:30    INFO rollout start: id=5a215e531e40409382dabed03e9e77a5 task=213 harness=null runtime=subprocess
+15:55:30    INFO rollout start: id=e8932c04926c45309c91985cdbe425fc task=214 harness=null runtime=subprocess
+15:55:30    INFO rollout done: id=0947dca4b58c4d00bcbc08795a13d742 task=209 reward=0.000 turns=0 stop=ProviderError
+15:55:30    INFO rollout start: id=d58fbb461b5c44b9b24bca2c9ce70e33 task=215 harness=null runtime=subprocess
+15:55:30 WARNING model call failed: id=3c652eb2463446e48fc00b5b85020992 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c3699246-900a-4dad-bfe3-e9001485e86f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:31    INFO rollout done: id=3c652eb2463446e48fc00b5b85020992 task=212 reward=0.000 turns=0 stop=ProviderError
+15:55:31    INFO rollout start: id=85889c92f3bd4a5a86845a24fb1dd86d task=216 harness=null runtime=subprocess
+15:55:32 WARNING model call failed: id=e8932c04926c45309c91985cdbe425fc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 15646438-21cd-46e3-adb5-13d65756fec8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:32 WARNING model call failed: id=d58fbb461b5c44b9b24bca2c9ce70e33 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 612c3f4c-302d-412f-8543-053a2b91a946)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:32 WARNING model call failed: id=5a215e531e40409382dabed03e9e77a5 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c78b3199-f296-4548-88e8-d96e52445a2d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:33    INFO rollout done: id=e8932c04926c45309c91985cdbe425fc task=214 reward=0.000 turns=0 stop=ProviderError
+15:55:33    INFO rollout done: id=d58fbb461b5c44b9b24bca2c9ce70e33 task=215 reward=0.000 turns=0 stop=ProviderError
+15:55:33    INFO rollout start: id=ee525ce039904c16a779d2480a038f14 task=217 harness=null runtime=subprocess
+15:55:33    INFO rollout start: id=be262b56c2574d79a5f80c52c501e97a task=218 harness=null runtime=subprocess
+15:55:33    INFO rollout done: id=5a215e531e40409382dabed03e9e77a5 task=213 reward=0.000 turns=0 stop=ProviderError
+15:55:33    INFO rollout start: id=a6b5a427dead43d1b00a17933c367e89 task=219 harness=null runtime=subprocess
+15:55:33 WARNING model call failed: id=85889c92f3bd4a5a86845a24fb1dd86d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5e465eeb-f960-4417-aba7-6ca7c73f2995)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:34    INFO rollout done: id=85889c92f3bd4a5a86845a24fb1dd86d task=216 reward=0.000 turns=0 stop=ProviderError
+15:55:34    INFO rollout start: id=fa24bd89dc074a8b9933cd06a39d25ef task=220 harness=null runtime=subprocess
+15:55:35 WARNING model call failed: id=be262b56c2574d79a5f80c52c501e97a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0deded34-765a-49d8-8f62-4ae5ec424082)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:35 WARNING model call failed: id=a6b5a427dead43d1b00a17933c367e89 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 16264d71-3f04-42e2-8eea-182f65fd316b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:35 WARNING model call failed: id=ee525ce039904c16a779d2480a038f14 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8b431d1f-1b81-4c56-b356-c1fb98cb30ab)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:36    INFO rollout done: id=a6b5a427dead43d1b00a17933c367e89 task=219 reward=0.000 turns=0 stop=ProviderError
+15:55:36    INFO rollout done: id=ee525ce039904c16a779d2480a038f14 task=217 reward=0.000 turns=0 stop=ProviderError
+15:55:36    INFO rollout done: id=be262b56c2574d79a5f80c52c501e97a task=218 reward=0.000 turns=0 stop=ProviderError
+15:55:36    INFO rollout start: id=badedf23c6054d058b328319f9fa68bf task=221 harness=null runtime=subprocess
+15:55:36    INFO rollout start: id=4978e5129db84c24b913d270b890dcf7 task=222 harness=null runtime=subprocess
+15:55:36    INFO rollout start: id=d2a4eb83ceec411cb716943d9ae71a05 task=223 harness=null runtime=subprocess
+15:55:36 WARNING model call failed: id=fa24bd89dc074a8b9933cd06a39d25ef ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8b1459ed-10d5-4f84-b9b3-23d116b72899)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:37    INFO rollout done: id=fa24bd89dc074a8b9933cd06a39d25ef task=220 reward=0.000 turns=0 stop=ProviderError
+15:55:37    INFO rollout start: id=1c0257cb499747b3a1b38b4b63da3fbe task=224 harness=null runtime=subprocess
+15:55:38 WARNING model call failed: id=badedf23c6054d058b328319f9fa68bf ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a43760af-0575-4af5-86c5-8fa3f22b9d0d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:38 WARNING model call failed: id=4978e5129db84c24b913d270b890dcf7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5ccf8a55-c064-4f82-9629-13bd77b426c8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:38 WARNING model call failed: id=d2a4eb83ceec411cb716943d9ae71a05 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5fa4e55e-f052-45c9-95c5-a93b4b4802e2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:38    INFO rollout done: id=badedf23c6054d058b328319f9fa68bf task=221 reward=0.000 turns=0 stop=ProviderError
+15:55:38    INFO rollout start: id=f30a1b45169e414d82111b1cffdd7c4d task=225 harness=null runtime=subprocess
+15:55:38    INFO rollout done: id=4978e5129db84c24b913d270b890dcf7 task=222 reward=0.000 turns=0 stop=ProviderError
+15:55:38    INFO rollout start: id=5e27b84c144d40ac8247e8f6f1ef6087 task=226 harness=null runtime=subprocess
+15:55:38    INFO rollout done: id=d2a4eb83ceec411cb716943d9ae71a05 task=223 reward=0.000 turns=0 stop=ProviderError
+15:55:38    INFO rollout start: id=1be4c5ddd00e4c0dbd62e602ae61ae4c task=227 harness=null runtime=subprocess
+15:55:39 WARNING model call failed: id=1c0257cb499747b3a1b38b4b63da3fbe ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 58dc0063-e3f7-43d7-b1fd-86b05be50764)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:40    INFO rollout done: id=1c0257cb499747b3a1b38b4b63da3fbe task=224 reward=0.000 turns=0 stop=ProviderError
+15:55:40    INFO rollout start: id=bd4a5af3744944509e460e7b1838df0f task=228 harness=null runtime=subprocess
+15:55:41 WARNING model call failed: id=5e27b84c144d40ac8247e8f6f1ef6087 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9ae64ece-3023-4c05-8153-b320a623f5b5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:41 WARNING model call failed: id=1be4c5ddd00e4c0dbd62e602ae61ae4c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0f720aa4-6555-4587-9c48-066acd0d5df1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:41 WARNING model call failed: id=f30a1b45169e414d82111b1cffdd7c4d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a1d64701-3f4c-45b2-8f59-6b2183d068d2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:41    INFO rollout done: id=5e27b84c144d40ac8247e8f6f1ef6087 task=226 reward=0.000 turns=0 stop=ProviderError
+15:55:41    INFO rollout done: id=f30a1b45169e414d82111b1cffdd7c4d task=225 reward=0.000 turns=0 stop=ProviderError
+15:55:41    INFO rollout done: id=1be4c5ddd00e4c0dbd62e602ae61ae4c task=227 reward=0.000 turns=0 stop=ProviderError
+15:55:41    INFO rollout start: id=591cc551d0b74666942a8aff96b60669 task=229 harness=null runtime=subprocess
+15:55:41    INFO rollout start: id=ac73bc77bff543abb591795b3c4f0940 task=230 harness=null runtime=subprocess
+15:55:41    INFO rollout start: id=d20c97844d8e4b12b78be203ec9f814e task=231 harness=null runtime=subprocess
+15:55:42 WARNING model call failed: id=bd4a5af3744944509e460e7b1838df0f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6c9fe65b-186a-47e7-b2cd-d08dd1b3b31c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:42    INFO rollout done: id=bd4a5af3744944509e460e7b1838df0f task=228 reward=0.000 turns=0 stop=ProviderError
+15:55:42    INFO rollout start: id=6911fe94c58a468eae35461ee21ac206 task=232 harness=null runtime=subprocess
+15:55:44 WARNING model call failed: id=ac73bc77bff543abb591795b3c4f0940 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9ea01fd1-ce8e-4855-a0d9-cc793060d8ff)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:44 WARNING model call failed: id=d20c97844d8e4b12b78be203ec9f814e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 32c20bf6-7101-4bc2-a258-8edb8f15ff91)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:44 WARNING model call failed: id=591cc551d0b74666942a8aff96b60669 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c19654a4-e4a4-4516-a0ab-cb975fbac046)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:44    INFO rollout done: id=ac73bc77bff543abb591795b3c4f0940 task=230 reward=0.000 turns=0 stop=ProviderError
+15:55:44    INFO rollout done: id=d20c97844d8e4b12b78be203ec9f814e task=231 reward=0.000 turns=0 stop=ProviderError
+15:55:44    INFO rollout start: id=da378c42cd3b43e3b993d1c1c5afdf3a task=233 harness=null runtime=subprocess
+15:55:44    INFO rollout start: id=9f73bd499a4e4bb0aba5e365988f8414 task=234 harness=null runtime=subprocess
+15:55:44    INFO rollout done: id=591cc551d0b74666942a8aff96b60669 task=229 reward=0.000 turns=0 stop=ProviderError
+15:55:44    INFO rollout start: id=ba6ea03953e241b9b10c689e83091074 task=235 harness=null runtime=subprocess
+15:55:45 WARNING model call failed: id=6911fe94c58a468eae35461ee21ac206 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 04a75a4e-e8b0-48e6-9efa-f2e432dcf5dd)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:45    INFO rollout done: id=6911fe94c58a468eae35461ee21ac206 task=232 reward=0.000 turns=0 stop=ProviderError
+15:55:45    INFO rollout start: id=1e94159c28064a4da0cea4f5318c8ac1 task=236 harness=null runtime=subprocess
+15:55:47 WARNING model call failed: id=9f73bd499a4e4bb0aba5e365988f8414 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b9b7f487-d85c-4d6e-a257-7dfb74891b8b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:47 WARNING model call failed: id=da378c42cd3b43e3b993d1c1c5afdf3a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2f640653-343b-4b88-91dd-73caf656dce3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:47 WARNING model call failed: id=ba6ea03953e241b9b10c689e83091074 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ddc8a189-cc8a-4afc-9ea9-d2219d3385ff)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:47    INFO rollout done: id=ba6ea03953e241b9b10c689e83091074 task=235 reward=0.000 turns=0 stop=ProviderError
+15:55:47    INFO rollout done: id=da378c42cd3b43e3b993d1c1c5afdf3a task=233 reward=0.000 turns=0 stop=ProviderError
+15:55:47    INFO rollout start: id=6661be1d6fd5479f97b86e4a71be024c task=237 harness=null runtime=subprocess
+15:55:47    INFO rollout start: id=3e525911a8874789a141a838a7c86c4c task=238 harness=null runtime=subprocess
+15:55:47    INFO rollout done: id=9f73bd499a4e4bb0aba5e365988f8414 task=234 reward=0.000 turns=0 stop=ProviderError
+15:55:47    INFO rollout start: id=909a0cb6e99a452c844f9f194a84b676 task=239 harness=null runtime=subprocess
+15:55:48 WARNING model call failed: id=1e94159c28064a4da0cea4f5318c8ac1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a5ffce72-e085-4fe6-b119-cdf02c42f656)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:48    INFO rollout done: id=1e94159c28064a4da0cea4f5318c8ac1 task=236 reward=0.000 turns=0 stop=ProviderError
+15:55:48    INFO rollout start: id=1b822de56aa94e3abbc47ec89a46f727 task=240 harness=null runtime=subprocess
+15:55:49 WARNING model call failed: id=6661be1d6fd5479f97b86e4a71be024c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0e5fec4a-9b77-4368-9c4f-b7dc4a8ecc99)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:49 WARNING model call failed: id=3e525911a8874789a141a838a7c86c4c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3b4a8a7c-3ab4-4047-b7b5-caa76787d0f6)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:49 WARNING model call failed: id=909a0cb6e99a452c844f9f194a84b676 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0d5aeabb-a249-4978-a82f-895f93dc752d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:50    INFO rollout done: id=909a0cb6e99a452c844f9f194a84b676 task=239 reward=0.000 turns=0 stop=ProviderError
+15:55:50    INFO rollout done: id=6661be1d6fd5479f97b86e4a71be024c task=237 reward=0.000 turns=0 stop=ProviderError
+15:55:50    INFO rollout done: id=3e525911a8874789a141a838a7c86c4c task=238 reward=0.000 turns=0 stop=ProviderError
+15:55:50    INFO rollout start: id=5334135bcfff422095f8274f4a78c8c7 task=241 harness=null runtime=subprocess
+15:55:50    INFO rollout start: id=86dbf65b47344ac488d1813427b18d07 task=242 harness=null runtime=subprocess
+15:55:50    INFO rollout start: id=02179e6ac67d46fa9f011c9081139a73 task=243 harness=null runtime=subprocess
+15:55:50 WARNING model call failed: id=1b822de56aa94e3abbc47ec89a46f727 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 71337e67-a467-4da2-94f6-b23044ffb9a3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:51    INFO rollout done: id=1b822de56aa94e3abbc47ec89a46f727 task=240 reward=0.000 turns=0 stop=ProviderError
+15:55:51    INFO rollout start: id=da70d4c5f4664e6ca8543c66df5da1e4 task=244 harness=null runtime=subprocess
+15:55:52 WARNING model call failed: id=5334135bcfff422095f8274f4a78c8c7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c8fae246-c624-4431-b1dd-422dedede95d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:52 WARNING model call failed: id=02179e6ac67d46fa9f011c9081139a73 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3df0b72e-0c23-48d9-a7d1-929c42ae78d2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:52 WARNING model call failed: id=86dbf65b47344ac488d1813427b18d07 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0433cccb-4351-4e3e-81fd-e0d2e4dae9d4)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:53    INFO rollout done: id=02179e6ac67d46fa9f011c9081139a73 task=243 reward=0.000 turns=0 stop=ProviderError
+15:55:53    INFO rollout done: id=5334135bcfff422095f8274f4a78c8c7 task=241 reward=0.000 turns=0 stop=ProviderError
+15:55:53    INFO rollout done: id=86dbf65b47344ac488d1813427b18d07 task=242 reward=0.000 turns=0 stop=ProviderError
+15:55:53    INFO rollout start: id=b3b2ad76370c4ac58abca175461341ed task=245 harness=null runtime=subprocess
+15:55:53    INFO rollout start: id=f12999800ffb4b7b89c39f9342ef0e84 task=246 harness=null runtime=subprocess
+15:55:53    INFO rollout start: id=936b26c55869412fae79d4c7d6084c13 task=247 harness=null runtime=subprocess
+15:55:53 WARNING model call failed: id=da70d4c5f4664e6ca8543c66df5da1e4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ca7ca975-f982-482f-bdb5-664c390403e3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:53    INFO rollout done: id=da70d4c5f4664e6ca8543c66df5da1e4 task=244 reward=0.000 turns=0 stop=ProviderError
+15:55:53    INFO rollout start: id=ba3eef56f8134ba5925869d0d552bc8e task=248 harness=null runtime=subprocess
+15:55:55 WARNING model call failed: id=f12999800ffb4b7b89c39f9342ef0e84 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3f79f67c-ded3-4a6b-b90a-9ecbc2c8a179)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:55 WARNING model call failed: id=b3b2ad76370c4ac58abca175461341ed ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: aed2d4dc-4a93-46ff-ba9a-9586b616bd32)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:55 WARNING model call failed: id=936b26c55869412fae79d4c7d6084c13 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b5972e43-121a-4185-84a2-895b2fd96043)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:55    INFO rollout done: id=f12999800ffb4b7b89c39f9342ef0e84 task=246 reward=0.000 turns=0 stop=ProviderError
+15:55:55    INFO rollout done: id=b3b2ad76370c4ac58abca175461341ed task=245 reward=0.000 turns=0 stop=ProviderError
+15:55:55    INFO rollout done: id=936b26c55869412fae79d4c7d6084c13 task=247 reward=0.000 turns=0 stop=ProviderError
+15:55:55    INFO rollout start: id=7f956720e6c7423fb501909579d63b11 task=249 harness=null runtime=subprocess
+15:55:55    INFO rollout start: id=68197ff5fb9f49efbba7cae26f873ddd task=250 harness=null runtime=subprocess
+15:55:55    INFO rollout start: id=64bb2cdfe1904afcab05a81293b58c97 task=251 harness=null runtime=subprocess
+15:55:56 WARNING model call failed: id=ba3eef56f8134ba5925869d0d552bc8e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: af970d81-6094-49a7-a7f5-2d186bfdc56a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:57    INFO rollout done: id=ba3eef56f8134ba5925869d0d552bc8e task=248 reward=0.000 turns=0 stop=ProviderError
+15:55:57    INFO rollout start: id=1703b83f667e44fea85313b90be1b807 task=252 harness=null runtime=subprocess
+15:55:58 WARNING model call failed: id=7f956720e6c7423fb501909579d63b11 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 960b38eb-dd32-45fc-909b-fe35e8d17027)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:58 WARNING model call failed: id=64bb2cdfe1904afcab05a81293b58c97 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: af65d988-4cfc-46e1-9519-3fa4707c524c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:58 WARNING model call failed: id=68197ff5fb9f49efbba7cae26f873ddd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ea4ed8a7-9fc1-4bca-8553-d77d881239d3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:55:58    INFO rollout done: id=64bb2cdfe1904afcab05a81293b58c97 task=251 reward=0.000 turns=0 stop=ProviderError
+15:55:58    INFO rollout done: id=7f956720e6c7423fb501909579d63b11 task=249 reward=0.000 turns=0 stop=ProviderError
+15:55:58    INFO rollout start: id=1c27ef42a278415b813c6c9913b403cb task=253 harness=null runtime=subprocess
+15:55:58    INFO rollout start: id=52e851b5cdf5434d955aebe7122c0115 task=254 harness=null runtime=subprocess
+15:55:58    INFO rollout done: id=68197ff5fb9f49efbba7cae26f873ddd task=250 reward=0.000 turns=0 stop=ProviderError
+15:55:58    INFO rollout start: id=a3ca91fb6f4147cca94d105e11e5f3dc task=255 harness=null runtime=subprocess
+15:55:59 WARNING model call failed: id=1703b83f667e44fea85313b90be1b807 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 190b3ba5-19a7-4f81-bc50-aed5e866b6b6)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:00    INFO rollout done: id=1703b83f667e44fea85313b90be1b807 task=252 reward=0.000 turns=0 stop=ProviderError
+15:56:00    INFO rollout start: id=5075be19dd694e4a84751e735fdc9ee8 task=256 harness=null runtime=subprocess
+15:56:01 WARNING model call failed: id=52e851b5cdf5434d955aebe7122c0115 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7b23a89d-17b6-40b9-98ee-348b57ec77d8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:01 WARNING model call failed: id=1c27ef42a278415b813c6c9913b403cb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c79e3c66-4253-41a6-a57f-71b365208c4a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:01 WARNING model call failed: id=a3ca91fb6f4147cca94d105e11e5f3dc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: f07a51f2-8577-4e8e-bc8b-92d6a101f9cd)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:01    INFO rollout done: id=52e851b5cdf5434d955aebe7122c0115 task=254 reward=0.000 turns=0 stop=ProviderError
+15:56:01    INFO rollout start: id=112dedfeac44403daad45f69021b61a9 task=257 harness=null runtime=subprocess
+15:56:01    INFO rollout done: id=1c27ef42a278415b813c6c9913b403cb task=253 reward=0.000 turns=0 stop=ProviderError
+15:56:01    INFO rollout done: id=a3ca91fb6f4147cca94d105e11e5f3dc task=255 reward=0.000 turns=0 stop=ProviderError
+15:56:01    INFO rollout start: id=364bf18333b04749851698300c0b2796 task=258 harness=null runtime=subprocess
+15:56:01    INFO rollout start: id=e957c0e817e24795858db83908eb7c68 task=259 harness=null runtime=subprocess
+15:56:02 WARNING model call failed: id=5075be19dd694e4a84751e735fdc9ee8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: dcc13231-318c-4978-b545-5b32f44367cc)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:02    INFO rollout done: id=5075be19dd694e4a84751e735fdc9ee8 task=256 reward=0.000 turns=0 stop=ProviderError
+15:56:02    INFO rollout start: id=94b15ea1f8b4432b8dc98f0fe8d220c7 task=260 harness=null runtime=subprocess
+15:56:04 WARNING model call failed: id=364bf18333b04749851698300c0b2796 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8fd1714b-6dc6-49fb-915d-ac0333e3b500)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:04 WARNING model call failed: id=e957c0e817e24795858db83908eb7c68 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 90f46cac-b698-4867-a77d-8b8171a4c046)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:04 WARNING model call failed: id=112dedfeac44403daad45f69021b61a9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: d9768c2a-c264-4102-8b91-adb7721cf3f2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:04    INFO rollout done: id=364bf18333b04749851698300c0b2796 task=258 reward=0.000 turns=0 stop=ProviderError
+15:56:04    INFO rollout start: id=a410cc84666a4dcc86fbaffd23d8f5a4 task=261 harness=null runtime=subprocess
+15:56:04    INFO rollout done: id=e957c0e817e24795858db83908eb7c68 task=259 reward=0.000 turns=0 stop=ProviderError
+15:56:04    INFO rollout start: id=f977189db3ba4b79835760d7cb06f2af task=262 harness=null runtime=subprocess
+15:56:04    INFO rollout done: id=112dedfeac44403daad45f69021b61a9 task=257 reward=0.000 turns=0 stop=ProviderError
+15:56:04    INFO rollout start: id=0a5242c6cd6c4240be3fce5b7e765c55 task=263 harness=null runtime=subprocess
+15:56:04 WARNING model call failed: id=94b15ea1f8b4432b8dc98f0fe8d220c7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3a36ecc9-03e4-4e98-b37f-0195d7f1a75a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:05    INFO rollout done: id=94b15ea1f8b4432b8dc98f0fe8d220c7 task=260 reward=0.000 turns=0 stop=ProviderError
+15:56:05    INFO rollout start: id=90a7e2ff931742db841a766dd6167106 task=264 harness=null runtime=subprocess
+15:56:06 WARNING model call failed: id=f977189db3ba4b79835760d7cb06f2af ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8064a1a5-8040-46bd-ae11-9f3c86ed1391)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:06 WARNING model call failed: id=0a5242c6cd6c4240be3fce5b7e765c55 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 06cf161a-9872-4f9a-bf6c-a2d946fbb34c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:06 WARNING model call failed: id=a410cc84666a4dcc86fbaffd23d8f5a4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6a05b9e2-e8fd-4897-8b55-9895e37a11f8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:06    INFO rollout done: id=a410cc84666a4dcc86fbaffd23d8f5a4 task=261 reward=0.000 turns=0 stop=ProviderError
+15:56:06    INFO rollout done: id=0a5242c6cd6c4240be3fce5b7e765c55 task=263 reward=0.000 turns=0 stop=ProviderError
+15:56:06    INFO rollout done: id=f977189db3ba4b79835760d7cb06f2af task=262 reward=0.000 turns=0 stop=ProviderError
+15:56:06    INFO rollout start: id=2e4d8fc6b2524eacbf9876792cf88790 task=265 harness=null runtime=subprocess
+15:56:06    INFO rollout start: id=ba8a78bc4d95402a9e219edf5ed22c67 task=266 harness=null runtime=subprocess
+15:56:06    INFO rollout start: id=23c6103e2b2643d391eb3c6e972fb478 task=267 harness=null runtime=subprocess
+15:56:14 WARNING model call failed: id=90a7e2ff931742db841a766dd6167106 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 15c10f4d-246d-4fae-a4a3-8af3bf176e6c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:14    INFO rollout done: id=90a7e2ff931742db841a766dd6167106 task=264 reward=0.000 turns=1 stop=ProviderError
+15:56:14    INFO rollout start: id=c2ea055253d6485f944fca9fcfa09248 task=268 harness=null runtime=subprocess
+15:56:15 WARNING model call failed: id=ba8a78bc4d95402a9e219edf5ed22c67 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 79ebcd31-849e-4530-8a3e-2d65e9f31468)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:15    INFO rollout done: id=ba8a78bc4d95402a9e219edf5ed22c67 task=266 reward=0.000 turns=1 stop=ProviderError
+15:56:15    INFO rollout start: id=a12a60897d82427aa6f6ec58927cf176 task=269 harness=null runtime=subprocess
+15:56:16 WARNING model call failed: id=c2ea055253d6485f944fca9fcfa09248 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 48875fc8-9dc9-477f-8470-9d7f7844ecc2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:16 WARNING model call failed: id=23c6103e2b2643d391eb3c6e972fb478 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 499b9cee-de3c-4bf4-90da-10f2d6e38550)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:17    INFO rollout done: id=c2ea055253d6485f944fca9fcfa09248 task=268 reward=0.000 turns=0 stop=ProviderError
+15:56:17    INFO rollout start: id=5f573bfe2d5a49d6a1c192d16a93ac35 task=270 harness=null runtime=subprocess
+15:56:17    INFO rollout done: id=23c6103e2b2643d391eb3c6e972fb478 task=267 reward=0.000 turns=1 stop=ProviderError
+15:56:17    INFO rollout start: id=1a97b91c88d04d32bef18a8bb2e69637 task=271 harness=null runtime=subprocess
+15:56:17 WARNING model call failed: id=a12a60897d82427aa6f6ec58927cf176 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 611dc3a7-662c-45c5-b5af-c83f4a14362e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:18    INFO rollout done: id=a12a60897d82427aa6f6ec58927cf176 task=269 reward=0.000 turns=0 stop=ProviderError
+15:56:18    INFO rollout start: id=a1f40de2bebb46fdba332a546c918312 task=272 harness=null runtime=subprocess
+15:56:18 WARNING model call failed: id=2e4d8fc6b2524eacbf9876792cf88790 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6f71e129-29f9-4092-8478-5fc3f8a5800d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:18    INFO rollout done: id=2e4d8fc6b2524eacbf9876792cf88790 task=265 reward=0.000 turns=1 stop=ProviderError
+15:56:18    INFO rollout start: id=b8d09e49d3564e8e8c252c25377c4233 task=273 harness=null runtime=subprocess
+15:56:19 WARNING model call failed: id=5f573bfe2d5a49d6a1c192d16a93ac35 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b5cbaab5-4c02-4425-bb36-a92d7c560709)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:19 WARNING model call failed: id=1a97b91c88d04d32bef18a8bb2e69637 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c86ff0c6-ee09-407e-a233-26f9262bb267)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:19    INFO rollout done: id=5f573bfe2d5a49d6a1c192d16a93ac35 task=270 reward=0.000 turns=0 stop=ProviderError
+15:56:19    INFO rollout start: id=d5e047578bb54e81a86dce5211fb7af4 task=274 harness=null runtime=subprocess
+15:56:19    INFO rollout done: id=1a97b91c88d04d32bef18a8bb2e69637 task=271 reward=0.000 turns=0 stop=ProviderError
+15:56:19    INFO rollout start: id=2eb4368b41b645879d0a14039ced79dc task=275 harness=null runtime=subprocess
+15:56:20 WARNING model call failed: id=b8d09e49d3564e8e8c252c25377c4233 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 549f8340-59a4-4ce5-9561-1915157ed47c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:20 WARNING model call failed: id=a1f40de2bebb46fdba332a546c918312 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 72b39b73-bb7c-46f3-879a-e802154904ff)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:21    INFO rollout done: id=a1f40de2bebb46fdba332a546c918312 task=272 reward=0.000 turns=0 stop=ProviderError
+15:56:21    INFO rollout start: id=b1e406d93d9d419e8b7adb7a6264dbe1 task=276 harness=null runtime=subprocess
+15:56:21    INFO rollout done: id=b8d09e49d3564e8e8c252c25377c4233 task=273 reward=0.000 turns=0 stop=ProviderError
+15:56:21    INFO rollout start: id=e7ea39a6d9964f7cbabe66c4a7957bdf task=277 harness=null runtime=subprocess
+15:56:22 WARNING model call failed: id=2eb4368b41b645879d0a14039ced79dc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 650410a4-3984-4a82-af31-ebdbf8409010)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:22 WARNING model call failed: id=d5e047578bb54e81a86dce5211fb7af4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 01fa547a-d182-4b3f-a076-34cf8cc9ba2a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:22    INFO rollout done: id=d5e047578bb54e81a86dce5211fb7af4 task=274 reward=0.000 turns=0 stop=ProviderError
+15:56:22    INFO rollout done: id=2eb4368b41b645879d0a14039ced79dc task=275 reward=0.000 turns=0 stop=ProviderError
+15:56:22    INFO rollout start: id=91e4959898d84e36b790e3d7a2ee9cdd task=278 harness=null runtime=subprocess
+15:56:22    INFO rollout start: id=d6544987c07444c0b3dc550a2db779e2 task=279 harness=null runtime=subprocess
+15:56:23 WARNING model call failed: id=e7ea39a6d9964f7cbabe66c4a7957bdf ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 01150365-5738-4ad0-9d70-f166322c211d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:23 WARNING model call failed: id=b1e406d93d9d419e8b7adb7a6264dbe1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2fca1ba5-b0fe-47d0-894f-38fa3bbcfa68)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:23    INFO rollout done: id=e7ea39a6d9964f7cbabe66c4a7957bdf task=277 reward=0.000 turns=0 stop=ProviderError
+15:56:23    INFO rollout done: id=b1e406d93d9d419e8b7adb7a6264dbe1 task=276 reward=0.000 turns=0 stop=ProviderError
+15:56:23    INFO rollout start: id=be1d2d40e5a34ca296ec621b213afee7 task=280 harness=null runtime=subprocess
+15:56:23    INFO rollout start: id=5fa202df3ee444f0b64d60ba5489a26b task=281 harness=null runtime=subprocess
+15:56:24 WARNING model call failed: id=91e4959898d84e36b790e3d7a2ee9cdd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8d574bb3-13f3-47d0-8402-c391c0d1a50f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:24 WARNING model call failed: id=d6544987c07444c0b3dc550a2db779e2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b0d19283-0621-42a5-b06e-c7b45060d3ec)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:24    INFO rollout done: id=91e4959898d84e36b790e3d7a2ee9cdd task=278 reward=0.000 turns=0 stop=ProviderError
+15:56:24    INFO rollout done: id=d6544987c07444c0b3dc550a2db779e2 task=279 reward=0.000 turns=0 stop=ProviderError
+15:56:24    INFO rollout start: id=9c6ca80e42e54b32ad2d6080b5626a57 task=282 harness=null runtime=subprocess
+15:56:24    INFO rollout start: id=9bb2f8e8e93840089ebb4d974251a3cf task=283 harness=null runtime=subprocess
+15:56:25 WARNING model call failed: id=5fa202df3ee444f0b64d60ba5489a26b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6aea4d4e-2c03-445a-8fba-377d726f8af7)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:25 WARNING model call failed: id=be1d2d40e5a34ca296ec621b213afee7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 42776090-2e34-4158-8d63-08ec15d6701a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:25    INFO rollout done: id=5fa202df3ee444f0b64d60ba5489a26b task=281 reward=0.000 turns=0 stop=ProviderError
+15:56:25    INFO rollout start: id=8acfa26f0d4c4d809664db7ca3a2524a task=284 harness=null runtime=subprocess
+15:56:25    INFO rollout done: id=be1d2d40e5a34ca296ec621b213afee7 task=280 reward=0.000 turns=0 stop=ProviderError
+15:56:25    INFO rollout start: id=305b818ba8764833bbc1331bf675d764 task=285 harness=null runtime=subprocess
+15:56:26 WARNING model call failed: id=9c6ca80e42e54b32ad2d6080b5626a57 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 746cfece-21f5-4a09-8a88-15ca5cf1a3c5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:26 WARNING model call failed: id=9bb2f8e8e93840089ebb4d974251a3cf ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c20872c0-78d8-4363-9223-5b92d76dd9cd)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:27    INFO rollout done: id=9c6ca80e42e54b32ad2d6080b5626a57 task=282 reward=0.000 turns=0 stop=ProviderError
+15:56:27    INFO rollout start: id=33b23ad90ae745c19c5b6f41f324a88f task=286 harness=null runtime=subprocess
+15:56:27    INFO rollout done: id=9bb2f8e8e93840089ebb4d974251a3cf task=283 reward=0.000 turns=0 stop=ProviderError
+15:56:27    INFO rollout start: id=30bb9f58bdc1486e9ef5983b7ab05e67 task=287 harness=null runtime=subprocess
+15:56:27 WARNING model call failed: id=8acfa26f0d4c4d809664db7ca3a2524a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3449847c-36d1-4ead-ac6c-8d07d82b366c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:27 WARNING model call failed: id=305b818ba8764833bbc1331bf675d764 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 944d0598-94b4-4b4e-95c0-71caa9c9ef0d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:28    INFO rollout done: id=8acfa26f0d4c4d809664db7ca3a2524a task=284 reward=0.000 turns=0 stop=ProviderError
+15:56:28    INFO rollout start: id=78b720b9971842288dca712b6c2d54fe task=288 harness=null runtime=subprocess
+15:56:28    INFO rollout done: id=305b818ba8764833bbc1331bf675d764 task=285 reward=0.000 turns=0 stop=ProviderError
+15:56:28    INFO rollout start: id=866f1ed692354467ac6b9e9a36e4b4a5 task=289 harness=null runtime=subprocess
+15:56:29 WARNING model call failed: id=33b23ad90ae745c19c5b6f41f324a88f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0307c270-68c1-4191-841a-f90af1a54de7)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:29    INFO rollout done: id=33b23ad90ae745c19c5b6f41f324a88f task=286 reward=0.000 turns=0 stop=ProviderError
+15:56:29    INFO rollout start: id=2246a610c31f482da961ef9fc9993eb6 task=290 harness=null runtime=subprocess
+15:56:30 WARNING model call failed: id=30bb9f58bdc1486e9ef5983b7ab05e67 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b8e161b3-69c1-4ac0-9ca4-17bbf69adf4d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:30    INFO rollout done: id=30bb9f58bdc1486e9ef5983b7ab05e67 task=287 reward=0.000 turns=0 stop=ProviderError
+15:56:30    INFO rollout start: id=04ef7bbbd4ff44619cd51e62b112ce67 task=291 harness=null runtime=subprocess
+15:56:30 WARNING model call failed: id=78b720b9971842288dca712b6c2d54fe ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9b57dc7d-b568-41c7-91fd-db04c32c1e3f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:30 WARNING model call failed: id=866f1ed692354467ac6b9e9a36e4b4a5 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 11a745eb-148a-429c-a339-10f5a1394342)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:30    INFO rollout done: id=78b720b9971842288dca712b6c2d54fe task=288 reward=0.000 turns=0 stop=ProviderError
+15:56:30    INFO rollout start: id=5b172f6175634c0fae0aa50de43625de task=292 harness=null runtime=subprocess
+15:56:30    INFO rollout done: id=866f1ed692354467ac6b9e9a36e4b4a5 task=289 reward=0.000 turns=0 stop=ProviderError
+15:56:30    INFO rollout start: id=383aa4652eaa49d599e515d546c60b2c task=293 harness=null runtime=subprocess
+15:56:31 WARNING model call failed: id=2246a610c31f482da961ef9fc9993eb6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 27d73299-bfb8-46b3-aa52-54a7caa829cf)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:31 WARNING model call failed: id=04ef7bbbd4ff44619cd51e62b112ce67 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8a537475-e040-4a11-a5cb-948ecff38bb4)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:31    INFO rollout done: id=2246a610c31f482da961ef9fc9993eb6 task=290 reward=0.000 turns=0 stop=ProviderError
+15:56:32    INFO rollout start: id=4a9faf79fa1c4e969e363aa46ea75b43 task=294 harness=null runtime=subprocess
+15:56:32    INFO rollout done: id=04ef7bbbd4ff44619cd51e62b112ce67 task=291 reward=0.000 turns=0 stop=ProviderError
+15:56:32    INFO rollout start: id=1c441e1f5c5c4f5cb3909190105cb7af task=295 harness=null runtime=subprocess
+15:56:33 WARNING model call failed: id=5b172f6175634c0fae0aa50de43625de ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: db7e71bd-0118-453b-953b-100da7aea4d2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:33 WARNING model call failed: id=383aa4652eaa49d599e515d546c60b2c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: de7381c5-ae9b-4d12-9316-4c535e538f1c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:33    INFO rollout done: id=383aa4652eaa49d599e515d546c60b2c task=293 reward=0.000 turns=0 stop=ProviderError
+15:56:33    INFO rollout done: id=5b172f6175634c0fae0aa50de43625de task=292 reward=0.000 turns=0 stop=ProviderError
+15:56:33    INFO rollout start: id=a398edb6f00a4b1c8e0ee427a3feadb8 task=296 harness=null runtime=subprocess
+15:56:33    INFO rollout start: id=e4f74d0b761f4a28846f1640aed3595c task=297 harness=null runtime=subprocess
+15:56:34 WARNING model call failed: id=4a9faf79fa1c4e969e363aa46ea75b43 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6c1618e7-65f5-49c0-ab61-a108e1b5b21e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:34 WARNING model call failed: id=1c441e1f5c5c4f5cb3909190105cb7af ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 56a59b5a-b23c-4678-a2fc-003fc72770ec)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:34    INFO rollout done: id=1c441e1f5c5c4f5cb3909190105cb7af task=295 reward=0.000 turns=0 stop=ProviderError
+15:56:34    INFO rollout done: id=4a9faf79fa1c4e969e363aa46ea75b43 task=294 reward=0.000 turns=0 stop=ProviderError
+15:56:34    INFO rollout start: id=95a12eab044c4f3982f48759bf3dbd20 task=298 harness=null runtime=subprocess
+15:56:34    INFO rollout start: id=4b6d3540c32d46f18f6e76deed38dbc8 task=299 harness=null runtime=subprocess
+15:56:35 WARNING model call failed: id=e4f74d0b761f4a28846f1640aed3595c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 67fe105d-7ad1-45c1-a87a-2a25aa12348d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:35 WARNING model call failed: id=a398edb6f00a4b1c8e0ee427a3feadb8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 73ccd75b-ab5c-4468-b45a-a98495f45b73)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:35    INFO rollout done: id=a398edb6f00a4b1c8e0ee427a3feadb8 task=296 reward=0.000 turns=0 stop=ProviderError
+15:56:35    INFO rollout done: id=e4f74d0b761f4a28846f1640aed3595c task=297 reward=0.000 turns=0 stop=ProviderError
+15:56:35    INFO rollout start: id=d2166fb07f794bad9d49641c161473ec task=300 harness=null runtime=subprocess
+15:56:35    INFO rollout start: id=93f8aa9e616f4a7db3c0c268b9a56ab2 task=301 harness=null runtime=subprocess
+15:56:36 WARNING model call failed: id=4b6d3540c32d46f18f6e76deed38dbc8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9f553f1c-2f9d-4b5b-a5ec-e1ec163cbb1c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:36 WARNING model call failed: id=95a12eab044c4f3982f48759bf3dbd20 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e4ae80ad-64eb-4fbd-b2e3-a547ba953a5d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:36    INFO rollout done: id=95a12eab044c4f3982f48759bf3dbd20 task=298 reward=0.000 turns=0 stop=ProviderError
+15:56:36    INFO rollout start: id=0fc4c774338646adb69f0919216d0973 task=302 harness=null runtime=subprocess
+15:56:36    INFO rollout done: id=4b6d3540c32d46f18f6e76deed38dbc8 task=299 reward=0.000 turns=0 stop=ProviderError
+15:56:36    INFO rollout start: id=147daab6840a4cefb9fbc731ed2ab605 task=303 harness=null runtime=subprocess
+15:56:37 WARNING model call failed: id=93f8aa9e616f4a7db3c0c268b9a56ab2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 918ff62e-8156-4acb-ba6c-075bee0c8d29)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:37 WARNING model call failed: id=d2166fb07f794bad9d49641c161473ec ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 43c9456b-bcc9-46f0-b134-40058b7c44a2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:38    INFO rollout done: id=93f8aa9e616f4a7db3c0c268b9a56ab2 task=301 reward=0.000 turns=0 stop=ProviderError
+15:56:38    INFO rollout done: id=d2166fb07f794bad9d49641c161473ec task=300 reward=0.000 turns=0 stop=ProviderError
+15:56:38    INFO rollout start: id=9df3c1ff49c34a31a83d0521d50a5525 task=304 harness=null runtime=subprocess
+15:56:38    INFO rollout start: id=b6c4f95aca1c4537a4a41b41e6b2efdb task=305 harness=null runtime=subprocess
+15:56:38 WARNING model call failed: id=147daab6840a4cefb9fbc731ed2ab605 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: acee4d47-9be6-4a0d-9030-c77fc6fd4cf8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:38 WARNING model call failed: id=0fc4c774338646adb69f0919216d0973 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 86966f7e-5583-4671-afe4-2faaef5d5707)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:39    INFO rollout done: id=0fc4c774338646adb69f0919216d0973 task=302 reward=0.000 turns=0 stop=ProviderError
+15:56:39    INFO rollout done: id=147daab6840a4cefb9fbc731ed2ab605 task=303 reward=0.000 turns=0 stop=ProviderError
+15:56:39    INFO rollout start: id=5af82c3108834e4d82caf8e1207fafcb task=306 harness=null runtime=subprocess
+15:56:39    INFO rollout start: id=3b97e0bad10e40228a2a2ce42fd78e2b task=307 harness=null runtime=subprocess
+15:56:40 WARNING model call failed: id=9df3c1ff49c34a31a83d0521d50a5525 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: f4b7afa7-45b9-4332-a2dd-74d0deecc29c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:40 WARNING model call failed: id=b6c4f95aca1c4537a4a41b41e6b2efdb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 34fd70c9-42d5-4350-8800-8326ac9cca17)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:40    INFO rollout done: id=b6c4f95aca1c4537a4a41b41e6b2efdb task=305 reward=0.000 turns=0 stop=ProviderError
+15:56:40    INFO rollout done: id=9df3c1ff49c34a31a83d0521d50a5525 task=304 reward=0.000 turns=0 stop=ProviderError
+15:56:40    INFO rollout start: id=708f2f91c267456d81b64f02f0659d48 task=308 harness=null runtime=subprocess
+15:56:40    INFO rollout start: id=ae404c557f2a429c96ad3d5fd22f419f task=309 harness=null runtime=subprocess
+15:56:41 WARNING model call failed: id=3b97e0bad10e40228a2a2ce42fd78e2b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 409f1d54-4a27-4349-a5f8-d69541090bf3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:41 WARNING model call failed: id=5af82c3108834e4d82caf8e1207fafcb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: bdf2ac2c-3712-4517-beb2-dfc8229f3503)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:41    INFO rollout done: id=3b97e0bad10e40228a2a2ce42fd78e2b task=307 reward=0.000 turns=0 stop=ProviderError
+15:56:41    INFO rollout done: id=5af82c3108834e4d82caf8e1207fafcb task=306 reward=0.000 turns=0 stop=ProviderError
+15:56:41    INFO rollout start: id=00315721033748d6bed4b5c9587cfd60 task=310 harness=null runtime=subprocess
+15:56:41    INFO rollout start: id=74882eace49049cc90bbb3f4b7ce73bd task=311 harness=null runtime=subprocess
+15:56:42 WARNING model call failed: id=708f2f91c267456d81b64f02f0659d48 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: db0e0428-2cb3-4409-9de7-4a4e88cc6670)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:42 WARNING model call failed: id=ae404c557f2a429c96ad3d5fd22f419f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 56ca35d0-d447-4a55-82cf-da62d2e8dd91)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:42    INFO rollout done: id=ae404c557f2a429c96ad3d5fd22f419f task=309 reward=0.000 turns=0 stop=ProviderError
+15:56:42    INFO rollout done: id=708f2f91c267456d81b64f02f0659d48 task=308 reward=0.000 turns=0 stop=ProviderError
+15:56:42    INFO rollout start: id=e9436ba3ab07422b9ec3a3288483bc4f task=312 harness=null runtime=subprocess
+15:56:42    INFO rollout start: id=68ef061f022f472c86091f1168073262 task=313 harness=null runtime=subprocess
+15:56:43 WARNING model call failed: id=00315721033748d6bed4b5c9587cfd60 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7101fd87-3920-48e7-b1e4-1b02e3846863)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:43 WARNING model call failed: id=74882eace49049cc90bbb3f4b7ce73bd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6bdf53e2-e203-4e92-855b-119b523e1d59)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:43    INFO rollout done: id=00315721033748d6bed4b5c9587cfd60 task=310 reward=0.000 turns=0 stop=ProviderError
+15:56:43    INFO rollout done: id=74882eace49049cc90bbb3f4b7ce73bd task=311 reward=0.000 turns=0 stop=ProviderError
+15:56:43    INFO rollout start: id=2b95915975ea4b1f8388fd5039ea3aef task=314 harness=null runtime=subprocess
+15:56:43    INFO rollout start: id=9941f17e48de44dcbeac83fb5703a6c6 task=315 harness=null runtime=subprocess
+15:56:44 WARNING model call failed: id=68ef061f022f472c86091f1168073262 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ddd61a41-f498-418e-ae6a-f0bb44fdb8c5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:44 WARNING model call failed: id=e9436ba3ab07422b9ec3a3288483bc4f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 32c9b2f6-8ecf-40dc-b7e8-b594ea5eb082)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:44    INFO rollout done: id=68ef061f022f472c86091f1168073262 task=313 reward=0.000 turns=0 stop=ProviderError
+15:56:44    INFO rollout start: id=4acf5500bfa246eabd248210f379d589 task=316 harness=null runtime=subprocess
+15:56:45    INFO rollout done: id=e9436ba3ab07422b9ec3a3288483bc4f task=312 reward=0.000 turns=0 stop=ProviderError
+15:56:45    INFO rollout start: id=6b05cf05688e4c4a927da04fb0d51ed8 task=317 harness=null runtime=subprocess
+15:56:45 WARNING model call failed: id=2b95915975ea4b1f8388fd5039ea3aef ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: bca308fa-46e1-496b-a8db-fadf7bdce54d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:45 WARNING model call failed: id=9941f17e48de44dcbeac83fb5703a6c6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0bbe9116-f29b-477e-918d-307cb094b817)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:46    INFO rollout done: id=2b95915975ea4b1f8388fd5039ea3aef task=314 reward=0.000 turns=0 stop=ProviderError
+15:56:46    INFO rollout start: id=a7a14a9967dd48aea92406c09933258e task=318 harness=null runtime=subprocess
+15:56:46    INFO rollout done: id=9941f17e48de44dcbeac83fb5703a6c6 task=315 reward=0.000 turns=0 stop=ProviderError
+15:56:46    INFO rollout start: id=bd8ff204247a444a995494ce85973f1d task=319 harness=null runtime=subprocess
+15:56:46 WARNING model call failed: id=4acf5500bfa246eabd248210f379d589 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 21e36336-24d1-4e6a-8415-b5810a7753d3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:46 WARNING model call failed: id=6b05cf05688e4c4a927da04fb0d51ed8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8e0907be-06b9-4a1c-bc32-9ad2feef4594)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:47    INFO rollout done: id=4acf5500bfa246eabd248210f379d589 task=316 reward=0.000 turns=0 stop=ProviderError
+15:56:47    INFO rollout start: id=f60693b11a6241f6b4a2c178e5d97f12 task=320 harness=null runtime=subprocess
+15:56:47    INFO rollout done: id=6b05cf05688e4c4a927da04fb0d51ed8 task=317 reward=0.000 turns=0 stop=ProviderError
+15:56:47    INFO rollout start: id=fc259fecd87d4756b730e55fa02b512b task=321 harness=null runtime=subprocess
+15:56:47 WARNING model call failed: id=a7a14a9967dd48aea92406c09933258e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 114c14c8-86ec-4c83-aee3-4aec1061fd1b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:47 WARNING model call failed: id=bd8ff204247a444a995494ce85973f1d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cfc55e47-8e0a-4478-9474-5f71ba69e18e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:48    INFO rollout done: id=a7a14a9967dd48aea92406c09933258e task=318 reward=0.000 turns=0 stop=ProviderError
+15:56:48    INFO rollout start: id=ac4c5d0d13124c15baaf304f9d8696a2 task=322 harness=null runtime=subprocess
+15:56:48    INFO rollout done: id=bd8ff204247a444a995494ce85973f1d task=319 reward=0.000 turns=0 stop=ProviderError
+15:56:48    INFO rollout start: id=c314182126b147a49aa1809de892a698 task=323 harness=null runtime=subprocess
+15:56:49 WARNING model call failed: id=f60693b11a6241f6b4a2c178e5d97f12 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1bf00df6-bb58-40d1-b88f-a30732dfef19)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:49 WARNING model call failed: id=fc259fecd87d4756b730e55fa02b512b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cfa74809-30e9-4fcc-8fdc-e48bf0038fe9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:49    INFO rollout done: id=f60693b11a6241f6b4a2c178e5d97f12 task=320 reward=0.000 turns=0 stop=ProviderError
+15:56:49    INFO rollout start: id=3468a17c1f5c4a47807c59203fde6a8d task=324 harness=null runtime=subprocess
+15:56:49    INFO rollout done: id=fc259fecd87d4756b730e55fa02b512b task=321 reward=0.000 turns=0 stop=ProviderError
+15:56:49    INFO rollout start: id=7f30bf2fc48648dfbd97eb4471a548b1 task=325 harness=null runtime=subprocess
+15:56:50 WARNING model call failed: id=ac4c5d0d13124c15baaf304f9d8696a2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ade41734-1a67-463f-8084-3fd052c6ddb6)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:50 WARNING model call failed: id=c314182126b147a49aa1809de892a698 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6f09f417-3638-4fc8-ab75-c8249664ee91)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:51    INFO rollout done: id=ac4c5d0d13124c15baaf304f9d8696a2 task=322 reward=0.000 turns=0 stop=ProviderError
+15:56:51    INFO rollout start: id=ea7c262c4c834a9392c2226c00cc7cec task=326 harness=null runtime=subprocess
+15:56:51    INFO rollout done: id=c314182126b147a49aa1809de892a698 task=323 reward=0.000 turns=0 stop=ProviderError
+15:56:51    INFO rollout start: id=aa77b53a688345c08cf2418d1d14ebf2 task=327 harness=null runtime=subprocess
+15:56:51 WARNING model call failed: id=7f30bf2fc48648dfbd97eb4471a548b1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ff8c1c76-4849-4abf-8886-f792d660ebc8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:51 WARNING model call failed: id=3468a17c1f5c4a47807c59203fde6a8d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a253000c-9998-4e7f-b1d0-6e1cf82bad39)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:52    INFO rollout done: id=7f30bf2fc48648dfbd97eb4471a548b1 task=325 reward=0.000 turns=0 stop=ProviderError
+15:56:52    INFO rollout done: id=3468a17c1f5c4a47807c59203fde6a8d task=324 reward=0.000 turns=0 stop=ProviderError
+15:56:52    INFO rollout start: id=f4ab2408c6c24be4b0efb24c4088a2fb task=328 harness=null runtime=subprocess
+15:56:52    INFO rollout start: id=595ae4150e1c493db3d1e9391e9aacf4 task=329 harness=null runtime=subprocess
+15:56:52 WARNING model call failed: id=ea7c262c4c834a9392c2226c00cc7cec ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0aedef6b-d207-4464-9a09-65c3c4f3b8e1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:52 WARNING model call failed: id=aa77b53a688345c08cf2418d1d14ebf2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c98571e9-94c5-42db-8fd4-22ce17587b3e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:53    INFO rollout done: id=aa77b53a688345c08cf2418d1d14ebf2 task=327 reward=0.000 turns=0 stop=ProviderError
+15:56:53    INFO rollout done: id=ea7c262c4c834a9392c2226c00cc7cec task=326 reward=0.000 turns=0 stop=ProviderError
+15:56:53    INFO rollout start: id=3f59adb599cd4f0489c4ca13826aa918 task=330 harness=null runtime=subprocess
+15:56:53    INFO rollout start: id=74a048645ac040be905d722bcda72de1 task=331 harness=null runtime=subprocess
+15:56:54 WARNING model call failed: id=f4ab2408c6c24be4b0efb24c4088a2fb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b764d92f-fcd0-4809-b377-d77974a5ca93)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:54 WARNING model call failed: id=595ae4150e1c493db3d1e9391e9aacf4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 23c64f7d-9a61-4f1d-aca2-02070d99fa16)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:54    INFO rollout done: id=f4ab2408c6c24be4b0efb24c4088a2fb task=328 reward=0.000 turns=0 stop=ProviderError
+15:56:54    INFO rollout start: id=28453450ce8243d8819be20d60c32d0e task=332 harness=null runtime=subprocess
+15:56:54    INFO rollout done: id=595ae4150e1c493db3d1e9391e9aacf4 task=329 reward=0.000 turns=0 stop=ProviderError
+15:56:54    INFO rollout start: id=27415ee25e314b2ca1d3f08539c5ef88 task=333 harness=null runtime=subprocess
+15:56:55 WARNING model call failed: id=3f59adb599cd4f0489c4ca13826aa918 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8f0154f7-1a40-4148-9d81-7efcf5ef9cf9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:55 WARNING model call failed: id=74a048645ac040be905d722bcda72de1 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e68509b4-c90b-42c4-831a-5eb71bb1f739)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:55    INFO rollout done: id=74a048645ac040be905d722bcda72de1 task=331 reward=0.000 turns=0 stop=ProviderError
+15:56:55    INFO rollout done: id=3f59adb599cd4f0489c4ca13826aa918 task=330 reward=0.000 turns=0 stop=ProviderError
+15:56:55    INFO rollout start: id=b1354fb330c34ef3a4918c65fbdcbca7 task=334 harness=null runtime=subprocess
+15:56:55    INFO rollout start: id=8c895803766c4253a2e163c9c1f612c5 task=335 harness=null runtime=subprocess
+15:56:56 WARNING model call failed: id=28453450ce8243d8819be20d60c32d0e ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 90261e1a-0f8d-40db-ac72-34ca4ad4b34e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:56 WARNING model call failed: id=27415ee25e314b2ca1d3f08539c5ef88 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0539be09-3fa3-4185-b661-604685916d03)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:56    INFO rollout done: id=28453450ce8243d8819be20d60c32d0e task=332 reward=0.000 turns=0 stop=ProviderError
+15:56:57    INFO rollout done: id=27415ee25e314b2ca1d3f08539c5ef88 task=333 reward=0.000 turns=0 stop=ProviderError
+15:56:57    INFO rollout start: id=e0abe74d94284c60a32a16a4952166af task=336 harness=null runtime=subprocess
+15:56:57    INFO rollout start: id=a837f2e8b2064234998dd99342727252 task=337 harness=null runtime=subprocess
+15:56:57 WARNING model call failed: id=8c895803766c4253a2e163c9c1f612c5 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b8939260-c990-4d3c-a2a5-a97d55908924)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:57 WARNING model call failed: id=b1354fb330c34ef3a4918c65fbdcbca7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 835022ac-b547-487e-812f-1b962fffc106)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:58    INFO rollout done: id=8c895803766c4253a2e163c9c1f612c5 task=335 reward=0.000 turns=0 stop=ProviderError
+15:56:58    INFO rollout done: id=b1354fb330c34ef3a4918c65fbdcbca7 task=334 reward=0.000 turns=0 stop=ProviderError
+15:56:58    INFO rollout start: id=96788f19e01e4ebeaa135d7f1fd9f5a6 task=338 harness=null runtime=subprocess
+15:56:58    INFO rollout start: id=e76f7eaa44f24713ab2d4645fe57b3f8 task=339 harness=null runtime=subprocess
+15:56:58 WARNING model call failed: id=e0abe74d94284c60a32a16a4952166af ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: fe41fe2a-c576-41c1-9848-026bf317f4f9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:58 WARNING model call failed: id=a837f2e8b2064234998dd99342727252 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 171d12b1-f1b1-466e-bf16-0629192d0ddd)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:56:59    INFO rollout done: id=e0abe74d94284c60a32a16a4952166af task=336 reward=0.000 turns=0 stop=ProviderError
+15:56:59    INFO rollout start: id=2dd0a605fce14153aa37769e68098859 task=340 harness=null runtime=subprocess
+15:56:59    INFO rollout done: id=a837f2e8b2064234998dd99342727252 task=337 reward=0.000 turns=0 stop=ProviderError
+15:56:59    INFO rollout start: id=3c000ed9924c48c88c678659010a6c42 task=341 harness=null runtime=subprocess
+15:57:00 WARNING model call failed: id=96788f19e01e4ebeaa135d7f1fd9f5a6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: cd874172-b789-44ab-b143-548105a4efbe)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:00 WARNING model call failed: id=e76f7eaa44f24713ab2d4645fe57b3f8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: d8a5d168-e9c2-4098-87f2-5b4833a973d3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:00    INFO rollout done: id=e76f7eaa44f24713ab2d4645fe57b3f8 task=339 reward=0.000 turns=0 stop=ProviderError
+15:57:00    INFO rollout done: id=96788f19e01e4ebeaa135d7f1fd9f5a6 task=338 reward=0.000 turns=0 stop=ProviderError
+15:57:00    INFO rollout start: id=9cf223459ecd46dcaa7e79e4777633d6 task=342 harness=null runtime=subprocess
+15:57:00    INFO rollout start: id=b8a9102eeeb143efb5bd722b342c1980 task=343 harness=null runtime=subprocess
+15:57:01 WARNING model call failed: id=3c000ed9924c48c88c678659010a6c42 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 59286da5-deac-4099-bfc7-e679577f6494)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:01 WARNING model call failed: id=2dd0a605fce14153aa37769e68098859 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 26076e97-3e86-4219-b1a0-005712853d92)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:01    INFO rollout done: id=3c000ed9924c48c88c678659010a6c42 task=341 reward=0.000 turns=0 stop=ProviderError
+15:57:01    INFO rollout done: id=2dd0a605fce14153aa37769e68098859 task=340 reward=0.000 turns=0 stop=ProviderError
+15:57:01    INFO rollout start: id=915174cee13543a79bc57b6de124509c task=344 harness=null runtime=subprocess
+15:57:01    INFO rollout start: id=1b2dd9f31c514b798ea7ce6a8fbb6bb9 task=345 harness=null runtime=subprocess
+15:57:02 WARNING model call failed: id=b8a9102eeeb143efb5bd722b342c1980 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: a63a2b98-ebc0-42f8-9e37-fc2b7395b0cc)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:02 WARNING model call failed: id=9cf223459ecd46dcaa7e79e4777633d6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b0606c44-7317-45b9-a5d8-78b793d2dafd)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:03    INFO rollout done: id=b8a9102eeeb143efb5bd722b342c1980 task=343 reward=0.000 turns=0 stop=ProviderError
+15:57:03    INFO rollout done: id=9cf223459ecd46dcaa7e79e4777633d6 task=342 reward=0.000 turns=0 stop=ProviderError
+15:57:03    INFO rollout start: id=3ad25056f2a14c1999f0849ce1634e91 task=346 harness=null runtime=subprocess
+15:57:03    INFO rollout start: id=909faf92a2004334a9f27c25373e3987 task=347 harness=null runtime=subprocess
+15:57:03 WARNING model call failed: id=915174cee13543a79bc57b6de124509c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3b497a0f-80b8-4dd4-a943-25ddcd605308)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:03 WARNING model call failed: id=1b2dd9f31c514b798ea7ce6a8fbb6bb9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c67c88e5-833a-4033-b94c-e22611bef117)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:04    INFO rollout done: id=1b2dd9f31c514b798ea7ce6a8fbb6bb9 task=345 reward=0.000 turns=0 stop=ProviderError
+15:57:04    INFO rollout done: id=915174cee13543a79bc57b6de124509c task=344 reward=0.000 turns=0 stop=ProviderError
+15:57:04    INFO rollout start: id=d0564a149fc6489bb8b5ddce549d84c3 task=348 harness=null runtime=subprocess
+15:57:04    INFO rollout start: id=9a933b6fd4d34baa80054cda7018c9e4 task=349 harness=null runtime=subprocess
+15:57:04 WARNING model call failed: id=3ad25056f2a14c1999f0849ce1634e91 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 369b1c69-7957-408e-acb7-25e61aee7aaf)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:04 WARNING model call failed: id=909faf92a2004334a9f27c25373e3987 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 051ea75d-4c23-4558-90ad-bc8101c36ef4)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:05    INFO rollout done: id=909faf92a2004334a9f27c25373e3987 task=347 reward=0.000 turns=0 stop=ProviderError
+15:57:05    INFO rollout start: id=ee3380ece16f4b54bac33ccc80464238 task=350 harness=null runtime=subprocess
+15:57:05    INFO rollout done: id=3ad25056f2a14c1999f0849ce1634e91 task=346 reward=0.000 turns=0 stop=ProviderError
+15:57:05    INFO rollout start: id=5cf1f7cd73dc40b4a542d3b816ef3d87 task=351 harness=null runtime=subprocess
+15:57:06 WARNING model call failed: id=9a933b6fd4d34baa80054cda7018c9e4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ff8c440e-9aa4-4535-90f7-69ba17398bb2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:06 WARNING model call failed: id=d0564a149fc6489bb8b5ddce549d84c3 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: af3072c3-d9e8-401d-94a0-1bad173b91c0)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:06    INFO rollout done: id=9a933b6fd4d34baa80054cda7018c9e4 task=349 reward=0.000 turns=0 stop=ProviderError
+15:57:06    INFO rollout done: id=d0564a149fc6489bb8b5ddce549d84c3 task=348 reward=0.000 turns=0 stop=ProviderError
+15:57:06    INFO rollout start: id=83726d2f194b40dcbf50d1409f4add7f task=352 harness=null runtime=subprocess
+15:57:06    INFO rollout start: id=9b584e89449b43f9ae60ce92b892d9b5 task=353 harness=null runtime=subprocess
+15:57:07 WARNING model call failed: id=ee3380ece16f4b54bac33ccc80464238 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 97c2da33-5c01-466d-ac04-d671ab27383e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:07 WARNING model call failed: id=5cf1f7cd73dc40b4a542d3b816ef3d87 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: fc523913-7e1a-4ce4-9d51-2c715376a5fe)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:07    INFO rollout done: id=ee3380ece16f4b54bac33ccc80464238 task=350 reward=0.000 turns=0 stop=ProviderError
+15:57:07    INFO rollout start: id=ef9ea10975e34200a3d4647a14fa93f6 task=354 harness=null runtime=subprocess
+15:57:08    INFO rollout done: id=5cf1f7cd73dc40b4a542d3b816ef3d87 task=351 reward=0.000 turns=0 stop=ProviderError
+15:57:08    INFO rollout start: id=692ad36466c74cf18ff99fe1193b8213 task=355 harness=null runtime=subprocess
+15:57:09 WARNING model call failed: id=9b584e89449b43f9ae60ce92b892d9b5 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5c4d4ace-9bbb-4bf0-9424-0e62e0f58f05)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:09 WARNING model call failed: id=83726d2f194b40dcbf50d1409f4add7f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 5aec5f46-02f9-4f66-892a-b589c8d1ad6a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:09    INFO rollout done: id=9b584e89449b43f9ae60ce92b892d9b5 task=353 reward=0.000 turns=0 stop=ProviderError
+15:57:09    INFO rollout start: id=fb5fe3257b7445db8c90c1c1c4a5603d task=356 harness=null runtime=subprocess
+15:57:09    INFO rollout done: id=83726d2f194b40dcbf50d1409f4add7f task=352 reward=0.000 turns=0 stop=ProviderError
+15:57:10    INFO rollout start: id=ab1c86c0528348caaa9f9479341c66aa task=357 harness=null runtime=subprocess
+15:57:10 WARNING model call failed: id=ef9ea10975e34200a3d4647a14fa93f6 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 36297c83-2383-4bdf-960e-c4b87f83cc7f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:10 WARNING model call failed: id=692ad36466c74cf18ff99fe1193b8213 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 59d3a55f-5c51-4c18-9e93-0954fa50e037)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:11    INFO rollout done: id=ef9ea10975e34200a3d4647a14fa93f6 task=354 reward=0.000 turns=0 stop=ProviderError
+15:57:11    INFO rollout start: id=a17b6a3fe5644bf09836e95163008d35 task=358 harness=null runtime=subprocess
+15:57:11    INFO rollout done: id=692ad36466c74cf18ff99fe1193b8213 task=355 reward=0.000 turns=0 stop=ProviderError
+15:57:11    INFO rollout start: id=1597ae5cc5844313b01ae5b293c77722 task=359 harness=null runtime=subprocess
+15:57:12 WARNING model call failed: id=fb5fe3257b7445db8c90c1c1c4a5603d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 439c83f0-a4df-40cf-9268-f842f0b6136a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:12 WARNING model call failed: id=ab1c86c0528348caaa9f9479341c66aa ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ae246dcc-1fa5-46d7-a807-ee1e308b5533)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:12    INFO rollout done: id=ab1c86c0528348caaa9f9479341c66aa task=357 reward=0.000 turns=0 stop=ProviderError
+15:57:12    INFO rollout done: id=fb5fe3257b7445db8c90c1c1c4a5603d task=356 reward=0.000 turns=0 stop=ProviderError
+15:57:12    INFO rollout start: id=2524d7e8a07e4b558bd5564eab1662f2 task=360 harness=null runtime=subprocess
+15:57:12    INFO rollout start: id=f396a1968b60419ea421b02dc0215d47 task=361 harness=null runtime=subprocess
+15:57:13 WARNING model call failed: id=1597ae5cc5844313b01ae5b293c77722 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 19b88de4-555c-43d6-870c-b19dc3e86046)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:13 WARNING model call failed: id=a17b6a3fe5644bf09836e95163008d35 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1c5af0e2-9970-4341-bf7c-3a990c6fd1de)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:13    INFO rollout done: id=1597ae5cc5844313b01ae5b293c77722 task=359 reward=0.000 turns=0 stop=ProviderError
+15:57:13    INFO rollout start: id=5d17ace743f34b73953f4d07891a2da7 task=362 harness=null runtime=subprocess
+15:57:13    INFO rollout done: id=a17b6a3fe5644bf09836e95163008d35 task=358 reward=0.000 turns=0 stop=ProviderError
+15:57:13    INFO rollout start: id=f62c5294cfb9428ab5a1aca9d4cfd0c9 task=363 harness=null runtime=subprocess
+15:57:14 WARNING model call failed: id=f396a1968b60419ea421b02dc0215d47 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 914854bc-4832-4bcb-92cd-f5130de73115)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:14 WARNING model call failed: id=2524d7e8a07e4b558bd5564eab1662f2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b194c4d9-b83e-4993-9d8d-3678ef60d505)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:15    INFO rollout done: id=2524d7e8a07e4b558bd5564eab1662f2 task=360 reward=0.000 turns=0 stop=ProviderError
+15:57:15    INFO rollout done: id=f396a1968b60419ea421b02dc0215d47 task=361 reward=0.000 turns=0 stop=ProviderError
+15:57:15    INFO rollout start: id=8e190a93c6c941c09717be0d0b1e74ab task=364 harness=null runtime=subprocess
+15:57:15    INFO rollout start: id=6144dc458766456890176b0d63b44ab8 task=365 harness=null runtime=subprocess
+15:57:15 WARNING model call failed: id=5d17ace743f34b73953f4d07891a2da7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1971cfcb-6fd3-4383-a402-70e98f940506)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:15 WARNING model call failed: id=f62c5294cfb9428ab5a1aca9d4cfd0c9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 448aca7a-b999-483a-9893-2a2a86a82fb6)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:16    INFO rollout done: id=f62c5294cfb9428ab5a1aca9d4cfd0c9 task=363 reward=0.000 turns=0 stop=ProviderError
+15:57:16    INFO rollout done: id=5d17ace743f34b73953f4d07891a2da7 task=362 reward=0.000 turns=0 stop=ProviderError
+15:57:16    INFO rollout start: id=934715835b464aa598ce2f8c76005776 task=366 harness=null runtime=subprocess
+15:57:16    INFO rollout start: id=0c44e43f20c84dcdb8db8bbf2fdf9660 task=367 harness=null runtime=subprocess
+15:57:16 WARNING model call failed: id=6144dc458766456890176b0d63b44ab8 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e640559c-e6e1-47f1-95b7-8b950be7f77f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:16 WARNING model call failed: id=8e190a93c6c941c09717be0d0b1e74ab ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: bc9e7691-d1dd-40f3-abc1-6197848c17cf)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:17    INFO rollout done: id=6144dc458766456890176b0d63b44ab8 task=365 reward=0.000 turns=0 stop=ProviderError
+15:57:17    INFO rollout done: id=8e190a93c6c941c09717be0d0b1e74ab task=364 reward=0.000 turns=0 stop=ProviderError
+15:57:17    INFO rollout start: id=a4c4b39a51754806941ace7c4c42604f task=368 harness=null runtime=subprocess
+15:57:17    INFO rollout start: id=57c1182681fc4a8eb2ef88c4f439475c task=369 harness=null runtime=subprocess
+15:57:18 WARNING model call failed: id=934715835b464aa598ce2f8c76005776 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1b2732a1-a27c-4a93-81e9-321fdc683226)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:18 WARNING model call failed: id=0c44e43f20c84dcdb8db8bbf2fdf9660 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 51aa0325-0fd3-4cf8-b8fb-f2b5a48e9df6)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:18    INFO rollout done: id=934715835b464aa598ce2f8c76005776 task=366 reward=0.000 turns=0 stop=ProviderError
+15:57:18    INFO rollout done: id=0c44e43f20c84dcdb8db8bbf2fdf9660 task=367 reward=0.000 turns=0 stop=ProviderError
+15:57:18    INFO rollout start: id=2134754ef06244cda8922189407db903 task=370 harness=null runtime=subprocess
+15:57:18    INFO rollout start: id=d413d78f8d7245af83350a51331fd900 task=371 harness=null runtime=subprocess
+15:57:19 WARNING model call failed: id=57c1182681fc4a8eb2ef88c4f439475c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c7962cd7-627f-4de2-bf30-088f2d540d97)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:19 WARNING model call failed: id=a4c4b39a51754806941ace7c4c42604f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7d24cfe1-3a04-470f-b50c-fceb8c60a595)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:19    INFO rollout done: id=a4c4b39a51754806941ace7c4c42604f task=368 reward=0.000 turns=0 stop=ProviderError
+15:57:19    INFO rollout done: id=57c1182681fc4a8eb2ef88c4f439475c task=369 reward=0.000 turns=0 stop=ProviderError
+15:57:19    INFO rollout start: id=4fdfe9dca4a740a7bc3c3a5f296b05de task=372 harness=null runtime=subprocess
+15:57:19    INFO rollout start: id=6609e11f14ec4a2b839994687ce536c2 task=373 harness=null runtime=subprocess
+15:57:20 WARNING model call failed: id=2134754ef06244cda8922189407db903 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8bb96a0d-fe47-4bae-84b2-4ccf9a55d5c3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:20 WARNING model call failed: id=d413d78f8d7245af83350a51331fd900 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 4fbe3475-b42a-45f3-8e50-6263f9133fd9)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:20    INFO rollout done: id=2134754ef06244cda8922189407db903 task=370 reward=0.000 turns=0 stop=ProviderError
+15:57:20    INFO rollout start: id=d91dbe24195642879029c5ce2f43d299 task=374 harness=null runtime=subprocess
+15:57:20    INFO rollout done: id=d413d78f8d7245af83350a51331fd900 task=371 reward=0.000 turns=0 stop=ProviderError
+15:57:20    INFO rollout start: id=8b9943ea97f644b4897ccb5631949554 task=375 harness=null runtime=subprocess
+15:57:21 WARNING model call failed: id=4fdfe9dca4a740a7bc3c3a5f296b05de ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c16e532c-2eba-492d-b5e7-f68e52d1ded0)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:21 WARNING model call failed: id=6609e11f14ec4a2b839994687ce536c2 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: f71b73c1-4e4e-4f88-8402-d8562f81fa4a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:21    INFO rollout done: id=6609e11f14ec4a2b839994687ce536c2 task=373 reward=0.000 turns=0 stop=ProviderError
+15:57:21    INFO rollout done: id=4fdfe9dca4a740a7bc3c3a5f296b05de task=372 reward=0.000 turns=0 stop=ProviderError
+15:57:21    INFO rollout start: id=8ec2414e64df4105990360eea440b42a task=376 harness=null runtime=subprocess
+15:57:21    INFO rollout start: id=6f9aca461a714ab19f99670302239310 task=377 harness=null runtime=subprocess
+15:57:22 WARNING model call failed: id=8b9943ea97f644b4897ccb5631949554 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b7a70c08-0d7c-415c-b865-7957ae2d2608)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:22 WARNING model call failed: id=d91dbe24195642879029c5ce2f43d299 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ec0edd16-d518-42a4-829f-ff0783df9730)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:23    INFO rollout done: id=8b9943ea97f644b4897ccb5631949554 task=375 reward=0.000 turns=0 stop=ProviderError
+15:57:23    INFO rollout done: id=d91dbe24195642879029c5ce2f43d299 task=374 reward=0.000 turns=0 stop=ProviderError
+15:57:23    INFO rollout start: id=5f446d27b1ed48b89f4c94b945d1d6bb task=378 harness=null runtime=subprocess
+15:57:23    INFO rollout start: id=6342cff692934aa89cd558887693f2be task=379 harness=null runtime=subprocess
+15:57:23 WARNING model call failed: id=6f9aca461a714ab19f99670302239310 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 10721c36-6565-4e8f-8168-68128753dca1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:23 WARNING model call failed: id=8ec2414e64df4105990360eea440b42a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 84751198-be9a-47bc-a8af-d1f8c022ea9e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:24    INFO rollout done: id=6f9aca461a714ab19f99670302239310 task=377 reward=0.000 turns=0 stop=ProviderError
+15:57:24    INFO rollout done: id=8ec2414e64df4105990360eea440b42a task=376 reward=0.000 turns=0 stop=ProviderError
+15:57:24    INFO rollout start: id=8d7f2bcd9b724856b501f602212358df task=380 harness=null runtime=subprocess
+15:57:24    INFO rollout start: id=fa821bd78b80474c8cde56c868fcca4f task=381 harness=null runtime=subprocess
+15:57:24 WARNING model call failed: id=6342cff692934aa89cd558887693f2be ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b4151334-e2aa-4503-b494-68b9d24954f3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:24 WARNING model call failed: id=5f446d27b1ed48b89f4c94b945d1d6bb ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8bba489f-ff84-4d5b-9613-2bbff4e339ff)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:25    INFO rollout done: id=5f446d27b1ed48b89f4c94b945d1d6bb task=378 reward=0.000 turns=0 stop=ProviderError
+15:57:25    INFO rollout done: id=6342cff692934aa89cd558887693f2be task=379 reward=0.000 turns=0 stop=ProviderError
+15:57:25    INFO rollout start: id=d0ff67c5ba0b4daca5c5b0d02961c042 task=382 harness=null runtime=subprocess
+15:57:25    INFO rollout start: id=41098c33998d43018a4dda87ae79fa0f task=383 harness=null runtime=subprocess
+15:57:26 WARNING model call failed: id=fa821bd78b80474c8cde56c868fcca4f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 8ecfffc7-5b76-462f-9d9d-3180860be72d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:26 WARNING model call failed: id=8d7f2bcd9b724856b501f602212358df ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b10a395e-3d2a-4e62-ab3d-7011225f572c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:26    INFO rollout done: id=fa821bd78b80474c8cde56c868fcca4f task=381 reward=0.000 turns=0 stop=ProviderError
+15:57:26    INFO rollout done: id=8d7f2bcd9b724856b501f602212358df task=380 reward=0.000 turns=0 stop=ProviderError
+15:57:26    INFO rollout start: id=a0046673a16f41628d07b0a223e0cf24 task=384 harness=null runtime=subprocess
+15:57:26    INFO rollout start: id=3b09ff80662444418034b13202820a2a task=385 harness=null runtime=subprocess
+15:57:27 WARNING model call failed: id=41098c33998d43018a4dda87ae79fa0f ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 16f470ce-d967-4a19-aa29-ee5972cd7c21)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:27 WARNING model call failed: id=d0ff67c5ba0b4daca5c5b0d02961c042 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: fcc392d3-86bd-4b85-9910-5c511257fad3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:27    INFO rollout done: id=41098c33998d43018a4dda87ae79fa0f task=383 reward=0.000 turns=0 stop=ProviderError
+15:57:27    INFO rollout done: id=d0ff67c5ba0b4daca5c5b0d02961c042 task=382 reward=0.000 turns=0 stop=ProviderError
+15:57:27    INFO rollout start: id=2a32853dcfbf4b26a2b3c3c92cb4b7a5 task=386 harness=null runtime=subprocess
+15:57:27    INFO rollout start: id=88b77eafe1a94fb78870dd6d59e960a4 task=387 harness=null runtime=subprocess
+15:57:28 WARNING model call failed: id=a0046673a16f41628d07b0a223e0cf24 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e31d57a4-774a-4160-8381-c57873c45685)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:28 WARNING model call failed: id=3b09ff80662444418034b13202820a2a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1b8c317c-798c-4665-af1e-bbf0b009f7e8)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:28    INFO rollout done: id=3b09ff80662444418034b13202820a2a task=385 reward=0.000 turns=0 stop=ProviderError
+15:57:28    INFO rollout done: id=a0046673a16f41628d07b0a223e0cf24 task=384 reward=0.000 turns=0 stop=ProviderError
+15:57:28    INFO rollout start: id=654361b6bb314ccc89a4c17b4a2aceef task=388 harness=null runtime=subprocess
+15:57:28    INFO rollout start: id=50b606f17b274a62b52720d870270abc task=389 harness=null runtime=subprocess
+15:57:29 WARNING model call failed: id=2a32853dcfbf4b26a2b3c3c92cb4b7a5 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 517f6f29-aa54-4208-a5ce-c0937058b18c)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:29 WARNING model call failed: id=88b77eafe1a94fb78870dd6d59e960a4 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 54bc95ee-d128-46ea-9b11-033246b831bc)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:29    INFO rollout done: id=88b77eafe1a94fb78870dd6d59e960a4 task=387 reward=0.000 turns=0 stop=ProviderError
+15:57:29    INFO rollout done: id=2a32853dcfbf4b26a2b3c3c92cb4b7a5 task=386 reward=0.000 turns=0 stop=ProviderError
+15:57:29    INFO rollout start: id=d2e622d8a1e14b47bed88a5c7af8b803 task=390 harness=null runtime=subprocess
+15:57:29    INFO rollout start: id=7c25251497d84de0ac30295bbadc269c task=391 harness=null runtime=subprocess
+15:57:30 WARNING model call failed: id=50b606f17b274a62b52720d870270abc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 3e9afb63-a15f-4c1b-999a-07c58c5b56c5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:30 WARNING model call failed: id=654361b6bb314ccc89a4c17b4a2aceef ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 4c7bace3-10dc-44e4-bdbe-89143ff97c45)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:30    INFO rollout done: id=654361b6bb314ccc89a4c17b4a2aceef task=388 reward=0.000 turns=0 stop=ProviderError
+15:57:30    INFO rollout done: id=50b606f17b274a62b52720d870270abc task=389 reward=0.000 turns=0 stop=ProviderError
+15:57:30    INFO rollout start: id=05c38ba7d8e94dcc9525456bbf17fe46 task=392 harness=null runtime=subprocess
+15:57:30    INFO rollout start: id=bd6342106f5441cfb119f2e8467e15a9 task=393 harness=null runtime=subprocess
+15:57:31 WARNING model call failed: id=d2e622d8a1e14b47bed88a5c7af8b803 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 09e22ac0-7a8d-49da-bb62-e46bfc89cb01)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:31 WARNING model call failed: id=7c25251497d84de0ac30295bbadc269c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b2c42cea-f0d2-4445-bda6-f3f189e748d2)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:32    INFO rollout done: id=d2e622d8a1e14b47bed88a5c7af8b803 task=390 reward=0.000 turns=0 stop=ProviderError
+15:57:32    INFO rollout start: id=290133df6ca449118db778c2c9cb235a task=394 harness=null runtime=subprocess
+15:57:32    INFO rollout done: id=7c25251497d84de0ac30295bbadc269c task=391 reward=0.000 turns=0 stop=ProviderError
+15:57:32    INFO rollout start: id=b6d6db62ded44587a4271cb9332dda9c task=395 harness=null runtime=subprocess
+15:57:32 WARNING model call failed: id=bd6342106f5441cfb119f2e8467e15a9 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: e77a69ff-f79f-4fe1-98f0-007d89d08a80)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:32 WARNING model call failed: id=05c38ba7d8e94dcc9525456bbf17fe46 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2b3f3762-8018-4489-922a-11e154aea7a7)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:33    INFO rollout done: id=bd6342106f5441cfb119f2e8467e15a9 task=393 reward=0.000 turns=0 stop=ProviderError
+15:57:33    INFO rollout done: id=05c38ba7d8e94dcc9525456bbf17fe46 task=392 reward=0.000 turns=0 stop=ProviderError
+15:57:33    INFO rollout start: id=de9db728aac748b1acfe403c2457ae47 task=396 harness=null runtime=subprocess
+15:57:33    INFO rollout start: id=6dae18c399ec409ebd8d76aace044527 task=397 harness=null runtime=subprocess
+15:57:34 WARNING model call failed: id=290133df6ca449118db778c2c9cb235a ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 212d7442-4bcd-4778-a9e4-36364a5f5192)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:34 WARNING model call failed: id=b6d6db62ded44587a4271cb9332dda9c ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 02e405ae-3feb-4e7e-af49-2c17798243c5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:34    INFO rollout done: id=290133df6ca449118db778c2c9cb235a task=394 reward=0.000 turns=0 stop=ProviderError
+15:57:34    INFO rollout start: id=f823ca650d26401f879e49a8ab3a4b32 task=398 harness=null runtime=subprocess
+15:57:34    INFO rollout done: id=b6d6db62ded44587a4271cb9332dda9c task=395 reward=0.000 turns=0 stop=ProviderError
+15:57:34    INFO rollout start: id=eeea91b75f3f438196e04ce7788b5a71 task=399 harness=null runtime=subprocess
+15:57:35 WARNING model call failed: id=6dae18c399ec409ebd8d76aace044527 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 189962d7-2bff-484c-b027-506403721495)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:35 WARNING model call failed: id=de9db728aac748b1acfe403c2457ae47 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 06b1409e-ccca-4f17-a3ea-1a887750a6b3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:35    INFO rollout done: id=6dae18c399ec409ebd8d76aace044527 task=397 reward=0.000 turns=0 stop=ProviderError
+15:57:35    INFO rollout done: id=de9db728aac748b1acfe403c2457ae47 task=396 reward=0.000 turns=0 stop=ProviderError
+15:57:35    INFO rollout start: id=0b78f3558b4048d5b2bcec88692de6be task=400 harness=null runtime=subprocess
+15:57:35    INFO rollout start: id=cd0e7b27ce8446d289336a5b838b55f7 task=401 harness=null runtime=subprocess
+15:57:36 WARNING model call failed: id=eeea91b75f3f438196e04ce7788b5a71 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9a3db985-7e8a-44c1-b328-897b9ea15a11)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:36 WARNING model call failed: id=f823ca650d26401f879e49a8ab3a4b32 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 898f42c1-f570-4f19-a3a2-74924e5b158e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:36    INFO rollout done: id=f823ca650d26401f879e49a8ab3a4b32 task=398 reward=0.000 turns=0 stop=ProviderError
+15:57:36    INFO rollout done: id=eeea91b75f3f438196e04ce7788b5a71 task=399 reward=0.000 turns=0 stop=ProviderError
+15:57:36    INFO rollout start: id=cc4f0585501141b1a6c886a12a5625cd task=402 harness=null runtime=subprocess
+15:57:36    INFO rollout start: id=6c60944a9d5947d1bd0bb3b177a03d29 task=403 harness=null runtime=subprocess
+15:57:37 WARNING model call failed: id=0b78f3558b4048d5b2bcec88692de6be ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: b36766b8-5b0d-43b8-9580-af7accdc8ccc)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:37 WARNING model call failed: id=cd0e7b27ce8446d289336a5b838b55f7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0edf7920-e28b-4feb-a08b-3dd1f9b85d3b)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:38    INFO rollout done: id=0b78f3558b4048d5b2bcec88692de6be task=400 reward=0.000 turns=0 stop=ProviderError
+15:57:38    INFO rollout start: id=d0e958cd123947dd933bb820a969689b task=404 harness=null runtime=subprocess
+15:57:38    INFO rollout done: id=cd0e7b27ce8446d289336a5b838b55f7 task=401 reward=0.000 turns=0 stop=ProviderError
+15:57:38    INFO rollout start: id=fe105247a91d449faf0e7008b80135ed task=405 harness=null runtime=subprocess
+15:57:38 WARNING model call failed: id=cc4f0585501141b1a6c886a12a5625cd ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: dd27f909-35ab-42de-aa07-d6fbae2441c5)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:38 WARNING model call failed: id=6c60944a9d5947d1bd0bb3b177a03d29 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2c927ec1-176d-483f-a354-7dc00ba11169)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:39    INFO rollout done: id=6c60944a9d5947d1bd0bb3b177a03d29 task=403 reward=0.000 turns=0 stop=ProviderError
+15:57:39    INFO rollout done: id=cc4f0585501141b1a6c886a12a5625cd task=402 reward=0.000 turns=0 stop=ProviderError
+15:57:39    INFO rollout start: id=38c8fc66fd7c4e428728783ddce7a210 task=406 harness=null runtime=subprocess
+15:57:39    INFO rollout start: id=617be10e497e46948ba3684c1ca7ebef task=407 harness=null runtime=subprocess
+15:57:39 WARNING model call failed: id=fe105247a91d449faf0e7008b80135ed ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 1e11445e-7621-417a-88da-8c8923af9d6e)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:39 WARNING model call failed: id=d0e958cd123947dd933bb820a969689b ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 0a0fc5db-36ec-4db9-9a09-9d88556e94d0)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:40    INFO rollout done: id=fe105247a91d449faf0e7008b80135ed task=405 reward=0.000 turns=0 stop=ProviderError
+15:57:40    INFO rollout start: id=20ba6e16ae654dadad88cf7c3b4746c7 task=408 harness=null runtime=subprocess
+15:57:40    INFO rollout done: id=d0e958cd123947dd933bb820a969689b task=404 reward=0.000 turns=0 stop=ProviderError
+15:57:40    INFO rollout start: id=72bfa8dac5f84a4e86973daf7e346099 task=409 harness=null runtime=subprocess
+15:57:41 WARNING model call failed: id=617be10e497e46948ba3684c1ca7ebef ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 6bf2f713-d541-439c-b5fc-3e17408c95f3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:41 WARNING model call failed: id=38c8fc66fd7c4e428728783ddce7a210 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: ed2150ef-edbd-4539-be53-d494bbe00b7d)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:41    INFO rollout done: id=38c8fc66fd7c4e428728783ddce7a210 task=406 reward=0.000 turns=0 stop=ProviderError
+15:57:41    INFO rollout done: id=617be10e497e46948ba3684c1ca7ebef task=407 reward=0.000 turns=0 stop=ProviderError
+15:57:41    INFO rollout start: id=dc8ad6cbc1e540c29ebd7f998df0a6cc task=410 harness=null runtime=subprocess
+15:57:41    INFO rollout start: id=56ae6a02779b4274b862b1e41f6fe594 task=411 harness=null runtime=subprocess
+15:57:42 WARNING model call failed: id=72bfa8dac5f84a4e86973daf7e346099 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: c1b9807e-d968-417e-9451-6f8e9506174a)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:42 WARNING model call failed: id=20ba6e16ae654dadad88cf7c3b4746c7 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 7c9a52f4-3c8a-4cff-a684-604368bc76f0)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:42    INFO rollout done: id=72bfa8dac5f84a4e86973daf7e346099 task=409 reward=0.000 turns=0 stop=ProviderError
+15:57:42    INFO rollout done: id=20ba6e16ae654dadad88cf7c3b4746c7 task=408 reward=0.000 turns=0 stop=ProviderError
+15:57:42    INFO rollout start: id=3c6f771e1d7f4cf493dffee1e033254d task=412 harness=null runtime=subprocess
+15:57:42    INFO rollout start: id=a487fd6d854047e9979675e48bc0c796 task=413 harness=null runtime=subprocess
+15:57:43 WARNING model call failed: id=56ae6a02779b4274b862b1e41f6fe594 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 4f9d22d8-8ea1-41a6-9481-9b41a08a52f1)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:43 WARNING model call failed: id=dc8ad6cbc1e540c29ebd7f998df0a6cc ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 2341f92a-d571-4eb1-be11-9d5dec58bd12)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:43    INFO rollout done: id=56ae6a02779b4274b862b1e41f6fe594 task=411 reward=0.000 turns=0 stop=ProviderError
+15:57:43    INFO rollout done: id=dc8ad6cbc1e540c29ebd7f998df0a6cc task=410 reward=0.000 turns=0 stop=ProviderError
+15:57:44 WARNING model call failed: id=a487fd6d854047e9979675e48bc0c796 ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 15b56d4b-82f9-4d3b-a5ba-07889373829f)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:44 WARNING model call failed: id=3c6f771e1d7f4cf493dffee1e033254d ProviderError: upstream 402: {"error":{"message":"Insufficient Balance (request_id: 9fb14c48-eb9d-424d-90d0-ae08473d27f3)","type":"unknown_error","param":null,"code":"invalid_request_error"}}
+15:57:44    INFO rollout done: id=3c6f771e1d7f4cf493dffee1e033254d task=412 reward=0.000 turns=0 stop=ProviderError
+15:57:44    INFO rollout done: id=a487fd6d854047e9979675e48bc0c796 task=413 reward=0.000 turns=0 stop=ProviderError
+15:57:44    INFO EnvServer down: taskset=clinical-trial-reasoning
+15:57:44    INFO interception down: url=http://127.0.0.1:57447
+15:57:45    INFO EnvServerPool down

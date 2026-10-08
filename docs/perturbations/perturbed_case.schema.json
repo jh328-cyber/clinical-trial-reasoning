@@ -1,0 +1,390 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "PerturbedCase",
+  "description": "One perturbed clinical trial specification. Shared format for both perturbation tracks (clinical-case: AE/SAE + protocol; drug-level: SMILES). The unperturbed baseline is the trial's own row in data/trial_specs.jsonl; a PerturbedCase records exactly one perturbation, consisting of one primary edit and zero or more secondary edits. LEAKAGE: perturbation_id / perturbation_type / expected_direction / expert_label are the answer and must never be shown to a model; feed models only the perturbed spec fields.",
+  "type": "object",
+  "required": [
+    "case_id",
+    "nct_id",
+    "perturbation_id",
+    "track",
+    "target_field",
+    "edit_method",
+    "original_value",
+    "perturbed_value",
+    "expected_direction",
+    "expert_label",
+    "perturbation_type",
+    "inserted_text",
+    "filter_passed",
+    "filter_note",
+    "secondary_edits"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string",
+      "description": "Unique id: '{nct_id}__{perturbation_id}'.",
+      "pattern": "^NCT\\d{8}__[A-Za-z0-9-]+$",
+      "examples": [
+        "NCT02442674__A01",
+        "NCT02442674__SMILES-01"
+      ]
+    },
+    "nct_id": {
+      "type": "string",
+      "pattern": "^NCT\\d{8}$",
+      "description": "Base trial. Must exist in data/trial_specs.jsonl and data/trials.jsonl."
+    },
+    "perturbation_id": {
+      "type": "string",
+      "description": "Id from the perturbation catalogue. Clinical track: A01-A12, B01-B08, C01-C04, D01-D02 (perturbations_v0.json). Drug track: SMILES-NN.",
+      "examples": [
+        "A01",
+        "B01",
+        "C03",
+        "SMILES-01"
+      ]
+    },
+    "track": {
+      "type": "string",
+      "enum": [
+        "clinical",
+        "drug"
+      ],
+      "description": "clinical = AE/SAE, protocol/design, positive, external (Junyi). drug = SMILES / toxicophore edits (Rayane)."
+    },
+    "perturbation_type": {
+      "type": "string",
+      "enum": [
+        "ae_sae_signal",
+        "protocol_design",
+        "positive_signal",
+        "external_contextual",
+        "smiles_toxicophore"
+      ],
+      "description": "Finer category; matches the `type` field in perturbations_v0.json for the clinical track."
+    },
+    "target_field": {
+      "type": "string",
+      "enum": [
+        "briefSummary",
+        "detailedDescription",
+        "eligibilityCriteria",
+        "sex",
+        "minimumAge",
+        "maximumAge",
+        "enrollmentCount",
+        "armGroups",
+        "interventions",
+        "primaryOutcomes",
+        "secondaryOutcomes",
+        "allocation",
+        "interventionModel",
+        "masking",
+        "phases",
+        "conditions",
+        "leadSponsor"
+      ],
+      "description": "The primary field of the trial_specs.jsonl row that is edited. One primary field per case; any further fields go in secondary_edits."
+    },
+    "edit_method": {
+      "type": "string",
+      "enum": [
+        "append",
+        "replace"
+      ],
+      "description": "append = perturbed_value is original_value + inserted text. replace = perturbed_value fully replaces original_value (used for enrollmentCount, masking, maximumAge, and SMILES edits)."
+    },
+    "original_value": {
+      "description": "Field value before the edit, copied verbatim from trial_specs.jsonl. Type follows the field (string, number, or array/object for armGroups / interventions / outcomes)."
+    },
+    "perturbed_value": {
+      "description": "Field value after the edit. Same type as original_value."
+    },
+    "inserted_text": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "For edit_method=append: the exact sentence(s) added, so the diff is recoverable without string-diffing. null for replace."
+    },
+    "expected_direction": {
+      "type": "string",
+      "enum": [
+        "harmful",
+        "neutral",
+        "helpful"
+      ],
+      "description": "Designer's a-priori direction for the trial's success likelihood. Not ground truth."
+    },
+    "expert_label": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "enum": [
+        "harmful",
+        "neutral",
+        "helpful",
+        null
+      ],
+      "description": "Clinical expert's label (Yousef Badran). null until labelled. This is what part 2 (alignment eval) scores against."
+    },
+    "filter_passed": {
+      "type": "boolean",
+      "default": true,
+      "description": "True if the perturbation's filter rule allowed it on this trial. Cases with false are normally not emitted; kept for auditing if they are."
+    },
+    "filter_note": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Why the filter passed or failed (e.g. 'no mention of ALT/hepatic in briefSummary/eligibility')."
+    },
+    "smiles_original": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Drug track only: canonical SMILES of the original drug."
+    },
+    "smiles_perturbed": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Drug track only: SMILES after toxicophore insertion."
+    },
+    "toxicophore": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Drug track only: name of the added structural alert (e.g. 'aromatic nitro', 'aniline')."
+    },
+    "notes": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "secondary_edits": {
+      "type": "array",
+      "description": "Further fields touched by the same perturbation, in order (B01/B02: briefSummary; B03/B07: briefSummary; B06: interventions then briefSummary). Empty list for pure appends. The case still counts as one perturbation.",
+      "items": {
+        "type": "object",
+        "required": [
+          "target_field",
+          "original_value",
+          "perturbed_value"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "target_field": {
+            "type": "string",
+            "enum": [
+              "briefSummary",
+              "detailedDescription",
+              "eligibilityCriteria",
+              "sex",
+              "minimumAge",
+              "maximumAge",
+              "enrollmentCount",
+              "armGroups",
+              "interventions",
+              "primaryOutcomes",
+              "secondaryOutcomes",
+              "allocation",
+              "interventionModel",
+              "masking",
+              "phases",
+              "conditions",
+              "leadSponsor"
+            ]
+          },
+          "original_value": {},
+          "perturbed_value": {}
+        }
+      }
+    }
+  },
+  "additionalProperties": false,
+  "examples": [
+    {
+      "case_id": "NCT02442674__A01",
+      "nct_id": "NCT02442674",
+      "perturbation_id": "A01",
+      "track": "clinical",
+      "perturbation_type": "ae_sae_signal",
+      "target_field": "briefSummary",
+      "edit_method": "append",
+      "original_value": "<briefSummary text from trial_specs.jsonl>",
+      "perturbed_value": "<briefSummary text> In a preceding open-label safety run-in, 3 of the first 15 dosed subjects showed ALT elevations >3× ULN within 4 weeks of treatment initiation.",
+      "inserted_text": "In a preceding open-label safety run-in, 3 of the first 15 dosed subjects showed ALT elevations >3× ULN within 4 weeks of treatment initiation.",
+      "expected_direction": "harmful",
+      "expert_label": null,
+      "filter_passed": true,
+      "filter_note": "no ALT/hepatic/liver term in briefSummary, primaryOutcomes",
+      "smiles_original": null,
+      "smiles_perturbed": null,
+      "toxicophore": null,
+      "notes": null,
+      "secondary_edits": []
+    },
+    {
+      "case_id": "NCT02442674__B01",
+      "nct_id": "NCT02442674",
+      "perturbation_id": "B01",
+      "track": "clinical",
+      "perturbation_type": "protocol_design",
+      "target_field": "enrollmentCount",
+      "edit_method": "replace",
+      "original_value": 60,
+      "perturbed_value": 30,
+      "inserted_text": null,
+      "expected_direction": "harmful",
+      "expert_label": null,
+      "filter_passed": true,
+      "filter_note": "enrollment 60 >= 20",
+      "smiles_original": null,
+      "smiles_perturbed": null,
+      "toxicophore": null,
+      "notes": null,
+      "secondary_edits": [
+        {
+          "target_field": "briefSummary",
+          "original_value": "<briefSummary text>",
+          "perturbed_value": "<briefSummary text> Due to slower-than-anticipated recruitment, the target enrollment was reduced from 60 to 30 subjects."
+        }
+      ]
+    },
+    {
+      "case_id": "NCT02442674__SMILES-01",
+      "nct_id": "NCT02442674",
+      "perturbation_id": "SMILES-01",
+      "track": "drug",
+      "perturbation_type": "smiles_toxicophore",
+      "target_field": "interventions",
+      "edit_method": "replace",
+      "original_value": "<interventions array from trial_specs.jsonl>",
+      "perturbed_value": "<same array with the drug's SMILES field swapped for smiles_perturbed>",
+      "inserted_text": null,
+      "expected_direction": "harmful",
+      "expert_label": null,
+      "filter_passed": true,
+      "filter_note": "small-molecule drug with resolvable structure",
+      "smiles_original": "<canonical SMILES>",
+      "smiles_perturbed": "<SMILES with toxicophore>",
+      "toxicophore": "<name>",
+      "notes": null,
+      "secondary_edits": []
+    }
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "edit_method": {
+            "const": "append"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "inserted_text": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "edit_method": {
+            "const": "replace"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "inserted_text": {
+            "type": "null"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "track": {
+            "const": "drug"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "smiles_original",
+          "smiles_perturbed",
+          "toxicophore"
+        ],
+        "properties": {
+          "smiles_original": {
+            "type": "string",
+            "minLength": 1
+          },
+          "smiles_perturbed": {
+            "type": "string",
+            "minLength": 1
+          },
+          "toxicophore": {
+            "type": "string",
+            "minLength": 1
+          },
+          "perturbation_type": {
+            "const": "smiles_toxicophore"
+          },
+          "perturbation_id": {
+            "type": "string",
+            "pattern": "^SMILES-\\d+$"
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "track": {
+            "const": "clinical"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "perturbation_type": {
+            "enum": [
+              "ae_sae_signal",
+              "protocol_design",
+              "positive_signal",
+              "external_contextual"
+            ]
+          },
+          "perturbation_id": {
+            "type": "string",
+            "pattern": "^[A-D]\\d{2}$"
+          },
+          "smiles_original": {
+            "type": "null"
+          },
+          "smiles_perturbed": {
+            "type": "null"
+          },
+          "toxicophore": {
+            "type": "null"
+          }
+        }
+      }
+    }
+  ]
+}

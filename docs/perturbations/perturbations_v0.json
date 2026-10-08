@@ -1,0 +1,784 @@
+[
+  {
+    "id": "A01",
+    "type": "ae_sae_signal",
+    "name": "Hepatotoxicity signal",
+    "perturbation_text": "In a preceding open-label safety run-in, 3 of the first 15 dosed subjects showed ALT elevations >3× ULN within 4 weeks of treatment initiation.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {
+        "skip_if_text_contains": [
+          "ALT",
+          "DILI",
+          "drug-induced liver*",
+          "hepatic impairment",
+          "hepatotoxic*",
+          "liver injur*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "ALT >3x ULN in 20% of initial subjects meets the ALT threshold used in Hy's Law screening (bilirubin not yet assessed); signals potential drug-induced liver injury that may lead to clinical hold or label restriction.",
+    "clinical_note": "Early sign: elevated transaminases. Model must connect ALT elevation to trial failure risk.",
+    "enabled": true
+  },
+  {
+    "id": "A02",
+    "type": "ae_sae_signal",
+    "name": "QT prolongation signal",
+    "perturbation_text": "Thorough QT study data indicate a mean QTcF increase of 15 ms at therapeutic dose, with individual values exceeding 480 ms in 2 of 40 subjects.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "QT",
+          "arrhythmi*",
+          "cardiac"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "QT prolongation",
+          "QTcF",
+          "antiarrhythmic*",
+          "cardiac arrhythmi*",
+          "torsade*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "A mean QTcF increase of 15 ms exceeds the ICH E14 threshold of regulatory concern (upper CI bound of 10 ms); individual QTcF outliers >480 ms add further safety concern and may require cardiac monitoring, dose caps, or contraindications.",
+    "clinical_note": "Early sign: ECG parameter shift. Model must know QTcF thresholds and their regulatory implications.",
+    "enabled": true
+  },
+  {
+    "id": "A03",
+    "type": "ae_sae_signal",
+    "name": "Nephrotoxicity signal",
+    "perturbation_text": "Post-hoc analysis of the preceding dose-escalation cohort revealed a mean serum creatinine increase of 0.4 mg/dL and two cases of acute kidney injury (CTCAE Grade 2) during the treatment period.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "creatinine",
+          "kidney*",
+          "renal"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "GFR",
+          "creatinine",
+          "dialys*",
+          "kidney*",
+          "nephrotoxic*",
+          "renal"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "Creatinine rise of 0.4 mg/dL + Grade 2 AKI in a small early cohort signals nephrotoxic potential; may lead to dose reductions, exclusion of at-risk patients, or trial redesign.",
+    "clinical_note": "Early sign: renal lab abnormality. Subtle because creatinine changes are small in absolute terms.",
+    "enabled": true
+  },
+  {
+    "id": "A04",
+    "type": "ae_sae_signal",
+    "name": "Hypersensitivity / administration reaction signal",
+    "perturbation_text": "In the preceding safety cohort, 4 of the first 20 dosed subjects experienced Grade 2–3 hypersensitivity reactions (hypotension, dyspnea, urticaria) temporally associated with drug administration, requiring treatment interruption.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "anaphyla*",
+          "hypersensitivity",
+          "infusion reaction*"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "anaphyla*",
+          "hypersensitivity",
+          "infusion-related reaction*",
+          "premedication"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "interventions",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "20% Grade 2–3 hypersensitivity reaction rate (4/20) is high; may require premedication protocols, dose adjustment, and could limit real-world adoption.",
+    "clinical_note": "Early sign: acute reactions during administration. 20% is above typical acceptable thresholds.",
+    "enabled": true
+  },
+  {
+    "id": "A05",
+    "type": "ae_sae_signal",
+    "name": "Bone marrow suppression signal",
+    "perturbation_text": "In the preceding dose-escalation cohorts, Grade 3 neutropenia (ANC <1000/mm³) was observed in 3 of 12 subjects at the recommended Phase 2 dose, with a median nadir at Day 14.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "ANC",
+          "bone marrow",
+          "myelosuppress*",
+          "neutropeni*"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "ANC",
+          "G-CSF",
+          "bone marrow",
+          "granulocyte*",
+          "myelosuppress*",
+          "neutropeni*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "25% Grade 3 neutropenia at RP2D signals significant myelotoxicity; may require dose modifications, G-CSF support, and could limit combination strategies.",
+    "clinical_note": "Early sign: hematologic lab finding in dose-escalation. Uses CTCAE grading which model should interpret.",
+    "enabled": true
+  },
+  {
+    "id": "A06",
+    "type": "ae_sae_signal",
+    "name": "Interstitial lung disease signal",
+    "perturbation_text": "In the preceding dose-expansion cohort, routine CT imaging at Week 12 identified new bilateral ground-glass opacities consistent with drug-induced pneumonitis in 2 of 30 treated subjects; both cases resolved after drug discontinuation.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "ILD",
+          "interstitial lung",
+          "pneumonitis",
+          "pulmonary fibros*"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "ILD",
+          "ground-glass",
+          "interstitial lung",
+          "pneumonitis",
+          "pulmonary fibros*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "Drug-induced ILD/pneumonitis is a known class effect for TKIs, checkpoint inhibitors, mTOR inhibitors; even asymptomatic cases at 6.7% incidence signal risk.",
+    "clinical_note": "Early sign: radiographic finding. Very subtle — asymptomatic and resolved, but pattern matters for regulators.",
+    "enabled": true
+  },
+  {
+    "id": "A07",
+    "type": "ae_sae_signal",
+    "name": "Severe GI toxicity signal",
+    "perturbation_text": "In the preceding safety cohort, 5 of 25 subjects (20%) experienced Grade 3 diarrhea within the first 2 weeks of dosing, with 2 requiring IV fluid resuscitation and temporary dose holds.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "diarrhea",
+          "diarrhoea",
+          "gastrointestinal toxicit*"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "GI toxicit*",
+          "diarrhea",
+          "diarrhoea",
+          "gastrointestinal",
+          "loperamide"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "20% Grade 3 diarrhea is dose-limiting; affects compliance, may require protocol amendment for dose reduction schedules or prophylactic anti-diarrheal.",
+    "clinical_note": "Early sign: high-grade GI event. Not the most subtle, but 20% rate in initial cohort is a real signal.",
+    "enabled": true
+  },
+  {
+    "id": "A08",
+    "type": "ae_sae_signal",
+    "name": "Thromboembolic event signal",
+    "perturbation_text": "In the preceding safety cohort of 40 treated subjects, one deep vein thrombosis and one pulmonary embolism were reported, both within 6 weeks of treatment initiation.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "DVT",
+          "anticoagul*",
+          "pulmonary embolism",
+          "thromboembol*"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "DVT",
+          "anticoagul*",
+          "deep vein thrombosis",
+          "pulmonary embolism",
+          "thromboembol*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "5% VTE rate (2/40) in an early safety cohort raises safety concern; may trigger DSMB review, added anticoagulation monitoring, or enrollment pause.",
+    "clinical_note": "Early sign: rare but serious events in small sample. Model must weigh low absolute count against small denominator.",
+    "enabled": true
+  },
+  {
+    "id": "A09",
+    "type": "ae_sae_signal",
+    "name": "Treatment-emergent suicidality signal",
+    "perturbation_text": "In the preceding safety cohort, 3 treated subjects reported new-onset suicidal ideation (C-SSRS score increase ≥2 points from baseline) within the first 8 weeks of dosing.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_endpoint_contains": [
+          "C-SSRS",
+          "suicid*"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "C-SSRS",
+          "Columbia Suicide",
+          "suicid*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "Treatment-emergent suicidality triggers FDA black box warning consideration; can apply to any drug class, not just CNS.",
+    "clinical_note": "Early sign: standardized psychiatric assessment finding. Uses C-SSRS which is a validated instrument.",
+    "enabled": true
+  },
+  {
+    "id": "A10",
+    "type": "ae_sae_signal",
+    "name": "Severe dermatologic reaction signal",
+    "perturbation_text": "In the preceding extended-dosing cohort, two cases of mucocutaneous reactions with skin detachment (suspected Stevens-Johnson syndrome) were reported; both required hospitalization and drug withdrawal.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {
+        "skip_if_text_contains": [
+          "SJS",
+          "Stevens-Johnson",
+          "TEN",
+          "skin detachment",
+          "toxic epidermal necrolysis"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "SJS/TEN is life-threatening (mortality 10-30% for TEN); typically leads to clinical hold, label contraindication, or program termination.",
+    "clinical_note": "Somewhat less subtle than other AE items, but tests whether model recognizes severity gradient of skin reactions.",
+    "enabled": true
+  },
+  {
+    "id": "A11",
+    "type": "ae_sae_signal",
+    "name": "Drug-drug interaction signal",
+    "perturbation_text": "A dedicated interaction study showed that co-administration with strong CYP3A4 inhibitors increased the study drug's AUC by 5.2-fold, necessitating a contraindication for concomitant use with azole antifungals and certain HIV protease inhibitors.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "apply_only_if_intervention_type": [
+          "DRUG"
+        ]
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "CYP3A4",
+          "concomitant medication*",
+          "drug interaction stud*",
+          "drug-drug interaction*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "5-fold AUC increase with a common enzyme inhibitor limits eligible population (must exclude patients on azoles, PIs) and increases overdose/toxicity risk.",
+    "clinical_note": "Clinical pharmacology finding. Tests whether model understands PK implications for real-world feasibility.",
+    "enabled": true
+  },
+  {
+    "id": "A12",
+    "type": "ae_sae_signal",
+    "name": "Reproductive toxicity signal",
+    "perturbation_text": "Nonclinical reproductive toxicology studies revealed embryo-fetal lethality and major skeletal malformations at sub-therapeutic exposures; a pregnancy prevention program and monthly pregnancy testing are mandated for all subjects of childbearing potential.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {
+        "skip_if_text_contains": [
+          "Category X",
+          "contraception required",
+          "embryo-fetal",
+          "pregnancy prevention",
+          "teratogen*"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "primaryOutcomes"
+        ]
+      }
+    },
+    "rationale": "Teratogenicity at sub-therapeutic doses restricts eligible population (exclude women of childbearing potential without adequate contraception), adds regulatory burden, and signals toxicity concerns.",
+    "clinical_note": "Nonclinical safety finding. Tests whether model weighs preclinical tox data in overall trial risk assessment.",
+    "enabled": true
+  },
+  {
+    "id": "B01",
+    "type": "protocol_design",
+    "name": "Halve enrollment",
+    "perturbation_text": "Due to slower-than-anticipated recruitment, the target enrollment was reduced from {N} to {ceil(N/2)} subjects.",
+    "target_field": "enrollmentCount",
+    "insertion_method": "modify_and_append",
+    "field_modification": {
+      "field": "enrollmentCount",
+      "op": "ceil_half"
+    },
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_enrollment_below": 20
+      },
+      "advanced": {}
+    },
+    "rationale": "Halved sample size reduces statistical power; trial may become underpowered for primary endpoint. Also signals recruitment difficulty which correlates with operational risk.",
+    "clinical_note": "Protocol modification. Tests whether model understands statistical power implications.",
+    "enabled": true
+  },
+  {
+    "id": "B02",
+    "type": "protocol_design",
+    "name": "Double enrollment",
+    "perturbation_text": "Based on interim power analysis, enrollment was expanded from {N} to {N×2} subjects to ensure adequate statistical power for the primary endpoint.",
+    "target_field": "enrollmentCount",
+    "insertion_method": "modify_and_append",
+    "field_modification": {
+      "field": "enrollmentCount",
+      "op": "double"
+    },
+    "expected_direction": "helpful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_enrollment_above": 2000,
+        "skip_if_enrollment_below": 1,
+        "skip_if_primary_endpoint_safety_only": true,
+        "apply_only_if_phase": [
+          "PHASE2",
+          "PHASE3"
+        ]
+      },
+      "advanced": {}
+    },
+    "rationale": "Doubled sample increases statistical power and signals sponsor confidence (willing to invest more).",
+    "clinical_note": "Protocol modification. Tests whether model recognizes that more subjects = more power.",
+    "enabled": true
+  },
+  {
+    "id": "B03",
+    "type": "protocol_design",
+    "name": "Switch to open-label",
+    "perturbation_text": "The protocol was amended to remove masking and adopt an open-label design after enrollment challenges made maintaining the blind infeasible.",
+    "target_field": "masking",
+    "insertion_method": "modify_and_append",
+    "field_modification": {
+      "field": "masking",
+      "op": "set",
+      "value": "NONE"
+    },
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_masking_is": [
+          "NONE"
+        ]
+      },
+      "advanced": {}
+    },
+    "rationale": "Loss of blinding introduces performance bias (treating physicians) and assessment bias (outcome evaluators). Also signals recruitment problems.",
+    "clinical_note": "Protocol modification. Tests whether model understands the importance of blinding for trial validity.",
+    "enabled": true
+  },
+  {
+    "id": "B04",
+    "type": "protocol_design",
+    "name": "Add interim futility analysis",
+    "perturbation_text": "An independent Data Safety Monitoring Board will conduct a pre-specified interim futility analysis at 50% information fraction, with stopping recommended if conditional power falls below 10%.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "neutral",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "apply_only_if_phase": [
+          "PHASE2",
+          "PHASE3"
+        ],
+        "skip_if_primary_endpoint_safety_only": true
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "DSMB",
+          "data safety monitoring",
+          "futility analys*",
+          "interim analys*"
+        ],
+        "search_fields": [
+          "briefSummary"
+        ]
+      }
+    },
+    "rationale": "Futility analysis is standard good practice; does not inherently help or harm success. Could stop a futile trial early (saves resources) but doesn't change the drug's actual efficacy.",
+    "clinical_note": "Design feature. Tests whether model treats this as neutral vs. interpreting it as a negative signal.",
+    "enabled": true
+  },
+  {
+    "id": "B05",
+    "type": "protocol_design",
+    "name": "Shorten treatment duration by half",
+    "perturbation_text": "Based on emerging pharmacokinetic data suggesting rapid target engagement, the treatment period was shortened by 50% from the original protocol.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {
+        "skip_if_text_contains": [
+          "SAD",
+          "one-time dose",
+          "single administration",
+          "single ascending",
+          "single dose*",
+          "single-dose"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "detailedDescription",
+          "interventions",
+          "armGroups"
+        ]
+      }
+    },
+    "rationale": "Shorter exposure may be insufficient to demonstrate clinical benefit, especially for chronic conditions. Although framed positively (rapid engagement), the risk of underdosing outweighs.",
+    "clinical_note": "Protocol modification. Tests whether model weighs the positive framing against the reduced treatment window.",
+    "enabled": true
+  },
+  {
+    "id": "B06",
+    "type": "protocol_design",
+    "name": "Add active comparator arm",
+    "perturbation_text": "The protocol was amended to add an active comparator arm receiving the current standard-of-care treatment; the primary analysis was revised to a non-inferiority comparison against this arm.",
+    "target_field": "armGroups",
+    "insertion_method": "modify_and_append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "apply_only_if_allocation": "RANDOMIZED",
+        "apply_only_if_text_contains": [
+          "placebo"
+        ],
+        "apply_only_if_search_fields": [
+          "armGroups",
+          "interventions"
+        ],
+        "skip_if_arm_type_contains": [
+          "ACTIVE_COMPARATOR"
+        ],
+        "apply_only_if_phase": [
+          "PHASE2",
+          "PHASE3"
+        ],
+        "skip_if_primary_endpoint_safety_only": true
+      },
+      "advanced": {
+        "skip_if_text_contains": [
+          "active comparator",
+          "active control*",
+          "non-inferiority"
+        ],
+        "search_fields": [
+          "briefSummary",
+          "armGroups"
+        ]
+      }
+    },
+    "rationale": "Non-inferiority against active comparator is a harder bar than superiority over placebo; also introduces assay sensitivity concerns and tighter margins.",
+    "clinical_note": "Regulatory/design shift. Tests whether model understands placebo vs. active comparator difficulty.",
+    "enabled": true,
+    "field_modification": [
+      {
+        "field": "armGroups",
+        "op": "append_item",
+        "value": {
+          "label": "Active Comparator: Standard of Care",
+          "type": "ACTIVE_COMPARATOR",
+          "description": "Current standard-of-care treatment for the indication"
+        }
+      },
+      {
+        "field": "interventions",
+        "op": "append_item",
+        "value": {
+          "type": "OTHER",
+          "name": "Standard-of-care therapy",
+          "description": "Current standard-of-care treatment for the indication, given as the active comparator"
+        }
+      }
+    ]
+  },
+  {
+    "id": "B07",
+    "type": "protocol_design",
+    "name": "Remove upper age limit",
+    "perturbation_text": "The upper age limit was removed to increase generalizability, with additional cardiac and renal monitoring required for older participants.",
+    "target_field": "maximumAge",
+    "insertion_method": "modify_and_append",
+    "field_modification": {
+      "field": "maximumAge",
+      "op": "set",
+      "value": ""
+    },
+    "expected_direction": "neutral",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "skip_if_maximum_age_is": "",
+        "skip_if_maximum_age_below_years": 18
+      },
+      "advanced": {}
+    },
+    "rationale": "Broader enrollment pool may help recruitment but elderly subjects bring more comorbidities and AEs. Net effect is roughly neutral; direction may depend on indication.",
+    "clinical_note": "Eligibility change. Tests whether model sees this as risk-increasing (comorbidities) or risk-decreasing (enrollment).",
+    "enabled": true
+  },
+  {
+    "id": "B08",
+    "type": "protocol_design",
+    "name": "Restrict to single site",
+    "perturbation_text": "Enrollment is limited to a single investigational site due to regulatory constraints in other planned regions.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {},
+      "note": "DISABLED in v0: site count is not in trial_specs.jsonl, so single-site baselines cannot be excluded and the perturbation would be a no-op on them. Kept in the catalogue for expert labeling; re-enable once a leak-free site count is added."
+    },
+    "rationale": "Single-site limits enrollment speed, reduces generalizability, and introduces site-specific bias. Also signals regulatory problems in other regions.",
+    "clinical_note": "Operational constraint. Tests whether model factors logistical barriers into success prediction.",
+    "enabled": false
+  },
+  {
+    "id": "C01",
+    "type": "positive_signal",
+    "name": "Strong preclinical efficacy",
+    "perturbation_text": "In pivotal preclinical studies, the investigational agent demonstrated robust dose-dependent target engagement with >90% inhibition at clinically achievable concentrations, and a therapeutic index exceeding 10× in the relevant animal toxicology models.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "helpful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {}
+    },
+    "rationale": "Strong preclinical signal (high target engagement + wide therapeutic window) correlates with higher probability of clinical success. TI > 10 is very favorable.",
+    "clinical_note": "Positive preclinical data. Tests whether model shifts toward SUCCESS when given encouraging nonclinical evidence.",
+    "enabled": true
+  },
+  {
+    "id": "C02",
+    "type": "positive_signal",
+    "name": "Positive interim efficacy signal",
+    "perturbation_text": "A pre-planned interim efficacy analysis at 60% enrollment showed conditional power exceeding 90% for the primary endpoint, and the independent DSMB recommended trial continuation without modification.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "helpful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "apply_only_if_phase": [
+          "PHASE2",
+          "PHASE3"
+        ],
+        "skip_if_primary_endpoint_safety_only": true
+      },
+      "advanced": {}
+    },
+    "rationale": "Conditional power >90% at interim is a strong favorable signal under the assumptions used in the conditional-power calculation. DSMB endorsement adds confidence.",
+    "clinical_note": "Strong positive signal. Tests whether model appropriately weighs interim results.",
+    "enabled": true
+  },
+  {
+    "id": "C03",
+    "type": "positive_signal",
+    "name": "Breakthrough therapy designation",
+    "perturbation_text": "The investigational agent has been granted Breakthrough Therapy Designation by the FDA based on preliminary clinical evidence of substantial improvement over available therapies for this indication.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "helpful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {
+        "skip_if_text_contains": [
+          "Breakthrough Therapy Designation",
+          "breakthrough designation"
+        ],
+        "search_fields": [
+          "briefSummary"
+        ]
+      }
+    },
+    "rationale": "BTD reflects FDA's assessment that preliminary clinical evidence suggests substantial improvement over available therapy for a serious condition; it brings intensive FDA guidance and expedited pathways but is not an approval guarantee.",
+    "clinical_note": "Regulatory milestone. Tests whether model recognizes BTD as a strong positive predictor.",
+    "enabled": true
+  },
+  {
+    "id": "C04",
+    "type": "positive_signal",
+    "name": "Prior study met prespecified objectives",
+    "perturbation_text": "The preceding clinical study met its prespecified primary objective and all secondary objectives, and the safety profile was favorable with no drug-related serious adverse events reported.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "helpful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {
+        "apply_only_if_phase": [
+          "PHASE2",
+          "PHASE3"
+        ]
+      },
+      "advanced": {}
+    },
+    "rationale": "Strong prior-study results (all prespecified objectives met + clean safety) increase confidence in the current phase; prior success does not guarantee current success (different populations, endpoints).",
+    "clinical_note": "Historical success signal. Tests whether model weighs prior results appropriately without over-anchoring.",
+    "enabled": true
+  },
+  {
+    "id": "D01",
+    "type": "external_contextual",
+    "name": "Competing therapy approved",
+    "perturbation_text": "Since this trial's initiation, a competing therapy for the same indication received FDA approval, establishing a new standard of care and potentially affecting the clinical relevance of the study's primary endpoint and recruitment feasibility.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {}
+    },
+    "rationale": "New approved competitor can make current trial's endpoints clinically irrelevant, slow recruitment (patients prefer approved therapy), and raise the bar for regulatory approval.",
+    "clinical_note": "External landscape change. Tests whether model considers competitive dynamics beyond the trial itself.",
+    "enabled": true
+  },
+  {
+    "id": "D02",
+    "type": "external_contextual",
+    "name": "Regulatory safety alert on drug class",
+    "perturbation_text": "The FDA has issued a Drug Safety Communication regarding increased cardiovascular risk associated with the pharmacological class of the study drug, requiring enhanced cardiac monitoring for all current and future trial subjects.",
+    "target_field": "briefSummary",
+    "insertion_method": "append",
+    "expected_direction": "harmful",
+    "yousef_label": null,
+    "filter": {
+      "basic": {},
+      "advanced": {
+        "skip_if_text_contains": [
+          "Drug Safety Communication",
+          "black box",
+          "boxed warning*"
+        ],
+        "search_fields": [
+          "briefSummary"
+        ]
+      }
+    },
+    "rationale": "Class-wide safety alert increases regulatory scrutiny, may slow enrollment (patients/investigators wary), adds monitoring burden, and raises the safety bar for approval.",
+    "clinical_note": "Regulatory action. Tests whether model factors class-level safety concerns into individual trial prediction.",
+    "enabled": true
+  }
+]

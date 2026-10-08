@@ -98,6 +98,95 @@ S5_PROMPT = (
 )
 
 STEPS = [S1_PROMPT, S2_PROMPT, S3_PROMPT, S4_PROMPT, S5_PROMPT, S6_PROMPT]
+
+# --------------------------------------------------------------------------
+# Spec mode (arm B): the model is shown the registered trial specification.
+# Used for the perturbation experiments, where the specification is the thing
+# being varied. S2-S5 are identical to arm A so per-step replies stay comparable;
+# only S1 and S6 change wording to acknowledge that a specification was shown.
+# --------------------------------------------------------------------------
+
+S1_PROMPT_SPEC = (
+    "Here is the registered specification of clinical trial {nct_id}:\n\n"
+    "{spec_text}\n\n"
+    "Beyond what is shown above, tell me what you independently know about this "
+    "trial or this drug: mechanism of action, sponsor track record, results of "
+    "earlier studies, key dates. For any item you are not sure about, write "
+    "'unknown'. Do not fabricate."
+)
+
+S6_PROMPT_SPEC = (
+    "Based on the trial specification shown at the start, your own knowledge, "
+    "and the similar trials you listed, make your final prediction:\n\n"
+    "Format your answer EXACTLY as:\n"
+    "PREDICTION: SUCCESS or FAILURE\n"
+    "CONFIDENCE: a number between 0.0 and 1.0\n"
+    "KEY_REASON: one sentence explaining the most important factor"
+)
+
+STEPS_SPEC = [S1_PROMPT_SPEC, S2_PROMPT, S3_PROMPT, S4_PROMPT, S5_PROMPT, S6_PROMPT_SPEC]
+
+
+def _fmt_outcomes(items: list | None) -> str:
+    if not items:
+        return "  (none listed)"
+    out = []
+    for o in items:
+        m = (o.get("measure") or "").strip()
+        tf = (o.get("timeFrame") or "").strip()
+        out.append(f"  - {m}" + (f" [time frame: {tf}]" if tf else ""))
+    return "\n".join(out)
+
+
+def render_spec(spec: dict) -> str:
+    """Render one trial_specs.jsonl row (or a perturbed copy of it) as the text the
+    model sees. Every field in the row is rendered, so every perturbation target
+    (briefSummary, enrollmentCount, masking, maximumAge, armGroups, interventions)
+    is visible. Nothing outside the row is added."""
+    L = []
+    L.append(f"Phase: {', '.join(spec.get('phases') or []) or 'unknown'}")
+    L.append(f"Conditions: {', '.join(spec.get('conditions') or []) or 'unknown'}")
+    L.append(f"Lead sponsor: {spec.get('leadSponsor') or 'unknown'}")
+    L.append(f"Enrollment: {spec.get('enrollmentCount') if spec.get('enrollmentCount') is not None else 'unknown'}")
+    L.append(
+        f"Design: allocation={spec.get('allocation') or 'unknown'}; "
+        f"intervention model={spec.get('interventionModel') or 'unknown'}; "
+        f"masking={spec.get('masking') or 'unknown'}"
+    )
+    L.append(
+        f"Eligibility: sex={spec.get('sex') or 'unknown'}; "
+        f"minimum age={spec.get('minimumAge') or 'not specified'}; "
+        f"maximum age={spec.get('maximumAge') or 'not specified'}"
+    )
+    L.append("")
+    L.append("Brief summary:")
+    L.append((spec.get("briefSummary") or "(none)").strip())
+    if (spec.get("detailedDescription") or "").strip():
+        L.append("")
+        L.append("Detailed description:")
+        L.append(spec["detailedDescription"].strip())
+    L.append("")
+    L.append("Arms:")
+    for a in spec.get("armGroups") or []:
+        L.append(f"  - [{a.get('type') or '?'}] {a.get('label') or ''}: {(a.get('description') or '').strip()}")
+    if not spec.get("armGroups"):
+        L.append("  (none listed)")
+    L.append("")
+    L.append("Interventions:")
+    for i in spec.get("interventions") or []:
+        L.append(f"  - [{i.get('type') or '?'}] {i.get('name') or ''}: {(i.get('description') or '').strip()}")
+    if not spec.get("interventions"):
+        L.append("  (none listed)")
+    L.append("")
+    L.append("Primary outcomes:")
+    L.append(_fmt_outcomes(spec.get("primaryOutcomes")))
+    L.append("")
+    L.append("Secondary outcomes:")
+    L.append(_fmt_outcomes(spec.get("secondaryOutcomes")))
+    L.append("")
+    L.append("Eligibility criteria:")
+    L.append((spec.get("eligibilityCriteria") or "(none)").strip())
+    return "\n".join(L)
 STEP_NAMES = [
     "s1_recall",
     "s2_reference",
@@ -188,6 +277,15 @@ class TrialData(vf.TaskData):
     """The registered primary outcome measure(s). Scoring-side only: no step prompt
     interpolates it, so S4 is asked to produce what this field already knows."""
     split: str = "unknown"
+
+    spec_text: str = ""
+    """Spec mode only: the rendered trial specification shown to the model in S1.
+    Empty in closed-book (arm A). When set, the env uses STEPS_SPEC."""
+    row_id: str = ""
+    """Spec mode only: opaque id from data/perturbed_specs_v0.jsonl (or the baseline
+    file). Carried into the trace so results join back to the perturbation
+    catalogue through the .map.jsonl file — the catalogue itself never reaches
+    the model."""
 
 
 # --------------------------------------------------------------------------
@@ -536,8 +634,9 @@ class TrialReasoningEnv(vf.Env[TrialReasoningEnvConfig]):
             task.config,
         )
         fields = task.data.model_dump()
+        steps = STEPS_SPEC if task.data.spec_text else STEPS
         async with agents.agent.interaction(staged) as interaction:
-            for step_prompt in STEPS:
+            for step_prompt in steps:
                 segment = await interaction.turn(step_prompt.format(**fields))
                 if segment.terminated:
                     # The run ended instead of answering; a further turn() would
@@ -558,6 +657,10 @@ class TrialReasoningConfig(vf.TasksetConfig):
     split: str = ""
     """Keep only rows from this split ("train" / "val"); empty keeps all."""
 
+    labels_path: str = "data/trials.jsonl"
+    """Spec mode: where to look up label / phase / sponsor / endpoint for scoring
+    when data_path holds {row_id, spec} rows (which carry no labels by design)."""
+
 
 class TrialReasoningTaskset(vf.Taskset[TrialTask, TrialReasoningConfig]):
     def load(self) -> list[TrialTask]:
@@ -570,12 +673,53 @@ class TrialReasoningTaskset(vf.Taskset[TrialTask, TrialReasoningConfig]):
                 f"task rows not found at {path}. Run scripts/prepare_data.py first."
             )
 
+        labels: dict[str, dict] = {}
         tasks: list[TrialTask] = []
         for idx, line in enumerate(path.read_text().splitlines()):
             line = line.strip()
             if not line:
                 continue
             record = json.loads(line)
+
+            if "spec" in record:
+                # Spec-mode row: {row_id, spec}. No labels here by design (see
+                # scripts/generate_perturbed_cases.py); join to labels_path by nct_id.
+                if not labels:
+                    lp = Path(self.config.labels_path)
+                    if not lp.is_absolute():
+                        lp = Path(__file__).resolve().parents[3] / lp
+                    for l2 in lp.read_text().splitlines():
+                        if l2.strip():
+                            r2 = json.loads(l2)
+                            labels[r2["nct_id"]] = r2
+                spec = record["spec"]
+                base = labels.get(spec["nct_id"])
+                if base is None:
+                    raise KeyError(f"{spec['nct_id']} from {path} not found in {self.config.labels_path}")
+                if self.config.split and base.get("split") != self.config.split:
+                    continue
+                tasks.append(
+                    TrialTask(
+                        TrialData(
+                            idx=idx,
+                            prompt=None,
+                            nct_id=spec["nct_id"],
+                            label=base["label"],
+                            phase=base.get("phase", "unknown"),
+                            indication=base.get("indication", "unknown"),
+                            sponsor=base.get("sponsor", "unknown"),
+                            drug_name=base.get("drug_name", "unknown"),
+                            trial_title=base.get("trial_title", spec["nct_id"]),
+                            primary_endpoint=base.get("primary_endpoint", ""),
+                            split=base.get("split", "unknown"),
+                            spec_text=render_spec(spec),
+                            row_id=record.get("row_id", ""),
+                        ),
+                        self.config.task,
+                    )
+                )
+                continue
+
             if self.config.split and record.get("split") != self.config.split:
                 continue
             tasks.append(

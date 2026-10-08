@@ -1,0 +1,13 @@
+15:17:17    INFO running 2x1 rollouts on deepseek-chat via the env-server elastic pool
+15:17:17    INFO results: results/spec/deepseek-chat/smoke
+15:17:19    INFO EnvServerPool up: address=tcp://127.0.0.1:57058 workers=1/inf multiplex=128 elastic=True
+15:17:21    INFO EnvServer up: taskset=clinical-trial-reasoning address=ipc:///tmp/vf-pool-3g4c5ypa/0
+15:17:21    INFO interception up: url=http://127.0.0.1:57060
+15:17:21    INFO interception pool: 1 server(s), multiplex=32
+15:17:21    INFO rollout start: id=530763e87abe43d0be5bc8c2a1c57159 task=0 harness=null runtime=subprocess
+15:17:21    INFO rollout start: id=2696d274aee34381887692c8b8b0a22f task=1 harness=null runtime=subprocess
+15:18:00    INFO rollout done: id=2696d274aee34381887692c8b8b0a22f task=1 reward=0.950 turns=6 stop=user_closed
+15:18:03    INFO rollout done: id=530763e87abe43d0be5bc8c2a1c57159 task=0 reward=0.925 turns=6 stop=user_closed
+15:18:03    INFO EnvServer down: taskset=clinical-trial-reasoning
+15:18:03    INFO interception down: url=http://127.0.0.1:57060
+15:18:04    INFO EnvServerPool down
