@@ -1,0 +1,7 @@
+[
+  {"id": "SMILES-01", "name": "Aromatic nitro toxicophore", "type": "smiles_toxicophore", "expected_direction": "harmful", "perturbation_text": "aromatic nitro group added to the drug SMILES", "enabled": true},
+  {"id": "SMILES-02", "name": "Aromatic amine (aniline) toxicophore", "type": "smiles_toxicophore", "expected_direction": "harmful", "perturbation_text": "aromatic amine (aniline) added to the drug SMILES", "enabled": true},
+  {"id": "SMILES-03", "name": "Aromatic nitroso toxicophore", "type": "smiles_toxicophore", "expected_direction": "harmful", "perturbation_text": "aromatic nitroso group added to the drug SMILES", "enabled": true},
+  {"id": "SMILES-04", "name": "Aryl bromide toxicophore", "type": "smiles_toxicophore", "expected_direction": "harmful", "perturbation_text": "aryl bromide added to the drug SMILES", "enabled": true},
+  {"id": "SMILES-05", "name": "Epoxide toxicophore", "type": "smiles_toxicophore", "expected_direction": "harmful", "perturbation_text": "epoxide formed on an alkene in the drug SMILES", "enabled": true}
+]
