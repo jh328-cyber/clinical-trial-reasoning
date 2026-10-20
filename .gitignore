@@ -80,3 +80,7 @@ data/cache/
 results/*
 !results/cross_model_report.md
 !results/rollout_analysis.md
+
+# Raw ClinicalTrials.gov responses: a regenerable cache keyed by NCT ID.
+# data/trial_specs.jsonl is the extracted product and is tracked instead.
+data/ctg_cache/

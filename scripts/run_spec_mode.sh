@@ -31,9 +31,9 @@ CONCURRENCY="${CONCURRENCY:-4}"
 OUTPUT_DIR="${OUTPUT_DIR:-results/spec/$name}"
 
 case "$name" in
-  deepseek-chat) model="deepseek-chat"; base_url="https://api.deepseek.com";                       key_var="DEEPSEEK_API_KEY" ;;
+  deepseek-chat) model="deepseek-flash"; base_url="https://api.deepseek.com";                       key_var="DEEPSEEK_API_KEY" ;;
   gpt-4o-mini)   model="gpt-4o-mini";   base_url="https://api.openai.com/v1";                      key_var="OPENAI_API_KEY" ;;
-  qwen-plus)     model="qwen-plus";     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"; key_var="DASHSCOPE_API_KEY" ;;
+  qwen-plus)     model="qwen-plus-2025-12-01";     base_url="https://dashscope.aliyuncs.com/compatible-mode/v1"; key_var="DASHSCOPE_API_KEY" ;;
   *) echo "error: unknown model '$name'" >&2; exit 1 ;;
 esac
 
