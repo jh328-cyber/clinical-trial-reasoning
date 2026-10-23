@@ -134,6 +134,9 @@ def main():
                 n_nodrug += 1         # no DRUG intervention at all (biologic/device/...)
             continue
         n_resolved += 1
+        # canonicalize the baseline SMILES through RDKit so the ONLY difference the model
+        # sees between baseline and perturbed is the toxicophore, not Kekule-vs-aromatic notation.
+        smi = Chem.MolToSmiles(Chem.MolFromSmiles(smi))
         variants = add_toxicophores(smi)
         if not variants:
             continue
