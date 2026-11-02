@@ -1,0 +1,11 @@
+noise floor on 1 trials (run A vs run B, same specs):
+  flip rate             0%
+  mean dP               +0.000   (regression-to-mean drift)
+  mean |dP|             0.000
+  share |dP| > 0.05      0%
+  dP range              +0.00 .. +0.00
+  CONFIDENCE values     min 0.95  median 0.95  max 0.95  (distinct: [0.95])
+  s2_reference   shift  0.67   (same prompt, two samples)
+  s3_base_rate   shift  0.78   (same prompt, two samples)
+  s4_criteria    shift  0.37   (same prompt, two samples)
+  s5_risks       shift  0.69   (same prompt, two samples)
