@@ -1,0 +1,88 @@
+<|im_start|>user
+Here is the registered specification of clinical trial NCT03246854:
+
+Phase: PHASE1
+Conditions: Head and Neck Cancer, NSCLC
+Lead sponsor: National Health Research Institutes, Taiwan
+Enrollment: 6
+Design: allocation=NA; intervention model=SINGLE_GROUP; masking=NONE
+Eligibility: sex=ALL; minimum age=18 Years; maximum age=70 Years
+
+Brief summary:
+The study is being performed to assess the MTD, pharmacokinetics (PK), safety, tolerability and preliminary antitumor activity of DBPR112 in patients with head and neck cancer and EGFR mutated lung cancer.
+
+Detailed description:
+This is a Phase I, multi-center, open-label, first-in-human study to determine the MTD and RP2D of DBPR112 and to assess the safety, tolerability and PK of DBPR112 in Asian patients. Patients with non-small cell cancer (NSCLC) who have progressed following prior therapy with an epidermal growth factor receptor (EGFR) tyrosine kinase (TK) inhibitor or in patients with squamous cell cancer of head and neck (SCCHN) who have progressed following prior standard therapy will be selected. Approximately 24 to 30 patients will be enrolled in this study as out patients/inpatients, in 2 study centers in Taiwan.
+
+Arms:
+  - [EXPERIMENTAL] DBPR112: 
+
+Interventions:
+  - [DRUG] DBPR112: DBPR112 hard gelatin capsule solid dosage formulation; strength: 25 mg, 100 mg.  SMILES: CN(C)C/C=C/C(=O)Nc1cccc(-c2c(-c3ccccc3)oc3ncnc(N[C@H](CO)c4ccccc4)c23)c1
+
+Primary outcomes:
+  - Maximum Tolerated Dose (MTD) [time frame: up to 22 months]
+  - Area Under the Plasma Concentration-Time Curve (AUC from 0 to infinity) [time frame: For Cycle 1 (each cycle is 28 days) and Cycle 2, Day 1, predose (0 hr), 0.5, 1, 2, 3, 4, 6, 8 and 24 hrs (i.e. predose on Day 2).Predose samples on Cycle 1 Days 8, 15, 22, and 28, Cycle 2 Day 15, and Cycle3-6 Days 1 and 15.]
+  - Observed Maximum Plasma Concentration (Cmax) [time frame: For Cycle 1 (each cycle is 28 days) and Cycle 2, Day 1, predose (0 hr), 0.5, 1, 2, 3, 4, 6, 8 and 24 hrs (i.e. predose on Day 2).Predose samples on Cycle 1 Days 8, 15, 22, and 28, Cycle 2 Day 15, and Cycle3-6 Days 1 and 15.]
+  - Time of Maximum Plasma Concentration (tmax) [time frame: For Cycle 1 (each cycle is 28 days) and Cycle 2, Day 1, predose (0 hr), 0.5, 1, 2, 3, 4, 6, 8 and 24 hrs (i.e. predose on Day 2).Predose samples on Cycle 1 Days 8, 15, 22, and 28, Cycle 2 Day 15, and Cycle3-6 Days 1 and 15.]
+
+Secondary outcomes:
+  - Incidence and intensity of Adverse Events and Serious Adverse Events as a measure of safety [time frame: Adverse events were collected from the time of the first dose of investigational product until 30 days after the last dose of investigational product administration.]
+  - Preliminary antitumor activity of DBPR112 in patients with solid tumors [time frame: The tumor responses were collected from the time of the first dose of investigational product until 30 days after the last dose of investigational product administration.]
+
+Eligibility criteria:
+Inclusion Criteria:
+
+* Male and female patients
+* Age from ≥18 to ≤70 years
+* Life expectancy \>12 weeks per investigator's judgement
+* Squamous cell carcinoma of head and neck that has failed prior standard therapy for metastatic disease or advanced EGFR-mutated NSCLC that has failed prior standard therapy including at least one anti EGFR TK inhibitor
+* Non-measurable but evaluable disease, or measurable disease per RECIST 1.1
+* Eastern Cooperative Oncology Group (ECOG) performance status of 0 or 1
+* Adequate blood and organ function
+* Male and female patients must agree to use contraception while on study and for 90 days after the last dose of DBPR112
+* Aspartate aminotransferase/ALT \<3 X ULN if no metastasis, and AST/ALT \<5 X ULN in presence of metastasis
+
+Exclusion Criteria:
+
+* History of allergic reactions to any component of DBPR112
+* History of unstable central nervous system (CNS) metastases or seizure disorder related to the malignancy; however, those patients who were treated for prior CNS metastases and who are asymptomatic may participate in the study
+* History of congestive heart failure, unstable angina pectoris, unstable atrial fibrillation, or cardiac arrhythmia
+* Exposure to any other investigational or commercial anticancer agents or therapies administered with the intention to treat malignancy within 28 days for chemotherapeutics and targeted agents, or 5 half-lives for proteins, whichever is longer, before the first dose of DBPR112
+* Significant surgical intervention within 21 days of the first dose of DBPR112 or with ongoing postoperative complications
+* Chronic skin condition that requires prescribed oral or intravenous treatment
+* History of severe rash that required discontinuation of prior EGFR targeted therapy
+* History of interstitial lung disease or non-infectious pneumonitis except for those induced by radiation therapy
+* Toxicities from any prior therapy, surgery, or radiotherapy must have resolved to Grade 0 or 1 as per the National Cancer Institute (NCI) - Common Terminology Criteria for Adverse Events (CTCAE) Version 4.03 or equivalent
+* Insufficient organ function as indicated by the following parameters
+
+  1. Absolute neutrophil count (ANC) \<1,500 /µL
+  2. Platelets \<100,000 /µL
+  3. Hemoglobin \<10 g/dL
+  4. Serum creatinine \>1.5 X ULN
+  5. Serum total bilirubin \>1.5 X ULN
+  6. Aspartate aminotransferase/ALT \>3 X ULN if no metastasis, AST/ALT \>5 X ULN in presence of metastasis
+  7. International normalized ratio or prothrombin time \>1.5 X ULN
+* Known history of human immunodeficiency virus (HIV)1 or 2
+* Active clinically significant infection requiring systemic therapy
+* Positive test for hepatitis B (HBsAg) or hepatitis C (anti-HCV antibody)
+* Child-Pugh B \& C stage liver disease or liver function impairment
+* Underlying medical conditions that, in the Investigator's opinion, will make the administration of DBPR112 hazardous or obscure the interpretation of toxicity or AEs
+* Inability to swallow oral medications (capsules and tablets) without chewing, breaking, crushing, opening or otherwise altering the product formulation. Patients should not have gastrointestinal illnesses that would preclude the absorption of DBPR112, which is an oral agent
+* Judgment by the investigator that the patient should not participate in the study if the patient is unlikely to comply with study procedures, restrictions and requirements
+* Pregnancy or breastfeeding
+
+Beyond what is shown above, tell me what you independently know about this trial or this drug: mechanism of action, sponsor track record, results of earlier studies, key dates. For any item you are not sure about, write 'unknown'. Do not fabricate.<|im_end|>
+<|im_start|>assistant
+<answer>
+{'1': 'unknown', '2': 'unknown', '3': 'unknown', '4': 'unknown', '5': 'unknown', '6': 'unknown', '7': 'unknown', '8': 'unknown', '9': 'unknown', '10': 'unknown', '11': 'unknown', '12': 'unknown', '13': 'unknown', '14': 'unknown', '15': 'unknown', '16': 'unknown', '17': 'unknown', '18': 'unknown', '19': 'unknown', '20': 'unknown', '21': 'unknown', '22': 'unknown', '23': 'unknown', '24': 'unknown', '25': 'unknown', '26': 'unknown', '27': 'unknown', '28': 'unknown', '29': 'unknown', '30': 'unknown', '31': 'unknown', '32': 'unknown', '33': 'unknown', '34': 'unknown', '35': 'unknown', '36': 'unknown', '37': 'unknown', '38': 'unknown', '39': 'unknown', '40': 'unknown', '41': 'unknown', '42': 'unknown', '43': 'unknown', '44': 'unknown', '45': 'unknown', '46': 'unknown', '47': 'unknown', '48': 'unknown', '49': 'unknown', '50': 'unknown', '51': 'unknown', '52': 'unknown', '53': 'unknown', '54': 'unknown', '55': 'unknown', '56': 'unknown', '57': 'unknown', '58': 'unknown', '59': 'unknown', '60': 'unknown', '61': 'unknown', '62': 'unknown', '63': 'unknown', '64': 'unknown', '65': 'unknown', '66': 'unknown', '67': 'unknown', '68': 'unknown', '69': 'unknown', '70': 'unknown', '71': 'unknown', '72': 'unknown', '73': 'unknown', '74': 'unknown', '75': 'unknown', '76': 'unknown', '77': 'unknown', '78': 'unknown', '79': 'unknown', '80': 'unknown', '81': 'unknown', '82': 'unknown', '83': 'unknown', '84': 'unknown', '85': 'unknown', '86': 'unknown', '87': 'unknown', '88': 'unknown', '89': 'unknown', '90': 'unknown', '91': 'unknown', '92': 'unknown', '93': 'unknown', '94': 'unknown', '95': 'unknown', '96': 'unknown', '97': 'unknown', '98': 'unknown', '99': 'unknown', '100': 'unknown', '101': 'unknown', '102': 'unknown', '103': 'unknown', '104': 'unknown', '105': 'unknown', '106': 'unknown', '107': 'unknown', '108': 'unknown', '109': 'unknown', '110': 'unknown', '111': 'unknown', '112': 'unknown', '113': 'unknown', '114': 'unknown', '115': 'unknown', '116': 'unknown', '117': 'unknown', '118': 'unknown', '119': 'unknown', '120': 'unknown', '121': 'unknown', '122': 'unknown', '123': 'unknown', '124': 'unknown', '125': 'unknown', '126': 'unknown', '127': 'unknown', '128': 'unknown', '129': 'unknown', '130': 'unknown', '131': 'unknown', '132': 'unknown', '133': 'unknown', '134': 'unknown', '135': 'unknown', '136': 'unknown', '137': 'unknown', '138': 'unknown', '139': 'unknown', '140': 'unknown', '141': 'unknown', '142': 'unknown', '143': 'unknown', '144': 'unknown', '145': 'unknown', '146': 'unknown', '147': 'unknown', '148': 'unknown', '149': 'unknown', '150': 'unknown', '151': 'unknown', '152': 'unknown', '153': 'unknown', '154': 'unknown', '155': 'unknown', '156': 'unknown', '157': 'unknown', '158': 'unknown', '159': 'unknown', '160': 'unknown', '161': 'unknown', '162': 'unknown', '163': 'unknown', '164': 'unknown', '165': 'unknown', '166': 'unknown', '167': 'unknown', '168': 'unknown', '169': 'unknown', '170': 'unknown', '171': 'unknown', '172': 'unknown', '173': 'unknown', '174': 'unknown', '175': 'unknown', '176': 'unknown', '177': 'unknown', '178': 'unknown', '179': 'unknown', '180': 'unknown', '181': 'unknown', '182': 'unknown', '183': 'unknown', '184': 'unknown', '185': 'unknown', '186': 'unknown', '187': 'unknown', '188': 'unknown', '189': 'unknown', '190': 'unknown', '191': 'unknown', '192': 'unknown', '193': 'unknown', '194': 'unknown', '195': 'unknown', '196': 'unknown', '197': 'unknown', '198': 'unknown', '199': 'unknown', '200': 'unknown', '201': 'unknown', '202': 'unknown', '203': 'unknown', '204': 'unknown', '205': 'unknown', '206': 'unknown', '207': 'unknown', '208': 'unknown', '209': 'unknown', '210': 'unknown', '211': 'unknown', '212': 'unknown', '213': 'unknown', '214': 'unknown', '215': 'unknown', '216': 'unknown', '217': 'unknown', '218': 'unknown', '219': 'unknown', '220': 'unknown', '221': 'unknown', '222': 'unknown', '223': 'unknown', '224': 'unknown', '225': 'unknown', '226': 'unknown', '227': 'unknown', '228': 'unknown', '229': 'unknown', '230': 'unknown', '231': 'unknown', '232': 'unknown', '233': 'unknown', '234': 'unknown', '235': 'unknown', '236': 'unknown', '237': 'unknown', '238': 'unknown', '239': 'unknown', '240': 'unknown', '241': 'unknown', '242': 'unknown', '243': 'unknown', '244': 'unknown', '245': 'unknown', '246': 'unknown', '247': 'unknown', '248': 'unknown', '249': 'unknown', '250': 'unknown', '251': 'unknown', '252': 'unknown', '253': 'unknown', '254': 'unknown', '255': 'unknown', '256': 'unknown', '257': 'unknown', '258': 'unknown', '259': 'unknown', '260': 'unknown', '261': 'unknown', '262': 'unknown', '263': 'unknown', '264': 'unknown', '265': 'unknown', '266': 'unknown', '267': 'unknown', '268': 'unknown', '269': 'unknown', '270': 'unknown', '271': 'unknown', '272': 'unknown', '273': 'unknown', '274': 'unknown', '275': 'unknown', '276': 'unknown', '277': 'unknown', '278': 'unknown', '279': 'unknown', '280': 'unknown', '281': 'unknown', '282': 'unknown', '283': 'unknown', '284': 'unknown', '285': 'unknown', '286': 'unknown', '287': 'unknown', '288': 'unknown', '289': 'unknown', '290': 'unknown', '291': 'unknown', '292': 'unknown', '293': 'unknown', '294': 'unknown', '295': 'unknown', '296': 'unknown', '297': 'unknown', '298': 'unknown', '299': 'unknown', '300': 'unknown', '301': 'unknown', '302': 'unknown', '303': 'unknown', '304': 'unknown', '305': 'unknown', '306': 'unknown', '307': 'unknown', '308': 'unknown', '309': 'unknown', '310': 'unknown', '311': 'unknown', '312': 'unknown', '313': 'unknown', '314': 'unknown', '315': 'unknown', '316': 'unknown', '317': 'unknown', '318': 'unknown', '319': 'unknown', '320': 'unknown', '321': 'unknown', '322': 'unknown', '323': 'unknown', '324': 'unknown', '325': 'unknown', '326': 'unknown', '327': 'unknown', '328': 'unknown', '329': 'unknown', '330': 'unknown', '331': 'unknown', '332': 'unknown', '333': 'unknown', '334': 'unknown', '335': 'unknown', '336': 'unknown', '337': 'unknown', '338': 'unknown', '339': 'unknown', '340': 'unknown', '341': 'unknown', '342': 'unknown', '343': 'unknown', '344': 'unknown', '345': 'unknown', '346': 'unknown', '347': 'unknown', '348': 'unknown', '349': 'unknown', '350': 'unknown', '351': 'unknown', '352': 'unknown', '353': 'unknown', '354': 'unknown', '355': 'unknown', '356': 'unknown', '357': 'unknown', '358': 'unknown', '359': 'unknown', '360': 'unknown', '361': 'unknown', '362': 'unknown', '363': 'unknown', '364': 'unknown', '365': 'unknown', '366': 'unknown', '367': 'unknown', '368': 'unknown', '369': 'unknown', '370': 'unknown', '371': 'unknown', '372': 'unknown', '373': 'unknown', '374': 'unknown', '375': 'unknown', '376': 'unknown', '377': 'unknown', '378': 'unknown', '379': 'unknown', '380': 'unknown', '381': 'unknown', '382': 'unknown', '383': 'unknown', '384': 'unknown', '385': 'unknown', '386': 'unknown', '387': 'unknown', '388': 'unknown', '389': 'unknown', '390': 'unknown', '391': 'unknown', '392': 'unknown', '393': 'unknown', '394': 'unknown', '395': 'unknown', '396': 'unknown', '397': 'unknown', '398': 'unknown', '399': 'unknown', '400': 'unknown', '401': 'unknown', '402': 'unknown', '403': 'unknown', '404': 'unknown', '405': 'unknown', '406': 'unknown', '407': 'unknown', '408': 'unknown', '409': 'unknown', '410': 'unknown', '411': 'unknown', '412': 'unknown', '413': 'unknown', '414': 'unknown', '415': 'unknown', '416': 'unknown', '417': 'unknown', '418': 'unknown', '419': 'unknown', '420': 'unknown', '421': 'unknown', '422': 'unknown', '423': 'unknown', '424': 'unknown', '425': 'unknown', '426': 'unknown', '427': 'unknown', '428': 'unknown', '429': 'unknown', '430': 'unknown', '431': 'unknown', '432': 'unknown', '433': 'unknown', '434': 'unknown', '435': 'unknown', '436': 'unknown', '437': 'unknown', '438': 'unknown', '439': 'unknown', '440': 'unknown', '441': 'unknown', '442': 'unknown', '443': 'unknown', '444': 'unknown', '445': 'unknown', '446': 'unknown', '447': 'unknown', '448': 'unknown', '449': 'unknown', '450': 'unknown', '451': 'unknown', '452': 'unknown', '453': 'unknown', '454': 'unknown', '455': 'unknown', '456': 'unknown', '457': 'unknown', '458': 'unknown', '459': 'unknown', '460': 'unknown', '461': 'unknown', '462': 'unknown', '463': 'unknown', '464': 'unknown', '465': 'unknown', '466': 'unknown', '467': 'unknown', '468': 'unknown', '469': 'unknown', '470': 'unknown', '471': 'unknown', '472': 'unknown', '473': 'unknown', '474': 'unknown', '475': 'unknown', '476': 'unknown', '477': 'unknown', '478': 'unknown', '479': 'unknown', '480': 'unknown', '481': 'unknown', '482': 'unknown', '483': 'unknown', '484': 'unknown', '485': 'unknown', '486': 'unknown', '487': 'unknown', '488': 'unknown', '489': 'unknown', '490': 'unknown', '491': 'unknown', '492': 'unknown', '493': 'unknown', '494': 'unknown', '495': 'unknown', '496': 'unknown', '497': 'unknown', '498': 'unknown', '499': 'unknown', '500': 'unknown', '501': 'unknown', '502': 'unknown', '503': 'unknown', '504': 'unknown', '505': 'unknown', '506': 'unknown', '507': 'unknown', '508': 'unknown', '509': 'unknown', '510': 'unknown', '511': 'unknown', '512': 'unknown', '513': 'unknown', '514': 'unknown', '515': 'unknown', '516': 'unknown', '517': 'unknown', '518': 'unknown', '519': 'unknown', '520': 'unknown', '521': 'unknown', '522': 'unknown', '523': 'unknown', '524': 'unknown', '525': 'unknown', '<|im_end|>
+<|im_start|>user
+Now list 3-5 clinical trials that you believe are most similar to this one. For each, provide:
+- NCT ID (if you know it)
+- Drug name and indication
+- Phase
+- Outcome (SUCCESS / FAILURE / unknown)
+- Why it is similar to the trial in question
+
+If you are unsure about any detail, say 'unknown'. Do not fabricate.<|im_end|>
+<|im_start|>assistant
